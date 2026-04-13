@@ -62,7 +62,7 @@ const FloatingContactButton = () => {
         <div className="flex flex-col gap-3 mr-3 animate-in slide-in-from-right duration-200">
           <a
             href="tel:04035966171"
-            className={`w-14 h-14 rounded-full ${bgClass} flex items-center justify-center transition-all duration-300 hover:scale-110`}
+            className={`w-11 h-11 md:w-14 md:h-14 rounded-full ${bgClass} flex items-center justify-center transition-all duration-300 hover:scale-110`}
             style={{ boxShadow: iconGlow }}
             aria-label="Anrufen"
           >
