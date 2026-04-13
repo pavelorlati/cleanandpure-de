@@ -17,12 +17,12 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 border-b bg-background shadow-sm">
-      <div className="mx-auto flex h-24 max-w-[1400px] items-center justify-between px-6">
-        <a href="#home" className="flex items-center">
+      <div className="mx-auto flex h-28 max-w-[1400px] items-center justify-between px-6">
+        <a href="#home" className="flex items-center py-1">
           <img
             src={logo}
             alt="Clean & Pure GmbH"
-            className="h-20 w-auto object-contain sm:h-24"
+            className="h-24 w-auto object-contain sm:h-28"
           />
         </a>
 
