@@ -84,7 +84,7 @@ const JobsSection = () => {
     const body = encodeURIComponent(
       `Name: ${name}\nE-Mail: ${email}\nTelefon: ${form.phone.trim() || "–"}\nGewünschte Stelle: ${form.position.trim() || "–"}\n\nNachricht:\n${message}`
     );
-    window.location.href = `mailto:info@cleanandpure.de?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:Personal@cleanandpure.de?subject=${subject}&body=${body}`;
 
     toast({ title: "Ihr E-Mail-Programm wird geöffnet." });
     setForm({ name: "", email: "", phone: "", position: "", message: "" });
