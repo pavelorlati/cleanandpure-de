@@ -1,0 +1,75 @@
+import { Phone, Mail, MapPin } from "lucide-react";
+
+const Footer = () => (
+  <footer className="bg-foreground text-background py-16">
+    <div className="mx-auto max-w-[1400px] px-6">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        {/* Brand */}
+        <div className="space-y-4">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+              <span className="text-primary-foreground font-bold text-lg">C</span>
+            </div>
+            <span className="text-xl font-bold tracking-wider">Clean & Pure</span>
+          </div>
+          <p className="text-sm text-background/60 leading-relaxed">
+            Ihr familiengeführter Gebäudedienstleister aus Hamburg – professionell, zuverlässig und mit Herz.
+          </p>
+        </div>
+
+        {/* Links */}
+        <div>
+          <h4 className="font-semibold tracking-wider text-sm uppercase mb-4">Navigation</h4>
+          <ul className="space-y-2 text-sm text-background/60">
+            {["Startseite", "Über uns", "Leistungen", "Referenzen", "Jobs", "Kontakt"].map((item) => (
+              <li key={item}>
+                <a href={`#${item.toLowerCase().replace(/\s/g, "").replace("ü", "u")}`} className="hover:text-primary transition-colors">
+                  {item}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Services */}
+        <div>
+          <h4 className="font-semibold tracking-wider text-sm uppercase mb-4">Leistungen</h4>
+          <ul className="space-y-2 text-sm text-background/60">
+            {["Büroreinigung", "Glasreinigung", "Grundreinigung", "Polsterreinigung", "Hausmeisterservice"].map((s) => (
+              <li key={s}>{s}</li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Contact */}
+        <div>
+          <h4 className="font-semibold tracking-wider text-sm uppercase mb-4">Kontakt</h4>
+          <ul className="space-y-3 text-sm text-background/60">
+            <li className="flex items-center gap-2">
+              <Phone className="w-4 h-4 text-primary" />
+              <a href="tel:04035966171" className="hover:text-primary transition-colors">040/35 96 61 71</a>
+            </li>
+            <li className="flex items-center gap-2">
+              <Mail className="w-4 h-4 text-primary" />
+              <a href="mailto:info@cleanandpure.de" className="hover:text-primary transition-colors">info@cleanandpure.de</a>
+            </li>
+            <li className="flex items-center gap-2">
+              <MapPin className="w-4 h-4 text-primary" />
+              Hamburg
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="border-t border-background/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-background/40">
+        <p>© {new Date().getFullYear()} Clean & Pure GmbH. Alle Rechte vorbehalten.</p>
+        <div className="flex gap-6">
+          <a href="#" className="hover:text-primary transition-colors">Impressum</a>
+          <a href="#" className="hover:text-primary transition-colors">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+);
+
+export default Footer;
