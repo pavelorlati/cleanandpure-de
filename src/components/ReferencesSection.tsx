@@ -1,10 +1,17 @@
+import refPolster from "@/assets/ref-polster.jpg";
+import refBoden from "@/assets/ref-boden.jpg";
+import refFassade from "@/assets/ref-fassade.jpg";
+import refGlas from "@/assets/ref-glas.jpg";
+import refBuero from "@/assets/ref-buero.jpg";
+import refTreppen from "@/assets/ref-treppen.jpg";
+
 const references = [
-  { title: "Polsterreinigung", desc: "Tiefenreinigung von Polstermöbeln" },
-  { title: "Bodengrundreinigung", desc: "Professionelle Bodenaufbereitung" },
-  { title: "Fassadenreinigung", desc: "Außenflächen wie neu" },
-  { title: "Glasreinigung", desc: "Streifenfreie Sauberkeit" },
-  { title: "Büroreinigung", desc: "Saubere Arbeitsumgebung" },
-  { title: "Treppenhausreinigung", desc: "Gepflegte Gemeinschaftsflächen" },
+  { title: "Polsterreinigung", desc: "Tiefenreinigung von Polstermöbeln", img: refPolster },
+  { title: "Bodengrundreinigung", desc: "Professionelle Bodenaufbereitung", img: refBoden },
+  { title: "Fassadenreinigung", desc: "Außenflächen wie neu", img: refFassade },
+  { title: "Glasreinigung", desc: "Streifenfreie Sauberkeit", img: refGlas },
+  { title: "Büroreinigung", desc: "Saubere Arbeitsumgebung", img: refBuero },
+  { title: "Treppenhausreinigung", desc: "Gepflegte Gemeinschaftsflächen", img: refTreppen },
 ];
 
 const ReferencesSection = () => (
@@ -18,13 +25,19 @@ const ReferencesSection = () => (
       </h2>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {references.map((ref) => (
-          <div key={ref.title} className="group relative rounded-xl overflow-hidden bg-muted aspect-[4/3] flex items-end">
-            <div className="absolute inset-0 bg-gradient-to-b from-primary/20 to-primary/60 flex items-center justify-center">
-              <span className="text-5xl opacity-30">📷</span>
-            </div>
-            <div className="relative z-10 p-6 w-full">
-              <h3 className="text-lg font-semibold text-primary-foreground tracking-wide">{ref.title}</h3>
-              <p className="text-sm text-primary-foreground/80">{ref.desc}</p>
+          <div key={ref.title} className="group relative rounded-xl overflow-hidden aspect-[4/3]">
+            <img
+              src={ref.img}
+              alt={ref.title}
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              loading="lazy"
+              width={800}
+              height={600}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+            <div className="relative z-10 flex flex-col justify-end h-full p-6">
+              <h3 className="text-lg font-semibold text-white tracking-wide">{ref.title}</h3>
+              <p className="text-sm text-white/80">{ref.desc}</p>
             </div>
           </div>
         ))}
