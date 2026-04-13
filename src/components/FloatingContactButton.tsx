@@ -72,7 +72,7 @@ const FloatingContactButton = () => {
             href="https://www.instagram.com/cleanandpure_gebaeudereinigung/"
             target="_blank"
             rel="noopener noreferrer"
-            className={`w-14 h-14 rounded-full ${bgClass} flex items-center justify-center transition-all duration-300 hover:scale-110`}
+            className={`w-11 h-11 md:w-14 md:h-14 rounded-full ${bgClass} flex items-center justify-center transition-all duration-300 hover:scale-110`}
             style={{ boxShadow: iconGlow }}
             aria-label="Instagram"
           >
@@ -80,7 +80,7 @@ const FloatingContactButton = () => {
           </a>
           <a
             href="mailto:info@cleanandpure.de"
-            className={`w-14 h-14 rounded-full ${bgClass} flex items-center justify-center transition-all duration-300 hover:scale-110`}
+            className={`w-11 h-11 md:w-14 md:h-14 rounded-full ${bgClass} flex items-center justify-center transition-all duration-300 hover:scale-110`}
             style={{ boxShadow: iconGlow }}
             aria-label="E-Mail"
           >
