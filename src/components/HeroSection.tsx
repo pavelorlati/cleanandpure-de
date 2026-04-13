@@ -18,7 +18,8 @@ const HeroSection = () => (
           Ihr Partner für Sauberkeit in Hamburg
         </p>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight tracking-wide">
-          Herzlich Willkommen bei Clean&nbsp;&amp;&nbsp;Pure
+          Herzlich Willkommen bei{" "}
+          <span className="text-primary">Clean&nbsp;&amp;&nbsp;Pure</span>
         </h1>
         <p className="text-lg md:text-xl text-primary-foreground/90 leading-relaxed max-w-xl">
           Wir sind ein familiengeführtes Dienstleistungsunternehmen aus Hamburg und bieten professionelle Reinigungslösungen für Privat- und Gewerbekunden.
