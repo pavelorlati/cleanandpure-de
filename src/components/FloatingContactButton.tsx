@@ -62,7 +62,7 @@ const FloatingContactButton = () => {
         <div className="flex flex-col gap-3 mr-3 animate-in slide-in-from-right duration-200">
           <a
             href="tel:04035966171"
-            className={`w-14 h-14 rounded-full ${bgClass} flex items-center justify-center transition-all duration-300 hover:scale-110`}
+            className={`w-11 h-11 md:w-14 md:h-14 rounded-full ${bgClass} flex items-center justify-center transition-all duration-300 hover:scale-110`}
             style={{ boxShadow: iconGlow }}
             aria-label="Anrufen"
           >
@@ -72,7 +72,7 @@ const FloatingContactButton = () => {
             href="https://www.instagram.com/cleanandpure_gebaeudereinigung/"
             target="_blank"
             rel="noopener noreferrer"
-            className={`w-14 h-14 rounded-full ${bgClass} flex items-center justify-center transition-all duration-300 hover:scale-110`}
+            className={`w-11 h-11 md:w-14 md:h-14 rounded-full ${bgClass} flex items-center justify-center transition-all duration-300 hover:scale-110`}
             style={{ boxShadow: iconGlow }}
             aria-label="Instagram"
           >
@@ -80,7 +80,7 @@ const FloatingContactButton = () => {
           </a>
           <a
             href="mailto:info@cleanandpure.de"
-            className={`w-14 h-14 rounded-full ${bgClass} flex items-center justify-center transition-all duration-300 hover:scale-110`}
+            className={`w-11 h-11 md:w-14 md:h-14 rounded-full ${bgClass} flex items-center justify-center transition-all duration-300 hover:scale-110`}
             style={{ boxShadow: iconGlow }}
             aria-label="E-Mail"
           >
@@ -91,7 +91,7 @@ const FloatingContactButton = () => {
 
       <button
         onClick={() => setOpen(!open)}
-        className={`w-16 h-16 rounded-l-2xl ${bgClass} flex items-center justify-center transition-all duration-300 hover:opacity-90`}
+        className={`w-12 h-20 md:w-16 md:h-16 rounded-l-2xl ${bgClass} flex items-center justify-center transition-all duration-300 hover:opacity-90`}
         style={{ boxShadow: glowColor }}
         aria-label="Kontakt öffnen"
       >
