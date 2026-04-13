@@ -1,12 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import heroImg from "@/assets/hero-cleaning.jpg";
 
 const HeroSection = () => (
-  <section id="home" className="relative bg-primary overflow-hidden">
-    <div className="absolute inset-0 opacity-10">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsl(181,100%,40%)_0%,transparent_60%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,hsl(181,80%,50%)_0%,transparent_40%)]" />
-    </div>
+  <section id="home" className="relative overflow-hidden">
+    <img
+      src={heroImg}
+      alt="Professionelle Gebäudereinigung"
+      className="absolute inset-0 w-full h-full object-cover"
+      width={1920}
+      height={1080}
+    />
+    <div className="absolute inset-0 bg-primary/80" />
     <div className="relative mx-auto max-w-[1400px] px-6 py-24 md:py-36 lg:py-44">
       <div className="max-w-2xl space-y-6">
         <p className="text-primary-foreground/80 text-sm font-medium tracking-[0.2em] uppercase">
