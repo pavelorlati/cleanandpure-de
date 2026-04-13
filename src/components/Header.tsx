@@ -17,10 +17,15 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-background border-b shadow-sm">
-      <div className="mx-auto max-w-[1400px] px-6 flex items-center justify-between h-20">
+      <div className="mx-auto max-w-[1400px] px-6 flex items-center justify-between h-24">
         {/* Logo */}
-        <a href="#home" className="flex items-center">
-          <img src={logo} alt="Clean & Pure GmbH" className="h-16 w-auto" />
+        <a href="#home" className="flex items-center -my-2">
+          <img
+            src={logo}
+            alt="Clean & Pure GmbH"
+            className="h-24 w-auto object-contain"
+            style={{ mixBlendMode: 'multiply' }}
+          />
         </a>
 
         {/* Desktop Nav */}
