@@ -11,7 +11,7 @@ const HeroSection = () => (
       width={1920}
       height={1080}
     />
-    <div className="absolute inset-0 bg-primary/80" />
+    <div className="absolute inset-0 bg-black/85" />
     <div className="relative mx-auto max-w-[1400px] px-6 py-24 md:py-36 lg:py-44">
       <div className="max-w-2xl space-y-6">
         <p className="text-primary-foreground/80 text-sm font-medium tracking-[0.2em] uppercase">
