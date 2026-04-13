@@ -1,0 +1,220 @@
+import { useState } from "react";
+import { Briefcase, Clock, MapPin, Send, Users, Star, CheckCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
+
+const jobListings = [
+  {
+    title: "Reinigungskraft (m/w/d)",
+    type: "Vollzeit / Teilzeit",
+    location: "Hamburg",
+    description:
+      "Unterstützen Sie unser Team bei der Unterhaltsreinigung in Büros, Praxen und Gewerbeobjekten.",
+    tasks: [
+      "Unterhaltsreinigung diverser Objekte",
+      "Einhaltung von Hygiene- und Qualitätsstandards",
+      "Selbstständiges und zuverlässiges Arbeiten",
+    ],
+  },
+  {
+    title: "Objektleiter/in (m/w/d)",
+    type: "Vollzeit",
+    location: "Hamburg",
+    description:
+      "Übernehmen Sie Verantwortung für unsere Reinigungsobjekte und führen Sie ein motiviertes Team.",
+    tasks: [
+      "Leitung und Koordination von Reinigungsteams",
+      "Qualitätskontrolle und Kundenkommunikation",
+      "Einarbeitung neuer Mitarbeiter/innen",
+    ],
+  },
+  {
+    title: "Glasreiniger/in (m/w/d)",
+    type: "Vollzeit / Teilzeit",
+    location: "Hamburg",
+    description:
+      "Professionelle Glas- und Rahmenreinigung an verschiedenen Standorten in Hamburg.",
+    tasks: [
+      "Glas- und Rahmenreinigung (innen & außen)",
+      "Fassadenreinigung im Osmoseverfahren",
+      "Pflege und Wartung der Arbeitsmittel",
+    ],
+  },
+];
+
+const benefits = [
+  "Faire Bezahlung & pünktliche Lohnzahlung",
+  "Familiäres Arbeitsumfeld",
+  "Flexible Arbeitszeiten",
+  "Einarbeitung & Weiterbildung",
+  "Langfristige Beschäftigung",
+  "Moderne Arbeitsmittel",
+];
+
+const JobsSection = () => {
+  const { toast } = useToast();
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    position: "",
+    message: "",
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const name = form.name.trim();
+    const email = form.email.trim();
+    const message = form.message.trim();
+
+    if (!name || !email || !message) {
+      toast({
+        title: "Bitte füllen Sie alle Pflichtfelder aus.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    const subject = encodeURIComponent(
+      `Bewerbung von ${name}${form.position ? ` – ${form.position}` : ""}`
+    );
+    const body = encodeURIComponent(
+      `Name: ${name}\nE-Mail: ${email}\nTelefon: ${form.phone.trim() || "–"}\nGewünschte Stelle: ${form.position.trim() || "–"}\n\nNachricht:\n${message}`
+    );
+    window.location.href = `mailto:info@cleanandpure.de?subject=${subject}&body=${body}`;
+
+    toast({ title: "Ihr E-Mail-Programm wird geöffnet." });
+    setForm({ name: "", email: "", phone: "", position: "", message: "" });
+  };
+
+  return (
+    <section id="jobs" className="py-20 bg-muted/30">
+      <div className="mx-auto max-w-[1400px] px-6">
+        {/* Section Header */}
+        <p className="text-sm font-medium text-primary tracking-[0.2em] uppercase text-center mb-4">
+          Karriere
+        </p>
+        <h2 className="text-3xl md:text-4xl font-bold text-center tracking-wide mb-4">
+          Werden Sie Teil unseres Teams
+        </h2>
+        <p className="text-center text-muted-foreground mb-14 max-w-2xl mx-auto">
+          Wir suchen engagierte Mitarbeiter/innen, die unser familiäres Team verstärken möchten.
+          Bewerben Sie sich jetzt – wir freuen uns auf Sie!
+        </p>
+
+        {/* Benefits Bar */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 mb-14">
+          {benefits.map((b) => (
+            <div
+              key={b}
+              className="flex items-center gap-2 rounded-lg bg-background border p-3 text-sm"
+            >
+              <CheckCircle className="w-4 h-4 text-primary shrink-0" />
+              <span className="text-muted-foreground leading-tight">{b}</span>
+            </div>
+          ))}
+        </div>
+
+        <div className="grid lg:grid-cols-5 gap-10 items-start">
+          {/* Job Listings – left */}
+          <div className="lg:col-span-3 space-y-5">
+            <h3 className="text-lg font-bold tracking-wide flex items-center gap-2 mb-2">
+              <Briefcase className="w-5 h-5 text-primary" />
+              Offene Stellen
+            </h3>
+            {jobListings.map((job) => (
+              <Card key={job.title} className="border shadow-sm hover:shadow-md transition-shadow">
+                <CardContent className="p-6">
+                  <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
+                    <h4 className="text-base font-bold tracking-wide">{job.title}</h4>
+                    <div className="flex gap-3 text-xs text-muted-foreground">
+                      <span className="flex items-center gap-1">
+                        <Clock className="w-3.5 h-3.5" />
+                        {job.type}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <MapPin className="w-3.5 h-3.5" />
+                        {job.location}
+                      </span>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-3">{job.description}</p>
+                  <ul className="space-y-1.5">
+                    {job.tasks.map((t) => (
+                      <li key={t} className="flex items-start gap-2 text-sm">
+                        <Star className="w-3.5 h-3.5 text-primary mt-0.5 shrink-0" />
+                        <span>{t}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          {/* Application Form – right */}
+          <Card className="lg:col-span-2 border-0 shadow-2xl sticky top-36">
+            <CardContent className="p-8">
+              <h3 className="text-xl font-bold tracking-wide mb-1 flex items-center gap-2">
+                <Users className="w-5 h-5 text-primary" />
+                Jetzt bewerben
+              </h3>
+              <p className="text-muted-foreground text-sm mb-6">
+                Senden Sie uns Ihre Bewerbung – wir melden uns zeitnah bei Ihnen.
+              </p>
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <Input
+                  placeholder="Ihr Name *"
+                  maxLength={100}
+                  value={form.name}
+                  onChange={(e) => setForm({ ...form, name: e.target.value })}
+                />
+                <Input
+                  type="email"
+                  placeholder="Ihre E-Mail *"
+                  maxLength={255}
+                  value={form.email}
+                  onChange={(e) => setForm({ ...form, email: e.target.value })}
+                />
+                <Input
+                  type="tel"
+                  placeholder="Telefonnummer (optional)"
+                  maxLength={30}
+                  value={form.phone}
+                  onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                />
+                <Input
+                  placeholder="Gewünschte Stelle (optional)"
+                  maxLength={100}
+                  value={form.position}
+                  onChange={(e) => setForm({ ...form, position: e.target.value })}
+                />
+                <Textarea
+                  placeholder="Ihre Nachricht / Kurzvorstellung *"
+                  maxLength={2000}
+                  rows={5}
+                  value={form.message}
+                  onChange={(e) => setForm({ ...form, message: e.target.value })}
+                  className="resize-none"
+                />
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="w-full text-base font-semibold tracking-wide"
+                >
+                  Bewerbung absenden
+                  <Send className="ml-2 w-5 h-5" />
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default JobsSection;
