@@ -16,15 +16,13 @@ const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-background border-b shadow-sm">
-      <div className="mx-auto max-w-[1400px] px-6 flex items-center justify-between h-24">
-        {/* Logo */}
-        <a href="#home" className="flex items-center -my-2">
+    <header className="sticky top-0 z-50 border-b bg-background shadow-sm">
+      <div className="mx-auto flex h-24 max-w-[1400px] items-center justify-between px-6">
+        <a href="#home" className="flex items-center">
           <img
             src={logo}
             alt="Clean & Pure GmbH"
-            className="h-24 w-auto object-contain"
-            style={{ mixBlendMode: 'multiply' }}
+            className="h-20 w-auto object-contain sm:h-24"
           />
         </a>
 
