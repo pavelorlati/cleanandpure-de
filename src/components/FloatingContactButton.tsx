@@ -69,7 +69,7 @@ const FloatingContactButton = () => {
             <Phone className="w-6 h-6" />
           </a>
           <a
-            href="https://www.instagram.com/cleanandpure.de/"
+            href="https://www.instagram.com/cleanandpure_gebaeudereinigung/"
             target="_blank"
             rel="noopener noreferrer"
             className={`w-14 h-14 rounded-full ${bgClass} flex items-center justify-center transition-all duration-300 hover:scale-110`}
