@@ -91,17 +91,19 @@ const FloatingContactButton = () => {
 
       <button
         onClick={() => setOpen(!open)}
-        className={`w-12 h-20 md:w-16 md:h-16 rounded-l-2xl ${bgClass} flex items-center justify-center transition-all duration-300 hover:opacity-90`}
+        className={`w-10 h-28 md:w-12 md:h-32 rounded-l-2xl ${bgClass} flex items-center justify-center transition-all duration-300 hover:opacity-90`}
         style={{ boxShadow: glowColor }}
         aria-label="Kontakt öffnen"
       >
         {open ? (
-          <X className="w-7 h-7" />
+          <X className="w-6 h-6" />
         ) : (
-          <div className="flex flex-col items-center gap-0.5">
-            <Phone className="w-6 h-6" />
-            <span className="text-[9px] font-bold tracking-wider uppercase">Kontakt</span>
-          </div>
+          <span
+            className="text-[11px] md:text-xs font-bold tracking-[0.2em] uppercase"
+            style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}
+          >
+            Kontakt
+          </span>
         )}
       </button>
     </div>
