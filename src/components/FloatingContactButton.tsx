@@ -91,7 +91,7 @@ const FloatingContactButton = () => {
 
       <button
         onClick={() => setOpen(!open)}
-        className={`w-16 h-16 rounded-l-2xl ${bgClass} flex items-center justify-center transition-all duration-300 hover:opacity-90`}
+        className={`w-16 h-16 md:w-16 md:h-16 w-12 h-20 rounded-l-2xl ${bgClass} flex items-center justify-center transition-all duration-300 hover:opacity-90`}
         style={{ boxShadow: glowColor }}
         aria-label="Kontakt öffnen"
       >
