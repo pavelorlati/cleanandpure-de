@@ -8,9 +8,11 @@ import CustomerSegments from "@/components/CustomerSegments";
 import WhyUsSection from "@/components/WhyUsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import FloatingContactButton from "@/components/FloatingContactButton";
 
 const Index = () => (
   <div className="min-h-screen">
+    <FloatingContactButton />
     <Header />
     <HeroSection />
     <QuickAccessCards />
