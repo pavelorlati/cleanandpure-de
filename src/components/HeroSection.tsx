@@ -25,13 +25,13 @@ const HeroSection = () => (
           Wir sind ein familiengeführtes Dienstleistungsunternehmen aus Hamburg und bieten professionelle Reinigungslösungen für Privat- und Gewerbekunden.
         </p>
         <div className="flex flex-wrap gap-4 pt-4">
-          <Button size="lg" variant="secondary" className="text-base font-semibold tracking-wide" asChild>
+          <Button size="lg" className="text-base font-semibold tracking-wide bg-primary text-primary-foreground hover:bg-primary/90" asChild>
             <a href="#contact">
               Jetzt Angebot anfragen
               <ArrowRight className="ml-2 w-5 h-5" />
             </a>
           </Button>
-          <Button size="lg" variant="outline" className="text-base font-semibold tracking-wide border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground" asChild>
+          <Button size="lg" variant="outline" className="text-base font-semibold tracking-wide border-primary text-primary bg-transparent hover:bg-primary/10" asChild>
             <a href="#services">Unsere Leistungen</a>
           </Button>
         </div>
