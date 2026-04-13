@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const navItems = [
   { label: "Startseite", href: "#home" },
@@ -18,14 +19,8 @@ const Header = () => {
     <header className="sticky top-0 z-50 bg-background border-b shadow-sm">
       <div className="mx-auto max-w-[1400px] px-6 flex items-center justify-between h-20">
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-lg">C</span>
-          </div>
-          <div>
-            <span className="text-xl font-bold tracking-wider text-foreground">Clean & Pure</span>
-            <span className="block text-xs text-muted-foreground tracking-widest uppercase">Gebäudereinigung</span>
-          </div>
+        <a href="#home" className="flex items-center">
+          <img src={logo} alt="Clean & Pure GmbH" className="h-16 w-auto" />
         </a>
 
         {/* Desktop Nav */}
