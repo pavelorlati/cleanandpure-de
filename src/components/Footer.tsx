@@ -1,4 +1,14 @@
 import { Phone, Mail, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const navLinks = [
+  { label: "Startseite", to: "/" },
+  { label: "Über uns", to: "/ueber-uns" },
+  { label: "Leistungen", to: "/leistungen" },
+  { label: "Referenzen", to: "/referenzen" },
+  { label: "Jobs", to: "/jobs" },
+  { label: "Kontakt", to: "/kontakt" },
+];
 
 const Footer = () => (
   <footer className="bg-foreground text-background py-16">
@@ -6,14 +16,9 @@ const Footer = () => (
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
         {/* Brand */}
         <div className="space-y-4">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">C</span>
-            </div>
-            <span className="text-xl font-bold tracking-wider">Clean & Pure</span>
-          </div>
+          <span className="text-xl font-bold tracking-wider">Clean & Pure</span>
           <p className="text-sm text-background/60 leading-relaxed">
-            Ihr familiengeführter Gebäudedienstleister aus Hamburg – professionell, zuverlässig und mit Herz.
+            Ihr familiengeführter Gebäudedienstleister aus Hamburg – professionell und zuverlässig.
           </p>
         </div>
 
@@ -21,11 +26,11 @@ const Footer = () => (
         <div>
           <h4 className="font-semibold tracking-wider text-sm uppercase mb-4">Navigation</h4>
           <ul className="space-y-2 text-sm text-background/60">
-            {["Startseite", "Über uns", "Leistungen", "Referenzen", "Jobs", "Kontakt"].map((item) => (
-              <li key={item}>
-                <a href={`#${item.toLowerCase().replace(/\s/g, "").replace("ü", "u")}`} className="hover:text-primary transition-colors">
-                  {item}
-                </a>
+            {navLinks.map((item) => (
+              <li key={item.to}>
+                <Link to={item.to} className="hover:text-primary transition-colors">
+                  {item.label}
+                </Link>
               </li>
             ))}
           </ul>

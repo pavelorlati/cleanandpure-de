@@ -1,53 +1,55 @@
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { NavLink, Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const navItems = [
-  { label: "Startseite", href: "#home" },
-  { label: "Über uns", href: "#about" },
-  { label: "Leistungen", href: "#services" },
-  { label: "Referenzen", href: "#references" },
-  { label: "Jobs", href: "#jobs" },
-  { label: "Kontakt", href: "#contact" },
+  { label: "Startseite", to: "/" },
+  { label: "Über uns", to: "/ueber-uns" },
+  { label: "Leistungen", to: "/leistungen" },
+  { label: "Referenzen", to: "/referenzen" },
+  { label: "Jobs", to: "/jobs" },
+  { label: "Kontakt", to: "/kontakt" },
 ];
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b bg-background shadow-sm">
+    <header className="sticky top-0 z-50 border-b bg-background">
       <div className="mx-auto flex h-28 max-w-[1400px] items-center justify-between px-6">
-        <a href="#home" className="flex items-center py-1">
+        <Link to="/" className="flex items-center py-1">
           <img
             src={logo}
             alt="Clean & Pure GmbH"
             className="h-24 w-auto object-contain sm:h-28"
           />
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-8">
           {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors tracking-wider uppercase"
+            <NavLink
+              key={item.to}
+              to={item.to}
+              end={item.to === "/"}
+              className={({ isActive }) =>
+                `text-sm font-medium tracking-wider uppercase transition-colors ${
+                  isActive ? "text-primary" : "text-muted-foreground hover:text-primary"
+                }`
+              }
             >
               {item.label}
-            </a>
+            </NavLink>
           ))}
         </nav>
 
-        {/* CTA + Mobile Toggle */}
+        {/* Phone + Mobile Toggle */}
         <div className="flex items-center gap-4">
           <a href="tel:04035966171" className="hidden sm:flex items-center gap-2 text-sm font-medium text-primary">
             <Phone className="w-4 h-4" />
             040/35 96 61 71
           </a>
-          <Button className="hidden md:inline-flex" asChild>
-            <a href="#contact">Angebot anfragen</a>
-          </Button>
           <button
             className="lg:hidden p-2"
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -62,18 +64,20 @@ const Header = () => {
       {mobileOpen && (
         <nav className="lg:hidden border-t bg-background px-6 pb-6 pt-4 space-y-4">
           {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
+            <NavLink
+              key={item.to}
+              to={item.to}
+              end={item.to === "/"}
               onClick={() => setMobileOpen(false)}
-              className="block text-sm font-medium text-muted-foreground hover:text-primary tracking-wider uppercase"
+              className={({ isActive }) =>
+                `block text-sm font-medium tracking-wider uppercase ${
+                  isActive ? "text-primary" : "text-muted-foreground hover:text-primary"
+                }`
+              }
             >
               {item.label}
-            </a>
+            </NavLink>
           ))}
-          <Button className="w-full" asChild>
-            <a href="#contact">Angebot anfragen</a>
-          </Button>
         </nav>
       )}
     </header>

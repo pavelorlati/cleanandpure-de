@@ -1,17 +1,19 @@
 import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
 import Footer from "@/components/Footer";
 import FloatingContactButton from "@/components/FloatingContactButton";
+import AboutSection from "@/components/AboutSection";
+import WhyUsSection from "@/components/WhyUsSection";
 
-const Index = () => (
+const UeberUns = () => (
   <div className="min-h-screen flex flex-col">
     <FloatingContactButton />
     <Header />
     <main className="flex-1">
-      <HeroSection />
+      <AboutSection />
+      <WhyUsSection />
     </main>
     <Footer />
   </div>
 );
 
-export default Index;
+export default UeberUns;

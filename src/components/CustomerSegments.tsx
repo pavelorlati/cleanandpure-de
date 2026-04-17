@@ -1,6 +1,3 @@
-import { Home, Building2, CheckCircle2 } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
 const privatServices = [
   "Haushaltsreinigung",
   "Fenster- & Glasreinigung",
@@ -21,55 +18,37 @@ const gewerbeServices = [
   "Bodensanierung",
 ];
 
+const SegmentList = ({ items }: { items: string[] }) => (
+  <ul className="space-y-3">
+    {items.map((s) => (
+      <li key={s} className="flex items-baseline gap-3">
+        <span className="w-4 h-px bg-primary shrink-0 translate-y-[-4px]" />
+        <span className="text-sm tracking-wide">{s}</span>
+      </li>
+    ))}
+  </ul>
+);
+
 const CustomerSegments = () => (
-  <section className="py-20 bg-muted">
+  <section className="py-24 bg-background border-t border-border">
     <div className="mx-auto max-w-[1400px] px-6">
-      <p className="text-sm font-medium text-primary tracking-[0.2em] uppercase text-center mb-4">
+      <p className="text-sm font-medium text-primary tracking-[0.25em] uppercase text-center mb-4">
         Für jeden das Richtige
       </p>
-      <h2 className="text-3xl md:text-4xl font-bold text-center tracking-wide mb-14">
+      <h2 className="text-3xl md:text-4xl font-bold text-center tracking-wide mb-16">
         Privat- & Gewerbekunden
       </h2>
-      <div className="grid md:grid-cols-2 gap-8">
-        <Card className="border-0 shadow-md">
-          <CardHeader>
-            <div className="w-14 h-14 rounded-xl bg-accent flex items-center justify-center mb-2">
-              <Home className="w-7 h-7 text-primary" />
-            </div>
-            <CardTitle className="text-xl tracking-wide">Für Privatkunden</CardTitle>
-            <p className="text-sm text-muted-foreground">Sauberkeit und Wohlbefinden für Ihr Zuhause</p>
-          </CardHeader>
-          <CardContent>
-            <ul className="space-y-3">
-              {privatServices.map((s) => (
-                <li key={s} className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
-                  <span className="text-sm tracking-wide">{s}</span>
-                </li>
-              ))}
-            </ul>
-          </CardContent>
-        </Card>
-
-        <Card className="border-0 shadow-md">
-          <CardHeader>
-            <div className="w-14 h-14 rounded-xl bg-accent flex items-center justify-center mb-2">
-              <Building2 className="w-7 h-7 text-primary" />
-            </div>
-            <CardTitle className="text-xl tracking-wide">Für Gewerbekunden</CardTitle>
-            <p className="text-sm text-muted-foreground">Professionelle Reinigung für Ihr Unternehmen</p>
-          </CardHeader>
-          <CardContent>
-            <ul className="space-y-3">
-              {gewerbeServices.map((s) => (
-                <li key={s} className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
-                  <span className="text-sm tracking-wide">{s}</span>
-                </li>
-              ))}
-            </ul>
-          </CardContent>
-        </Card>
+      <div className="grid md:grid-cols-2 gap-16 max-w-4xl mx-auto">
+        <div>
+          <h3 className="text-xl font-semibold tracking-wide mb-2">Für Privatkunden</h3>
+          <p className="text-sm text-muted-foreground mb-6">Sauberkeit und Wohlbefinden für Ihr Zuhause</p>
+          <SegmentList items={privatServices} />
+        </div>
+        <div>
+          <h3 className="text-xl font-semibold tracking-wide mb-2">Für Gewerbekunden</h3>
+          <p className="text-sm text-muted-foreground mb-6">Professionelle Reinigung für Ihr Unternehmen</p>
+          <SegmentList items={gewerbeServices} />
+        </div>
       </div>
     </div>
   </section>
