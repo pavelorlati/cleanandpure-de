@@ -1,3 +1,5 @@
+import { Check } from "lucide-react";
+
 const unterhaltsreinigung = [
   "Shopreinigung",
   "Büroreinigung",
@@ -20,11 +22,16 @@ const sonderreinigung = [
   "Bodensanierung / -Versiegelung",
 ];
 
-const ServiceList = ({ items }: { items: string[] }) => (
-  <ul className="space-y-3">
+const ServiceGrid = ({ items }: { items: string[] }) => (
+  <ul className="grid grid-cols-2 gap-x-6 gap-y-3">
     {items.map((item) => (
-      <li key={item} className="flex items-baseline gap-3 text-foreground">
-        <span className="w-4 h-px bg-primary shrink-0 translate-y-[-4px]" />
+      <li
+        key={item}
+        className="flex items-center gap-3 text-foreground rounded-md px-3 py-2 bg-background hover:bg-primary/5 transition-colors"
+      >
+        <span className="flex items-center justify-center w-6 h-6 rounded-full bg-primary/10 text-primary shrink-0">
+          <Check className="w-3.5 h-3.5" strokeWidth={3} />
+        </span>
         <span className="text-sm tracking-wide">{item}</span>
       </li>
     ))}
@@ -38,24 +45,30 @@ const ServicesSection = () => (
         Unsere Leistungen
       </p>
       <h2 className="text-3xl md:text-4xl font-bold text-center tracking-wide mb-4">
-        Professionelle Reinigung aus einer Hand
+        Professionelle Reinigung <span className="text-primary">aus einer Hand</span>
       </h2>
       <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
         Von der regelmäßigen Unterhaltsreinigung bis zur spezialisierten Sonderreinigung – wir haben die passende Lösung für Sie.
       </p>
 
-      <div className="grid md:grid-cols-2 gap-16 max-w-4xl mx-auto">
-        <div>
-          <h3 className="text-xl font-semibold tracking-wide mb-6 pb-3 border-b border-border">
-            Unterhaltsreinigung
-          </h3>
-          <ServiceList items={unterhaltsreinigung} />
+      <div className="grid lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
+        <div className="rounded-2xl border border-border bg-secondary/30 p-8 md:p-10">
+          <div className="flex items-center gap-3 mb-8 pb-4 border-b border-primary/20">
+            <span className="w-1.5 h-8 rounded-full bg-primary" />
+            <h3 className="text-xl font-semibold tracking-wide">
+              Unterhaltsreinigung
+            </h3>
+          </div>
+          <ServiceGrid items={unterhaltsreinigung} />
         </div>
-        <div>
-          <h3 className="text-xl font-semibold tracking-wide mb-6 pb-3 border-b border-border">
-            Sonderreinigung
-          </h3>
-          <ServiceList items={sonderreinigung} />
+        <div className="rounded-2xl border border-border bg-primary/5 p-8 md:p-10">
+          <div className="flex items-center gap-3 mb-8 pb-4 border-b border-primary/20">
+            <span className="w-1.5 h-8 rounded-full bg-primary" />
+            <h3 className="text-xl font-semibold tracking-wide">
+              Sonderreinigung
+            </h3>
+          </div>
+          <ServiceGrid items={sonderreinigung} />
         </div>
       </div>
     </div>
