@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, Instagram } from "lucide-react";
 import { NavLink, Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
@@ -49,6 +49,15 @@ const Header = () => {
           <a href="tel:04035966171" className="hidden sm:flex items-center gap-2 text-sm font-medium text-primary">
             <Phone className="w-4 h-4" />
             040/35 96 61 71
+          </a>
+          <a
+            href="https://www.instagram.com/cleanandpure_gebaeudereinigung/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="hidden sm:inline-flex items-center justify-center w-9 h-9 rounded-full bg-background text-primary border border-primary/30 hover:bg-primary hover:text-primary-foreground transition-colors"
+          >
+            <Instagram className="w-4 h-4" />
           </a>
           <button
             className="lg:hidden p-2"
