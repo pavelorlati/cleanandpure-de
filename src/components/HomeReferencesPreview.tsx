@@ -12,13 +12,13 @@ const previews = [
 ];
 
 const HomeReferencesPreview = () => (
-  <section className="py-24 border-t border-border">
+  <section className="py-24 bg-secondary/40">
     <div className="container mx-auto px-6">
       <div className="grid md:grid-cols-2 gap-16 items-center">
         <div>
-          <p className="text-sm uppercase tracking-widest text-primary mb-4">Referenzen</p>
+          <p className="text-sm uppercase tracking-[0.25em] text-primary mb-4 font-medium">Referenzen</p>
           <h2 className="text-3xl md:text-4xl font-light mb-6 leading-tight">
-            Einblicke in unsere Arbeit
+            Einblicke in <span className="text-primary font-normal">unsere Arbeit</span>
           </h2>
           <p className="text-muted-foreground mb-8 leading-relaxed">
             Ein kleiner Auszug aus den Objekten, die wir regelmäßig betreuen –
@@ -26,7 +26,7 @@ const HomeReferencesPreview = () => (
           </p>
           <Link
             to="/referenzen"
-            className="text-primary hover:underline underline-offset-4"
+            className="inline-block text-primary hover:underline underline-offset-4 font-medium"
           >
             Alle Referenzen ansehen →
           </Link>
