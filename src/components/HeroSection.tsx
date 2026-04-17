@@ -12,17 +12,19 @@ const HeroSection = () => (
       width={1920}
       height={1080}
     />
-    <div className="absolute inset-0 bg-black/75" />
-    <div className="relative mx-auto max-w-[1400px] px-6 py-32 md:py-44 lg:py-52">
-      <div className="max-w-2xl space-y-8">
-        <p className="text-primary-foreground/70 text-sm font-medium tracking-[0.25em] uppercase">
-          Ihr Partner für Sauberkeit in Hamburg
+    <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30" />
+    <div className="relative mx-auto max-w-[1400px] px-6 py-36 md:py-52 lg:py-64">
+      <div className="max-w-2xl space-y-10">
+        <p className="text-primary text-xs md:text-sm font-medium tracking-[0.3em] uppercase">
+          Gebäudereinigung Hamburg
         </p>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight tracking-wide">
-          Herzlich Willkommen bei{" "}
-          <span className="text-primary">Clean&nbsp;&amp;&nbsp;Pure</span>
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-primary-foreground leading-[1.05] tracking-tight">
+          Sauberkeit,<br />die man <span className="font-normal text-primary">sieht</span>.
         </h1>
-        <div className="flex flex-wrap gap-4 pt-4">
+        <p className="text-base md:text-lg text-primary-foreground/80 max-w-xl leading-relaxed font-light">
+          Clean &amp; Pure steht für zuverlässige, gründliche Reinigung – seit Jahren der vertrauensvolle Partner für Unternehmen in Hamburg.
+        </p>
+        <div className="flex flex-wrap gap-4 pt-2">
           <Button size="lg" className="text-base font-semibold tracking-wide bg-primary text-primary-foreground hover:bg-primary/90" asChild>
             <Link to="/kontakt">
               Jetzt Angebot anfragen
