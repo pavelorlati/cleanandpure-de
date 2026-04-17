@@ -1,64 +1,86 @@
 
-# Clean & Pure Gebäudereinigung – Website
 
-Website für das Reinigungsunternehmen Clean & Pure GmbH aus Hamburg, mit Inhalten von cleanandpure.de und dem professionellen Layout-Stil von vblh.de (klare Struktur, großzügige Abstände, moderne Typografie, Card-basierte Abschnitte).
+## Plan: Multi-Page-Umbau & Minimalismus-Redesign
 
-## Aufbau der Seite
+Ich strukturiere die Website von einer One-Page in eine **mehrseitige Anwendung** um und entschlacke das Design radikal, damit es professioneller und seriöser wirkt.
 
-### 1. Header / Navigation
-- Logo-Bereich links mit Firmenname "Clean & Pure GmbH"
-- Horizontale Navigation: Startseite, Über uns, Leistungen, Referenzen, Jobs, Kontakt
-- Sauberes, professionelles Design mit weißem Hintergrund wie bei vblh.de
+### 1. Multi-Page-Struktur (React Router)
 
-### 2. Hero-Bereich
-- Großes Bannerbild (Reinigungsthema) mit Text-Overlay auf farbigem Hintergrund (Petrol/Türkis-Ton passend zur Marke)
-- Überschrift: "Herzlich Willkommen bei Clean & Pure Gebäudereinigung"
-- Untertext: "Wir sind ein familiengeführtes Dienstleistungsunternehmen aus Hamburg"
-- CTA-Button: "Jetzt Angebot anfragen"
+Neue Routen in `src/App.tsx`:
+```text
+/              → Startseite (Hero + minimaler Quick Access)
+/ueber-uns     → Über uns
+/leistungen    → Leistungen + Kundensegmente
+/referenzen    → Referenzen
+/jobs          → Jobs + Bewerbungsformular
+/kontakt       → Kontakt + Formular
+```
 
-### 3. Schnellzugriff-Karten (wie "Was können wir für Sie tun?" bei vblh.de)
-- 4 Karten nebeneinander mit Icons:
-  - Kostenlose Beratung
-  - Unterhaltsreinigung
-  - Sonderreinigung
-  - Kontakt aufnehmen
-- Jede Karte mit kurzem Text und Pfeil-Link
+Header-Navigation: Hash-Links (`#about`) → Router-Links (`/ueber-uns`). Aktiver Link wird hervorgehoben.
 
-### 4. Über uns / Slogan-Bereich
-- "Ihr Gebäudedienstleister mit 💚"
-- Beschreibungstext über das Team und die maßgeschneiderten Reinigungskonzepte
+### 2. Startseite radikal vereinfachen
 
-### 5. Leistungsübersicht (Zwei-Spalten-Layout)
-- **Unterhaltsreinigung**: Shopreinigung, Büroreinigung, Hotelreinigung, Praxisreinigung, Außenreinigung, Hygienereinigung, Haushaltsreinigung, Treppenhausreinigung
-- **Sonderreinigung**: Glasreinigung, Grundreinigung, Polsterreinigung, Bauendreinigung, Fassadenreinigung, Hausmeisterservice, Teppichgrundreinigung, Bodensanierung/-Versiegelung
+- **HeroSection**: Untertitel-Absatz ("Wir sind ein familiengeführtes…") **entfernen**. Nur Kicker, H1 und die zwei Buttons bleiben. Hintergrundbild dezenter.
+- **QuickAccessCards, AboutSection, ServicesSection, ReferencesSection, CustomerSegments, WhyUsSection, JobsSection, ContactSection** werden von der Startseite entfernt und in die jeweiligen Unterseiten verschoben.
+- Startseite zeigt nur: Header → Hero → Footer.
 
-### 6. Referenzen-Bereich (Bildergalerie)
-- Vorher/Nachher-Bilder als Platzhalter-Bereiche für:
-  - Polsterreinigung, Bodengrundreinigung, Fassadenreinigung, Glasreinigung etc.
+### 3. Header aufräumen
 
-### 7. Privat- & Gewerbekunden (Zwei-Spalten wie bei vblh.de)
-- Karte "Für Privatkunden" mit Leistungsliste
-- Karte "Für Gewerbekunden" mit Leistungsliste
+- "Angebot anfragen"-Button oben rechts **entfernen**.
+- Nur Logo + Navigation + Telefonnummer bleiben.
+- Mobile-Menü bleibt, aber ohne CTA-Button.
 
-### 8. Vorteile / "Warum Clean & Pure?" (nummerierte Liste wie bei vblh.de)
-- 1. Familiengeführt & persönlich
-- 2. Erfahrene Reinigungsprofis
-- 3. Maßgeschneiderte Konzepte
-- 4. Zuverlässig & flexibel
+### 4. Floating Contact Button beruhigen
 
-### 9. Kontakt-Bereich (Karten wie bei vblh.de Footer)
-- Telefon: 040/35 96 61 71
-- E-Mail: info@cleanandpure.de
-- Standort: Hamburg
-- Angebot anfragen (CTA)
+- Pulsier-/Blink-/Glow-Animation entfernen (kein `box-shadow`-Pulsing mehr, kein dynamischer Hintergrundwechsel).
+- Schlichter, statischer petrolfarbener Button mit vertikalem Text.
 
-### 10. Footer
-- Firmenname, Adresse, Kontaktdaten
-- Links zu den Unterseiten
-- Copyright
+### 5. ServicesSection: Card-Boxen entfernen
 
-## Design
-- **Farbschema**: Petrol/Türkis (#007B7F) als Primärfarbe (passend zur Clean & Pure Marke), Weiß, Dunkelgrau
-- **Typografie**: Klare Sans-Serif-Schrift, großzügige Zeichenabstände wie bei vblh.de
-- **Layout**: Maximale Breite ~1400px, zentriert, großzügiges Padding, Card-basierte Abschnitte mit leichten Schatten
-- **Responsive**: Mobile-optimiert mit Hamburger-Menü
+- Die zwei großen Card-Container (Unterhaltsreinigung / Sonderreinigung) **entfernen**.
+- Stattdessen: zwei schlichte Überschriften + Listen direkt auf weißem Hintergrund, ohne Rahmen, ohne Schatten, ohne Hintergrundfarbe.
+- Check-Icons durch dezente Striche/Bullets ersetzen (kein farbiges CheckCircle-Icon mehr).
+
+### 6. "Baukasten-Look" entfernen – generelle Entschlackung
+
+Diese Elemente wirken nach Website-Baukasten und werden überarbeitet:
+- **Großflächige farbige Banner-Header** in JobsSection (`bg-primary py-14`) → ersetzt durch schlichte Überschrift auf weißem Grund.
+- **Bunte Badges** (`bg-primary/10` Pills für Job-Typ/Ort) → ersetzt durch schlichten Grautext mit Trennzeichen.
+- **`border-l-4 border-l-primary`** Akzentränder an Job-Cards → entfernt, schlichte Trennlinien zwischen Einträgen stattdessen.
+- **Benefits-Bar mit Icon-Boxen** → schlichte Textliste.
+- **Floating Glow-Effekte** und übermäßige `shadow-2xl` → reduziert auf dezente `shadow-sm` oder ganz entfernt.
+- **QuickAccessCards** mit Hover-Skalierung → falls beibehalten, deutlich reduziert; ansonsten ganz weg.
+- **Großzügigere Whitespaces**, weniger Hintergrundfarben-Sektionen.
+
+### 7. Alle Emojis entfernen
+
+Codebase-Scan zeigt: Emojis kommen aktuell vor allem in Texten/Labels eventuell vor. Ich prüfe und entferne sie systematisch in:
+- `Footer.tsx`, `ContactSection.tsx`, `JobsSection.tsx`, `WhyUsSection.tsx`, `AboutSection.tsx`, `ServicesSection.tsx`, `CustomerSegments.tsx`, `ReferencesSection.tsx`, `QuickAccessCards.tsx`.
+
+Lucide-Icons (SVG) sind **keine Emojis** und bleiben dort, wo sie funktional sinnvoll sind (z. B. Telefon-Icon neben Nummer). An dekorativen Stellen werden sie ebenfalls reduziert.
+
+### 8. Betroffene Dateien
+
+- `src/App.tsx` – neue Routen
+- `src/pages/Index.tsx` – nur noch Hero
+- `src/pages/UeberUns.tsx` *(neu)*
+- `src/pages/Leistungen.tsx` *(neu)*
+- `src/pages/Referenzen.tsx` *(neu)*
+- `src/pages/Jobs.tsx` *(neu)*
+- `src/pages/Kontakt.tsx` *(neu)*
+- `src/components/Header.tsx` – Router-Links, CTA weg
+- `src/components/HeroSection.tsx` – Text raus
+- `src/components/ServicesSection.tsx` – Cards raus, Listen pur
+- `src/components/JobsSection.tsx` – Banner-Header & Badges raus, schlichter
+- `src/components/FloatingContactButton.tsx` – Animationen weg
+- `src/components/Footer.tsx` – Links auf Routen umstellen
+- evtl. `src/components/QuickAccessCards.tsx`, `WhyUsSection.tsx`, `CustomerSegments.tsx` – Stilanpassungen
+
+### 9. Design-Prinzipien danach
+
+- Viel Weißraum, minimal Hintergrundfarben.
+- Petrol nur noch als gezielter Akzent (Links, Hauptbutton, Logo).
+- Keine pulsierenden/glowenden Effekte.
+- Keine bunten Pills/Badges/Banner.
+- Typografie trägt das Design, nicht Farben oder Boxen.
+
