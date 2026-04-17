@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const navLinks = [
@@ -61,6 +61,17 @@ const Footer = () => (
             <li className="flex items-center gap-2">
               <MapPin className="w-4 h-4 text-primary" />
               Hamburg
+            </li>
+            <li className="flex items-center gap-2">
+              <Instagram className="w-4 h-4 text-primary" />
+              <a
+                href="https://www.instagram.com/cleanandpure_gebaeudereinigung"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors"
+              >
+                @cleanandpure_gebaeudereinigung
+              </a>
             </li>
           </ul>
         </div>
