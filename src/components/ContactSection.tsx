@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Mail, MapPin, ArrowRight, Send } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowRight, Send, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -27,6 +27,13 @@ const contactCards = [
     value: "Hamburg",
     href: "#",
     action: "Auf Karte ansehen",
+  },
+  {
+    icon: Instagram,
+    title: "Instagram",
+    value: "@cleanandpure_gebaeudereinigung",
+    href: "https://www.instagram.com/cleanandpure_gebaeudereinigung",
+    action: "Auf Instagram folgen",
   },
 ];
 
