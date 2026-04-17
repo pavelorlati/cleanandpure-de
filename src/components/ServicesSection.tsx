@@ -1,6 +1,3 @@
-import { CheckCircle2 } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
 const unterhaltsreinigung = [
   "Shopreinigung",
   "Büroreinigung",
@@ -23,59 +20,43 @@ const sonderreinigung = [
   "Bodensanierung / -Versiegelung",
 ];
 
+const ServiceList = ({ items }: { items: string[] }) => (
+  <ul className="space-y-3">
+    {items.map((item) => (
+      <li key={item} className="flex items-baseline gap-3 text-foreground">
+        <span className="w-4 h-px bg-primary shrink-0 translate-y-[-4px]" />
+        <span className="text-sm tracking-wide">{item}</span>
+      </li>
+    ))}
+  </ul>
+);
+
 const ServicesSection = () => (
-  <section id="services" className="py-20 bg-muted">
+  <section id="services" className="py-24 bg-background">
     <div className="mx-auto max-w-[1400px] px-6">
-      <p className="text-sm font-medium text-primary tracking-[0.2em] uppercase text-center mb-4">
+      <p className="text-sm font-medium text-primary tracking-[0.25em] uppercase text-center mb-4">
         Unsere Leistungen
       </p>
       <h2 className="text-3xl md:text-4xl font-bold text-center tracking-wide mb-4">
         Professionelle Reinigung aus einer Hand
       </h2>
-      <p className="text-center text-muted-foreground mb-14 max-w-2xl mx-auto">
+      <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
         Von der regelmäßigen Unterhaltsreinigung bis zur spezialisierten Sonderreinigung – wir haben die passende Lösung für Sie.
       </p>
 
-      <div className="grid md:grid-cols-2 gap-8">
-        <Card className="border-0 shadow-md">
-          <CardHeader className="pb-4">
-            <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-2">
-              <span className="text-2xl">🧹</span>
-            </div>
-            <CardTitle className="text-xl tracking-wide">Unterhaltsreinigung</CardTitle>
-            <p className="text-sm text-muted-foreground">Regelmäßige Reinigung für dauerhaft saubere Räumlichkeiten</p>
-          </CardHeader>
-          <CardContent>
-            <ul className="space-y-3">
-              {unterhaltsreinigung.map((item) => (
-                <li key={item} className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
-                  <span className="text-sm tracking-wide">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </CardContent>
-        </Card>
-
-        <Card className="border-0 shadow-md">
-          <CardHeader className="pb-4">
-            <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-2">
-              <span className="text-2xl">✨</span>
-            </div>
-            <CardTitle className="text-xl tracking-wide">Sonderreinigung</CardTitle>
-            <p className="text-sm text-muted-foreground">Spezialreinigungen für besondere Anforderungen</p>
-          </CardHeader>
-          <CardContent>
-            <ul className="space-y-3">
-              {sonderreinigung.map((item) => (
-                <li key={item} className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
-                  <span className="text-sm tracking-wide">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </CardContent>
-        </Card>
+      <div className="grid md:grid-cols-2 gap-16 max-w-4xl mx-auto">
+        <div>
+          <h3 className="text-xl font-semibold tracking-wide mb-6 pb-3 border-b border-border">
+            Unterhaltsreinigung
+          </h3>
+          <ServiceList items={unterhaltsreinigung} />
+        </div>
+        <div>
+          <h3 className="text-xl font-semibold tracking-wide mb-6 pb-3 border-b border-border">
+            Sonderreinigung
+          </h3>
+          <ServiceList items={sonderreinigung} />
+        </div>
       </div>
     </div>
   </section>

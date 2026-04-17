@@ -1,17 +1,17 @@
 import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
 import Footer from "@/components/Footer";
 import FloatingContactButton from "@/components/FloatingContactButton";
+import JobsSection from "@/components/JobsSection";
 
-const Index = () => (
+const Jobs = () => (
   <div className="min-h-screen flex flex-col">
     <FloatingContactButton />
     <Header />
     <main className="flex-1">
-      <HeroSection />
+      <JobsSection />
     </main>
     <Footer />
   </div>
 );
 
-export default Index;
+export default Jobs;
