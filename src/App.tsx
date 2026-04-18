@@ -9,6 +9,8 @@ import Leistungen from "./pages/Leistungen.tsx";
 import Referenzen from "./pages/Referenzen.tsx";
 import Jobs from "./pages/Jobs.tsx";
 import Kontakt from "./pages/Kontakt.tsx";
+import Impressum from "./pages/Impressum.tsx";
+import Datenschutz from "./pages/Datenschutz.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -26,6 +28,8 @@ const App = () => (
           <Route path="/referenzen" element={<Referenzen />} />
           <Route path="/jobs" element={<Jobs />} />
           <Route path="/kontakt" element={<Kontakt />} />
+          <Route path="/impressum" element={<Impressum />} />
+          <Route path="/datenschutz" element={<Datenschutz />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

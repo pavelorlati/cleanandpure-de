@@ -80,8 +80,8 @@ const Footer = () => (
       <div className="border-t border-background/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-background/40">
         <p>© {new Date().getFullYear()} Clean & Pure GmbH. Alle Rechte vorbehalten.</p>
         <div className="flex gap-6">
-          <a href="#" className="hover:text-primary transition-colors">Impressum</a>
-          <a href="#" className="hover:text-primary transition-colors">Datenschutz</a>
+          <Link to="/impressum" className="hover:text-primary transition-colors">Impressum</Link>
+          <Link to="/datenschutz" className="hover:text-primary transition-colors">Datenschutz</Link>
         </div>
       </div>
     </div>
