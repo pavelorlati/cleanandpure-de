@@ -83,21 +83,21 @@ const services = [
 const ServicesSection = () => (
   <section id="services" className="bg-background">
     {/* Intro */}
-    <div className="mx-auto max-w-[1400px] px-6 pt-24 pb-16">
-      <p className="text-sm font-medium text-primary tracking-[0.25em] uppercase mb-6">
+    <div className="mx-auto max-w-6xl px-6 pt-20 pb-12">
+      <p className="text-xs font-medium text-primary tracking-[0.3em] uppercase mb-5">
         Was wir für Sie leisten
       </p>
-      <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-10">
+      <h1 className="text-3xl md:text-5xl font-semibold tracking-tight mb-8 text-foreground">
         Alles aus einer Hand
       </h1>
-      <div className="grid md:grid-cols-2 gap-10 items-end border-t border-border pt-10">
-        <p className="text-lg text-muted-foreground max-w-xl">
+      <div className="grid md:grid-cols-[1fr_auto] gap-8 items-end border-t border-border pt-8">
+        <p className="text-base text-muted-foreground max-w-xl leading-relaxed">
           Vom täglichen Reinigungsservice bis zur Spezialreinigung – das komplette Spektrum
           professioneller Gebäudedienstleistungen in Hamburg.
         </p>
         <div className="md:text-right">
-          <span className="text-5xl font-bold text-primary align-middle">{services.length}</span>
-          <span className="ml-3 text-sm tracking-[0.25em] uppercase text-muted-foreground">
+          <span className="text-3xl font-semibold text-primary align-middle">{services.length}</span>
+          <span className="ml-3 text-xs tracking-[0.3em] uppercase text-muted-foreground">
             Leistungen
           </span>
         </div>
@@ -105,13 +105,13 @@ const ServicesSection = () => (
     </div>
 
     {/* List */}
-    <div className="mx-auto max-w-[1400px] px-6 pb-24 border-t border-border">
+    <div className="mx-auto max-w-6xl px-6 pb-20 border-t border-border">
       {services.map((s, i) => (
         <article
           key={s.title}
-          className="group grid grid-cols-12 gap-6 md:gap-10 items-center py-8 border-b border-border transition-colors hover:bg-secondary/40"
+          className="group grid grid-cols-12 gap-5 md:gap-8 items-center py-7 border-b border-border transition-colors hover:bg-secondary/30"
         >
-          <div className="col-span-12 md:col-span-1 text-sm tracking-widest text-muted-foreground">
+          <div className="col-span-12 md:col-span-1 text-xs tracking-[0.25em] text-muted-foreground">
             {String(i + 1).padStart(2, "0")}
           </div>
           <div className="col-span-12 md:col-span-3">
@@ -125,18 +125,18 @@ const ServicesSection = () => (
             </div>
           </div>
           <div className="col-span-12 md:col-span-6">
-            <p className="text-xs font-medium text-primary tracking-[0.2em] uppercase mb-2">
+            <p className="text-[11px] font-medium text-primary tracking-[0.25em] uppercase mb-2">
               {s.kicker}
             </p>
-            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-3">
+            <h2 className="text-lg md:text-xl font-semibold tracking-tight mb-2 text-foreground">
               {s.title}
             </h2>
-            <p className="text-muted-foreground max-w-xl">{s.description}</p>
+            <p className="text-sm text-muted-foreground leading-relaxed max-w-lg">{s.description}</p>
           </div>
           <div className="col-span-12 md:col-span-2 md:text-right">
-            <span className="inline-flex items-center gap-2 text-sm font-medium text-primary tracking-wide">
+            <span className="inline-flex items-center gap-2 text-xs font-medium text-primary tracking-[0.15em] uppercase">
               Mehr erfahren
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
             </span>
           </div>
         </article>
@@ -144,20 +144,20 @@ const ServicesSection = () => (
     </div>
 
     {/* CTA */}
-    <div className="mx-auto max-w-[1400px] px-6 pb-24">
-      <div className="border-t border-border pt-16 text-center">
-        <h3 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
+    <div className="mx-auto max-w-6xl px-6 pb-24">
+      <div className="border-t border-border pt-14 text-center">
+        <h3 className="text-xl md:text-2xl font-semibold tracking-tight mb-3 text-foreground">
           Die passende Leistung nicht gefunden?
         </h3>
-        <p className="text-muted-foreground max-w-xl mx-auto mb-8">
+        <p className="text-sm text-muted-foreground max-w-md mx-auto mb-7 leading-relaxed">
           Sprechen Sie uns an – wir finden gemeinsam die optimale Lösung für Ihre Anforderungen.
         </p>
         <a
           href="/kontakt"
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-primary text-primary-foreground text-sm font-medium tracking-wide hover:opacity-90 transition-opacity"
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-primary text-primary-foreground text-xs font-medium tracking-[0.15em] uppercase hover:opacity-90 transition-opacity"
         >
           Jetzt Angebot anfordern
-          <ArrowRight className="w-4 h-4" />
+          <ArrowRight className="w-3.5 h-3.5" />
         </a>
       </div>
     </div>
