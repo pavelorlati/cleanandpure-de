@@ -1,75 +1,164 @@
-import { Check } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
-const unterhaltsreinigung = [
-  "Shopreinigung",
-  "Büroreinigung",
-  "Hotelreinigung",
-  "Praxisreinigung",
-  "Außenreinigung",
-  "Hygienereinigung",
-  "Haushaltsreinigung",
-  "Treppenhausreinigung",
+const services = [
+  {
+    image: "https://clean-pure.vercel.app/images/hero-mopping.png",
+    kicker: "Regelmäßig & verlässlich",
+    title: "Unterhaltsreinigung",
+    description:
+      "Täglich, wöchentlich oder nach individuellem Turnus – zuverlässig und termingerecht.",
+  },
+  {
+    image: "https://clean-pure.vercel.app/images/hero-buero.png",
+    kicker: "Hygienisch & professionell",
+    title: "Büroreinigung",
+    description:
+      "Professionelle Reinigung für Büros und Arbeitsräume – für ein hygienisches, produktives Arbeitsumfeld.",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
+    kicker: "Gäste begeistern",
+    title: "Hotelreinigung",
+    description:
+      "Diskrete, zuverlässige Reinigung für Hotels und Beherbergungsbetriebe nach höchsten Hygienestandards.",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800&q=80",
+    kicker: "Medizinische Standards",
+    title: "Praxis- & Hygienereinigung",
+    description:
+      "Spezialisierte Hygienereinigung für Arztpraxen, Zahnarztpraxen und medizinische Einrichtungen.",
+  },
+  {
+    image: "https://clean-pure.vercel.app/images/hero-glasreinigung.webp",
+    kicker: "Kristallklar",
+    title: "Glas- & Fassadenreinigung",
+    description:
+      "Streifenfreie Glas- und Fassadenreinigung für ein gepflegtes Erscheinungsbild Ihres Gebäudes.",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80",
+    kicker: "Intensive Tiefenpflege",
+    title: "Grund- & Sonderreinigung",
+    description:
+      "Intensive Tiefenreinigung für Räume, die eine gründliche Auffrischung und Intensivpflege benötigen.",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    kicker: "Textilpflege",
+    title: "Polster- & Teppichreinigung",
+    description:
+      "Professionelle Reinigung von Teppichböden, Polstermöbeln und textilen Belägen aller Art.",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
+    kicker: "Schutz & Glanz",
+    title: "Bodensanierung & Versiegelung",
+    description:
+      "Professionelle Bodenpflege, Sanierung und Versiegelung für alle Bodenbeläge und Oberflächen.",
+  },
+  {
+    image: "https://clean-pure.vercel.app/images/hero-sunset.png",
+    kicker: "Rundum-Betreuung",
+    title: "Hausmeisterservice",
+    description:
+      "Zuverlässiger Hausmeisterservice für Wartung, Pflege und technischen Betrieb Ihrer Immobilie.",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
+    kicker: "Übergabebereit",
+    title: "Bauendreinigung",
+    description:
+      "Professionelle Endreinigung nach Bau- und Renovierungsarbeiten für eine sofort nutzbare Immobilie.",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80",
+    kicker: "Gepflegte Gemeinschaftsflächen",
+    title: "Außen- & Treppenhausreinigung",
+    description:
+      "Reinigung von Treppenhäusern, Außenanlagen und Gemeinschaftsflächen für gepflegte Immobilien.",
+  },
 ];
-
-const sonderreinigung = [
-  "Glasreinigung",
-  "Grundreinigung",
-  "Polsterreinigung",
-  "Bauendreinigung",
-  "Fassadenreinigung",
-  "Hausmeisterservice",
-  "Teppichgrundreinigung",
-  "Bodensanierung / -Versiegelung",
-];
-
-const ServiceGrid = ({ items }: { items: string[] }) => (
-  <ul className="grid grid-cols-2 gap-x-6 gap-y-3">
-    {items.map((item) => (
-      <li
-        key={item}
-        className="flex items-center gap-3 text-foreground rounded-md px-3 py-2 bg-background hover:bg-primary/5 transition-colors"
-      >
-        <span className="flex items-center justify-center w-6 h-6 rounded-full bg-primary/10 text-primary shrink-0">
-          <Check className="w-3.5 h-3.5" strokeWidth={3} />
-        </span>
-        <span className="text-sm tracking-wide">{item}</span>
-      </li>
-    ))}
-  </ul>
-);
 
 const ServicesSection = () => (
-  <section id="services" className="py-24 bg-background">
-    <div className="mx-auto max-w-[1400px] px-6">
-      <p className="text-sm font-medium text-primary tracking-[0.25em] uppercase text-center mb-4">
-        Unsere Leistungen
+  <section id="services" className="bg-background">
+    {/* Intro */}
+    <div className="mx-auto max-w-[1400px] px-6 pt-24 pb-16">
+      <p className="text-sm font-medium text-primary tracking-[0.25em] uppercase mb-6">
+        Was wir für Sie leisten
       </p>
-      <h2 className="text-3xl md:text-4xl font-bold text-center tracking-wide mb-4">
-        Professionelle Reinigung <span className="text-primary">aus einer Hand</span>
-      </h2>
-      <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
-        Von der regelmäßigen Unterhaltsreinigung bis zur spezialisierten Sonderreinigung – wir haben die passende Lösung für Sie.
-      </p>
+      <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-10">
+        Alles aus einer Hand
+      </h1>
+      <div className="grid md:grid-cols-2 gap-10 items-end border-t border-border pt-10">
+        <p className="text-lg text-muted-foreground max-w-xl">
+          Vom täglichen Reinigungsservice bis zur Spezialreinigung – das komplette Spektrum
+          professioneller Gebäudedienstleistungen in Hamburg.
+        </p>
+        <div className="md:text-right">
+          <span className="text-5xl font-bold text-primary align-middle">{services.length}</span>
+          <span className="ml-3 text-sm tracking-[0.25em] uppercase text-muted-foreground">
+            Leistungen
+          </span>
+        </div>
+      </div>
+    </div>
 
-      <div className="grid lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
-        <div className="rounded-2xl border border-border bg-secondary/30 p-8 md:p-10">
-          <div className="flex items-center gap-3 mb-8 pb-4 border-b border-primary/20">
-            <span className="w-1.5 h-8 rounded-full bg-primary" />
-            <h3 className="text-xl font-semibold tracking-wide">
-              Unterhaltsreinigung
-            </h3>
+    {/* List */}
+    <div className="mx-auto max-w-[1400px] px-6 pb-24 border-t border-border">
+      {services.map((s, i) => (
+        <article
+          key={s.title}
+          className="group grid grid-cols-12 gap-6 md:gap-10 items-center py-8 border-b border-border transition-colors hover:bg-secondary/40"
+        >
+          <div className="col-span-12 md:col-span-1 text-sm tracking-widest text-muted-foreground">
+            {String(i + 1).padStart(2, "0")}
           </div>
-          <ServiceGrid items={unterhaltsreinigung} />
-        </div>
-        <div className="rounded-2xl border border-border bg-primary/5 p-8 md:p-10">
-          <div className="flex items-center gap-3 mb-8 pb-4 border-b border-primary/20">
-            <span className="w-1.5 h-8 rounded-full bg-primary" />
-            <h3 className="text-xl font-semibold tracking-wide">
-              Sonderreinigung
-            </h3>
+          <div className="col-span-12 md:col-span-3">
+            <div className="aspect-[4/3] overflow-hidden rounded-md bg-secondary">
+              <img
+                src={s.image}
+                alt={s.title}
+                loading="lazy"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
           </div>
-          <ServiceGrid items={sonderreinigung} />
-        </div>
+          <div className="col-span-12 md:col-span-6">
+            <p className="text-xs font-medium text-primary tracking-[0.2em] uppercase mb-2">
+              {s.kicker}
+            </p>
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-3">
+              {s.title}
+            </h2>
+            <p className="text-muted-foreground max-w-xl">{s.description}</p>
+          </div>
+          <div className="col-span-12 md:col-span-2 md:text-right">
+            <span className="inline-flex items-center gap-2 text-sm font-medium text-primary tracking-wide">
+              Mehr erfahren
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </span>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    {/* CTA */}
+    <div className="mx-auto max-w-[1400px] px-6 pb-24">
+      <div className="border-t border-border pt-16 text-center">
+        <h3 className="text-2xl md:text-3xl font-semibold tracking-tight mb-4">
+          Die passende Leistung nicht gefunden?
+        </h3>
+        <p className="text-muted-foreground max-w-xl mx-auto mb-8">
+          Sprechen Sie uns an – wir finden gemeinsam die optimale Lösung für Ihre Anforderungen.
+        </p>
+        <a
+          href="/kontakt"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-primary text-primary-foreground text-sm font-medium tracking-wide hover:opacity-90 transition-opacity"
+        >
+          Jetzt Angebot anfordern
+          <ArrowRight className="w-4 h-4" />
+        </a>
       </div>
     </div>
   </section>
