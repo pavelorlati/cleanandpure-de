@@ -1,12 +1,8 @@
 import { Link } from "react-router-dom";
 import { Building2, Hotel, Stethoscope, Home, ShoppingBag, Factory, Shield } from "lucide-react";
-import refBoden from "@/assets/ref-boden.jpg";
 import refTreppen from "@/assets/ref-treppen.jpg";
-import refGlas from "@/assets/ref-glas.jpg";
-import refBuero from "@/assets/ref-buero.jpg";
-import refFassade from "@/assets/ref-fassade.jpg";
-import refPolster from "@/assets/ref-polster.jpg";
-import vorherNachher from "@/assets/vorher-nachher-parkett.jpg";
+import vorherNachherParkett from "@/assets/vorher-nachher-parkett.jpg";
+import vorherNachherFassade from "@/assets/vorher-nachher-fassade.jpg";
 
 const branchen = [
   { Icon: Building2, title: "Bürogebäude & Verwaltung", text: "Täglich gepflegte Büros und Verwaltungsgebäude in Hamburg." },
@@ -18,12 +14,9 @@ const branchen = [
 ];
 
 const projekte = [
-  { img: vorherNachher, ort: "Hamburg-Altona", title: "Parkett-Grundreinigung Bürogebäude", text: "Professionelle Tiefenreinigung und Versiegelung eines stark beanspruchten Parkettbodens." },
-  { img: refTreppen, ort: "Hamburg-Wandsbek", title: "Flur-Tiefenreinigung Wohnanlage", text: "Grundreinigung und Versiegelung aller Gemeinschaftsflächen einer Wohnanlage." },
-  { img: refGlas, ort: "Hamburg City", title: "Glasfassaden-Reinigung Hochhaus", text: "Reinigung einer mehrstöckigen Glasfassade mit Teleskopsystem – streifenfrei." },
-  { img: refBuero, ort: "Hamburg-Altona", title: "Premium-Büroreinigung", text: "Wöchentliche Fenster- und Büroreinigung in einem Hochhaus." },
-  { img: refBoden, ort: "Hamburg-Harburg", title: "Industriereinigung mit Exzentermaschine", text: "Maschinelle Bodenreinigung und Beschichtungsentfernung in einer Gewerbeeinheit." },
-  { img: refPolster, ort: "Hamburg-Eimsbüttel", title: "Küchenreinigung Gastronomie", text: "Hygienische Tiefenreinigung einer gewerblichen Küche nach HACCP-Standard." },
+  { img: vorherNachherParkett, ort: "Hamburg-Altona", title: "Parkett-Grundreinigung Bürogebäude", text: "Vorher / Nachher: Professionelle Tiefenreinigung und Versiegelung eines stark beanspruchten Parkettbodens." },
+  { img: refTreppen, ort: "Hamburg-Wandsbek", title: "Flur-Sanierung Wohnanlage", text: "Vorher / Nachher: Grundreinigung und Versiegelung aller Gemeinschaftsflächen einer Wohnanlage." },
+  { img: vorherNachherFassade, ort: "Hamburg", title: "Fassadenreinigung Wohngebäude", text: "Vorher / Nachher: Reinigung einer verschmutzten Außenfassade – sichtbar frischer und gepflegter." },
 ];
 
 const anonRefs = [
@@ -93,14 +86,14 @@ const ReferencesSection = () => (
       <div className="mx-auto max-w-[1400px] px-6">
         <div className="mb-14 max-w-2xl">
           <p className="text-sm uppercase tracking-[0.25em] text-primary font-medium mb-4">
-            Projekt-Galerie
+            Vorher / Nachher
           </p>
           <h2 className="text-3xl md:text-4xl font-light leading-tight mb-4">
-            Echte Aufträge, <span className="text-primary font-normal">echte Ergebnisse</span>
+            Echte Aufträge, <span className="text-primary font-normal">sichtbare Ergebnisse</span>
           </h2>
           <p className="text-muted-foreground">
-            Ein Auszug aus unserer täglichen Arbeit in Hamburg – von der
-            Glasfassaden-Reinigung bis zur Bodensanierung.
+            Ein direkter Vergleich vor und nach unserer Arbeit – so sieht
+            professionelle Reinigung in Hamburg aus.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
