@@ -192,6 +192,9 @@ const ReferencesSection = () => (
       </div>
     </div>
 
+    {/* Vorher / Nachher */}
+    <BeforeAfterSection />
+
     {/* Anonymisierte Referenzen */}
     <div className="bg-secondary/30 border-t border-border">
       <div className="mx-auto max-w-6xl px-6 py-20">
