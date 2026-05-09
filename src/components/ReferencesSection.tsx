@@ -16,6 +16,7 @@ import refFassade from "@/assets/ref-fassade.jpg";
 import refGlas from "@/assets/ref-glas.jpg";
 import refBuero from "@/assets/ref-buero.jpg";
 import refTreppen from "@/assets/ref-treppen.jpg";
+import BeforeAfterSection from "./BeforeAfterSection";
 
 const references = [
   { title: "Polsterreinigung", desc: "Tiefenreinigung von Polstermöbeln", img: refPolster },
