@@ -86,14 +86,14 @@ const ReferencesSection = () => (
       <div className="mx-auto max-w-[1400px] px-6">
         <div className="mb-14 max-w-2xl">
           <p className="text-sm uppercase tracking-[0.25em] text-primary font-medium mb-4">
-            Projekt-Galerie
+            Vorher / Nachher
           </p>
           <h2 className="text-3xl md:text-4xl font-light leading-tight mb-4">
-            Echte Aufträge, <span className="text-primary font-normal">echte Ergebnisse</span>
+            Echte Aufträge, <span className="text-primary font-normal">sichtbare Ergebnisse</span>
           </h2>
           <p className="text-muted-foreground">
-            Ein Auszug aus unserer täglichen Arbeit in Hamburg – von der
-            Glasfassaden-Reinigung bis zur Bodensanierung.
+            Ein direkter Vergleich vor und nach unserer Arbeit – so sieht
+            professionelle Reinigung in Hamburg aus.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
