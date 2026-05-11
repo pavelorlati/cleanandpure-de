@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
-import refBuero from "@/assets/ref-buero.jpg";
-import refGlas from "@/assets/ref-glas.jpg";
-import refBoden from "@/assets/ref-boden.jpg";
-import refFassade from "@/assets/ref-fassade.jpg";
+import img1 from "@/assets/work-glasdach.jpg";
+import img2 from "@/assets/work-kueche.jpg";
+import img3 from "@/assets/work-fenster-van.jpg";
+import img4 from "@/assets/work-hochhaus.jpg";
 
 const previews = [
-  { img: refBuero, alt: "Büroreinigung" },
-  { img: refGlas, alt: "Glasreinigung" },
-  { img: refBoden, alt: "Bodenreinigung" },
-  { img: refFassade, alt: "Fassadenreinigung" },
+  { img: img1, alt: "Glasdachreinigung mit Teleskopbürste" },
+  { img: img2, alt: "Küchenreinigung im Einsatz" },
+  { img: img3, alt: "Fensterreinigung mit Firmenwagen" },
+  { img: img4, alt: "Glasreinigung mit Blick über Hamburg" },
 ];
 
 const HomeReferencesPreview = () => (
