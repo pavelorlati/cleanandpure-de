@@ -267,7 +267,7 @@ const UeberUns = () => (
 
       {/* CTA */}
       <section className="py-24 bg-background">
-        <div className="mx-auto max-w-3xl px-6 text-center space-y-8">
+        <div className="max-w-3xl mr-auto pl-6 md:pl-12 lg:pl-20 pr-6 text-center space-y-8">
           <p className="text-xs font-medium text-primary tracking-[0.3em] uppercase">Bereit loszulegen?</p>
           <h2 className="text-3xl md:text-5xl font-light tracking-tight leading-tight">
             Lernen Sie uns <span className="font-normal">persönlich</span> kennen.
