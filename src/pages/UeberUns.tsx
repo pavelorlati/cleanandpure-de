@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContactButton from "@/components/FloatingContactButton";
-import heroImg from "@/assets/ueber-hero.jpg";
+import heroImg from "@/assets/hero-cleaning.jpg";
 import philosophieImg from "@/assets/ueber-philosophie.jpg";
 import bodenImg from "@/assets/team-bodenreinigung.jpg";
 import firmenwagenImg from "@/assets/firmenwagen.jpg";
