@@ -38,8 +38,8 @@ const pairs = [
     location: "Hamburg",
     description:
       "Algen-, Moos- und Witterungsablagerungen an einer Putzfassade wurden schonend entfernt. Das Mauerwerk erscheint wieder hell, gleichmäßig und gepflegt – ohne Beschädigung der Oberfläche.",
-    before: vorherFassade,
-    after: nachherFassade,
+    before: nachherFassade,
+    after: vorherFassade,
   },
 ];
 
