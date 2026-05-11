@@ -335,11 +335,11 @@ const ReferencesSection = () => (
 
     {/* CTA */}
     <div className="max-w-6xl mr-auto pl-6 md:pl-12 lg:pl-20 pr-6 py-20">
-      <div className="border-t border-border pt-14 text-center">
+      <div className="border-t border-border pt-14">
         <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-3 text-foreground">
           Werden Sie unsere nächste Referenz
         </h2>
-        <p className="text-sm text-muted-foreground max-w-md mx-auto mb-7 leading-relaxed">
+        <p className="text-sm text-muted-foreground max-w-md mb-7 leading-relaxed">
           Sprechen Sie uns unverbindlich an – wir erstellen Ihnen ein passgenaues Angebot
           innerhalb von 24 Stunden.
         </p>
