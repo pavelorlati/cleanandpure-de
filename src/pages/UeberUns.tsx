@@ -21,7 +21,7 @@ const team = [
     tel: "040 / 35 96 61 71",
     telHref: "tel:+494035966171",
     mail: "info@cleanandpure.de",
-    quote: "„Müde macht uns die Arbeit, die wir liegen lassen, nicht die, die wir tun."",
+    quote: "„Müde macht uns die Arbeit, die wir liegen lassen, nicht die, die wir tun.“",
     img: safakImg,
   },
   {
@@ -30,7 +30,7 @@ const team = [
     tel: "040 / 35 96 61 71",
     telHref: "tel:+494035966171",
     mail: "info@cleanandpure.de",
-    quote: "„Service heißt, das ganze Geschäft mit den Augen des Kunden zu sehen."",
+    quote: "„Service heißt, das ganze Geschäft mit den Augen des Kunden zu sehen.“",
     img: tolgahanImg,
   },
   {
@@ -39,7 +39,7 @@ const team = [
     tel: "040 / 35 96 61 71",
     telHref: "tel:+494035966171",
     mail: "info@cleanandpure.de",
-    quote: "„Zusammenkommen ist ein Beginn, Zusammenbleiben ein Fortschritt, Zusammenarbeiten ein Erfolg."",
+    quote: "„Zusammenkommen ist ein Beginn, Zusammenbleiben ein Fortschritt, Zusammenarbeiten ein Erfolg.“",
     img: maikImg,
   },
   {
@@ -48,7 +48,7 @@ const team = [
     tel: "040 / 35 96 61 71",
     telHref: "tel:+494035966171",
     mail: "info@cleanandpure.de",
-    quote: "„Zusammen geht's nur, wenn alle mit Gemeinsinn und Einsatz dabei sind."",
+    quote: "„Zusammen geht's nur, wenn alle mit Gemeinsinn und Einsatz dabei sind.“",
     img: selviImg,
   },
 ];
