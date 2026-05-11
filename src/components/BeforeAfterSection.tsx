@@ -5,6 +5,8 @@ import vorherFlur from "@/assets/vorher-flur.jpg";
 import nachherFlur from "@/assets/nachher-flur.jpg";
 import vorherGlas from "@/assets/vorher-glas.jpg";
 import nachherGlas from "@/assets/nachher-glas.jpg";
+import vorherFassade from "@/assets/vorher-fassade.jpg";
+import nachherFassade from "@/assets/nachher-fassade.jpg";
 
 const pairs = [
   {
@@ -30,6 +32,14 @@ const pairs = [
       "Streifenfreie Reinigung großflächiger Bürofenster mit professioneller Ausrüstung. Wasserflecken, Pollen und Stadtstaub wurden vollständig entfernt – für klare Sicht und ein gepflegtes Erscheinungsbild der Räume.",
     before: vorherGlas,
     after: nachherGlas,
+  },
+  {
+    title: "Fassadenreinigung – Wohnhaus",
+    location: "Hamburg",
+    description:
+      "Algen-, Moos- und Witterungsablagerungen an einer Putzfassade wurden schonend entfernt. Das Mauerwerk erscheint wieder hell, gleichmäßig und gepflegt – ohne Beschädigung der Oberfläche.",
+    before: vorherFassade,
+    after: nachherFassade,
   },
 ];
 
