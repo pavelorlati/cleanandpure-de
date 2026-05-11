@@ -81,7 +81,7 @@ const testimonials = [
 const ReferencesSection = () => (
   <section id="references" className="bg-background">
     {/* Intro */}
-    <div className="mx-auto max-w-6xl px-6 pt-20 pb-12">
+    <div className="max-w-6xl mr-auto pl-6 md:pl-12 lg:pl-20 pr-6 pt-20 pb-12">
       <p className="text-xs font-medium text-primary tracking-[0.3em] uppercase mb-5">
         Vertrauen durch Erfahrung
       </p>
@@ -111,7 +111,7 @@ const ReferencesSection = () => (
     </div>
 
     {/* Diskretion */}
-    <div className="mx-auto max-w-6xl px-6 pb-20 border-t border-border pt-12">
+    <div className="max-w-6xl mr-auto pl-6 md:pl-12 lg:pl-20 pr-6 pb-20 border-t border-border pt-12">
       <div className="grid md:grid-cols-[auto_1fr] gap-6 items-start max-w-3xl">
         <Shield className="w-8 h-8 text-primary mt-1" />
         <div>
@@ -130,7 +130,7 @@ const ReferencesSection = () => (
 
     {/* Branchen */}
     <div className="bg-secondary/30 border-t border-border">
-      <div className="mx-auto max-w-6xl px-6 py-20">
+      <div className="max-w-6xl mr-auto pl-6 md:pl-12 lg:pl-20 pr-6 py-20">
         <p className="text-xs font-medium text-primary tracking-[0.3em] uppercase mb-5">
           Unsere Branchen
         </p>
@@ -160,7 +160,7 @@ const ReferencesSection = () => (
     </div>
 
     {/* Projekt-Galerie */}
-    <div className="mx-auto max-w-6xl px-6 py-20">
+    <div className="max-w-6xl mr-auto pl-6 md:pl-12 lg:pl-20 pr-6 py-20">
       <p className="text-xs font-medium text-primary tracking-[0.3em] uppercase mb-5">
         Einblicke in unsere Arbeit
       </p>
@@ -197,7 +197,7 @@ const ReferencesSection = () => (
 
     {/* Anonymisierte Referenzen */}
     <div className="bg-secondary/30 border-t border-border">
-      <div className="mx-auto max-w-6xl px-6 py-20">
+      <div className="max-w-6xl mr-auto pl-6 md:pl-12 lg:pl-20 pr-6 py-20">
         <p className="text-xs font-medium text-primary tracking-[0.3em] uppercase mb-5">
           Laufende Aufträge
         </p>
@@ -235,7 +235,7 @@ const ReferencesSection = () => (
     </div>
 
     {/* Kundenstimmen */}
-    <div className="mx-auto max-w-6xl px-6 py-20">
+    <div className="max-w-6xl mr-auto pl-6 md:pl-12 lg:pl-20 pr-6 py-20">
       <p className="text-xs font-medium text-primary tracking-[0.3em] uppercase mb-5">
         Kundenstimmen
       </p>
@@ -264,7 +264,7 @@ const ReferencesSection = () => (
 
     {/* SEO Long Copy */}
     <div className="bg-secondary/30 border-t border-border">
-      <div className="mx-auto max-w-3xl px-6 py-20">
+      <div className="max-w-3xl mr-auto pl-6 md:pl-12 lg:pl-20 pr-6 py-20">
         <p className="text-xs font-medium text-primary tracking-[0.3em] uppercase mb-5">
           Gebäudereinigung in Hamburg
         </p>
@@ -334,12 +334,12 @@ const ReferencesSection = () => (
     </div>
 
     {/* CTA */}
-    <div className="mx-auto max-w-6xl px-6 py-20">
-      <div className="border-t border-border pt-14 text-center">
+    <div className="max-w-6xl mr-auto pl-6 md:pl-12 lg:pl-20 pr-6 py-20">
+      <div className="border-t border-border pt-14">
         <h2 className="text-2xl md:text-3xl font-semibold tracking-tight mb-3 text-foreground">
           Werden Sie unsere nächste Referenz
         </h2>
-        <p className="text-sm text-muted-foreground max-w-md mx-auto mb-7 leading-relaxed">
+        <p className="text-sm text-muted-foreground max-w-md mb-7 leading-relaxed">
           Sprechen Sie uns unverbindlich an – wir erstellen Ihnen ein passgenaues Angebot
           innerhalb von 24 Stunden.
         </p>

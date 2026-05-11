@@ -81,7 +81,7 @@ const UeberUns = () => (
           height={1080}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30" />
-        <div className="relative mx-auto max-w-[1400px] px-6 py-36 md:py-52">
+        <div className="relative max-w-[1400px] mr-auto pl-6 md:pl-12 lg:pl-20 pr-6 py-36 md:py-52">
           <div className="max-w-2xl space-y-8">
             <p className="text-primary text-xs md:text-sm font-medium tracking-[0.3em] uppercase">
               Über uns
@@ -96,7 +96,7 @@ const UeberUns = () => (
 
       {/* PHILOSOPHIE */}
       <section className="py-24 bg-background">
-        <div className="mx-auto max-w-[1400px] px-6 grid lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-[1400px] mr-auto pl-6 md:pl-12 lg:pl-20 pr-6 grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-6">
             <p className="text-xs font-medium text-primary tracking-[0.3em] uppercase">Unsere Philosophie</p>
             <h2 className="text-3xl md:text-4xl font-light tracking-tight leading-tight">
@@ -130,7 +130,7 @@ const UeberUns = () => (
 
       {/* STATS */}
       <section className="py-16 bg-secondary/30 border-y border-border">
-        <div className="mx-auto max-w-[1400px] px-6 grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+        <div className="max-w-[1400px] mr-auto pl-6 md:pl-12 lg:pl-20 pr-6 grid grid-cols-1 md:grid-cols-3 gap-10">
           {[
             { v: "15+", l: "Jahre Erfahrung" },
             { v: "100+", l: "Zufriedene Kunden" },
@@ -146,7 +146,7 @@ const UeberUns = () => (
 
       {/* TEAM IM EINSATZ */}
       <section className="py-24 bg-background">
-        <div className="mx-auto max-w-[1400px] px-6 grid lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-[1400px] mr-auto pl-6 md:pl-12 lg:pl-20 pr-6 grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-6 lg:order-2">
             <p className="text-xs font-medium text-primary tracking-[0.3em] uppercase">Unser Team</p>
             <h2 className="text-3xl md:text-4xl font-light tracking-tight leading-tight">
@@ -174,8 +174,8 @@ const UeberUns = () => (
 
       {/* ANSPRECHPARTNER */}
       <section className="py-24 bg-secondary/30 border-y border-border">
-        <div className="mx-auto max-w-[1400px] px-6">
-          <div className="text-center mb-16 space-y-4">
+        <div className="max-w-[1400px] mr-auto pl-6 md:pl-12 lg:pl-20 pr-6">
+          <div className="mb-16 space-y-4">
             <p className="text-xs font-medium text-primary tracking-[0.3em] uppercase">Ihr Team</p>
             <h2 className="text-3xl md:text-4xl font-light tracking-tight">
               Ihre <span className="font-normal">Ansprechpartner</span>
@@ -208,7 +208,7 @@ const UeberUns = () => (
             ))}
           </div>
 
-          <div className="mt-10 border border-dashed border-primary/40 p-8 text-center max-w-3xl mx-auto bg-background">
+          <div className="mt-10 border border-dashed border-primary/40 p-8 max-w-3xl bg-background">
             <h3 className="text-lg font-semibold tracking-wide mb-2">Wir brauchen dich in unserem Team — jetzt bewerben!</h3>
             <p className="text-sm text-muted-foreground mb-5">Assistent:in der Geschäftsführung &amp; weitere offene Stellen.</p>
             <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
@@ -222,8 +222,8 @@ const UeberUns = () => (
 
       {/* DAS ZEICHNET UNS AUS */}
       <section className="py-24 bg-background">
-        <div className="mx-auto max-w-[1400px] px-6">
-          <div className="text-center mb-16 space-y-4 max-w-2xl mx-auto">
+        <div className="max-w-[1400px] mr-auto pl-6 md:pl-12 lg:pl-20 pr-6">
+          <div className="mb-16 space-y-4 max-w-2xl">
             <p className="text-xs font-medium text-primary tracking-[0.3em] uppercase">Warum Clean &amp; Pure?</p>
             <h2 className="text-3xl md:text-4xl font-light tracking-tight">
               Das <span className="font-normal">zeichnet uns aus</span>
@@ -246,14 +246,14 @@ const UeberUns = () => (
 
       {/* WERTE */}
       <section className="py-24 bg-secondary/30 border-y border-border">
-        <div className="mx-auto max-w-[1400px] px-6">
-          <div className="text-center mb-16 space-y-4">
+        <div className="max-w-[1400px] mr-auto pl-6 md:pl-12 lg:pl-20 pr-6">
+          <div className="mb-16 space-y-4">
             <p className="text-xs font-medium text-primary tracking-[0.3em] uppercase">Unsere Werte</p>
             <h2 className="text-3xl md:text-4xl font-light tracking-tight">
               Was uns <span className="font-normal">antreibt</span>
             </h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-10 max-w-5xl">
             {werte.map((w) => (
               <div key={w.num} className="space-y-4">
                 <span className="text-4xl font-light text-primary/40 block">{w.num}</span>
@@ -267,7 +267,7 @@ const UeberUns = () => (
 
       {/* CTA */}
       <section className="py-24 bg-background">
-        <div className="mx-auto max-w-3xl px-6 text-center space-y-8">
+        <div className="max-w-3xl mr-auto pl-6 md:pl-12 lg:pl-20 pr-6 space-y-8">
           <p className="text-xs font-medium text-primary tracking-[0.3em] uppercase">Bereit loszulegen?</p>
           <h2 className="text-3xl md:text-5xl font-light tracking-tight leading-tight">
             Lernen Sie uns <span className="font-normal">persönlich</span> kennen.
