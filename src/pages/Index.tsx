@@ -1,8 +1,12 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import HomeReferencesPreview from "@/components/HomeReferencesPreview";
-import HomeServicesTeaser from "@/components/HomeServicesTeaser";
+import HomeAboutTeaser from "@/components/HomeAboutTeaser";
+import HomeServicesGrid from "@/components/HomeServicesGrid";
+import HomeBeforeAfterPreview from "@/components/HomeBeforeAfterPreview";
+import HomeQuote from "@/components/HomeQuote";
+import HomeTestimonials from "@/components/HomeTestimonials";
 import HomeJobsTeaser from "@/components/HomeJobsTeaser";
+import HomeCTA from "@/components/HomeCTA";
 import SeoLongCopy from "@/components/SeoLongCopy";
 import Footer from "@/components/Footer";
 import FloatingContactButton from "@/components/FloatingContactButton";
@@ -13,9 +17,13 @@ const Index = () => (
     <Header />
     <main className="flex-1">
       <HeroSection />
-      <HomeReferencesPreview />
-      <HomeServicesTeaser />
+      <HomeAboutTeaser />
+      <HomeServicesGrid />
+      <HomeBeforeAfterPreview />
+      <HomeQuote />
+      <HomeTestimonials />
       <HomeJobsTeaser />
+      <HomeCTA />
       <SeoLongCopy
         kicker="Gebäudereinigung Hamburg"
         heading="Ihr Reinigungspartner in Hamburg – familiengeführt seit über 15 Jahren"
@@ -26,22 +34,10 @@ const Index = () => (
           "Was uns auszeichnet: Verlässlichkeit, Nachhaltigkeit und Fachkompetenz. Wir setzen auf umweltfreundliche Reinigungsprodukte, ressourcenschonendes Arbeiten und transparente Abläufe. Sie erhalten ein maßgeschneidertes Angebot innerhalb von 24 Stunden – kostenlos und unverbindlich.",
         ]}
         faq={[
-          {
-            q: "Wie schnell erhalte ich ein Angebot?",
-            a: "Innerhalb von 24 Stunden nach Ihrer Anfrage. Bei größeren Objekten vereinbaren wir vorab gerne einen kurzen Vor-Ort-Termin – ebenfalls kostenlos und unverbindlich.",
-          },
-          {
-            q: "In welchen Stadtteilen Hamburgs sind Sie tätig?",
-            a: "Wir arbeiten in ganz Hamburg und im näheren Umland – von Altona, Eimsbüttel und Wandsbek über die City und HafenCity bis nach Harburg, Bergedorf, Winterhude und Eppendorf.",
-          },
-          {
-            q: "Arbeiten Sie auch außerhalb der Geschäftszeiten?",
-            a: "Ja. Viele unserer Aufträge laufen morgens vor Geschäftsbeginn, abends oder am Wochenende – damit Ihr Tagesgeschäft nicht gestört wird.",
-          },
-          {
-            q: "Sind Sie versichert?",
-            a: "Selbstverständlich. Wir verfügen über eine umfassende Betriebshaftpflichtversicherung und arbeiten ausschließlich mit fest angestelltem, geschultem Personal.",
-          },
+          { q: "Wie schnell erhalte ich ein Angebot?", a: "Innerhalb von 24 Stunden nach Ihrer Anfrage. Bei größeren Objekten vereinbaren wir vorab gerne einen kurzen Vor-Ort-Termin – ebenfalls kostenlos und unverbindlich." },
+          { q: "In welchen Stadtteilen Hamburgs sind Sie tätig?", a: "Wir arbeiten in ganz Hamburg und im näheren Umland – von Altona, Eimsbüttel und Wandsbek über die City und HafenCity bis nach Harburg, Bergedorf, Winterhude und Eppendorf." },
+          { q: "Arbeiten Sie auch außerhalb der Geschäftszeiten?", a: "Ja. Viele unserer Aufträge laufen morgens vor Geschäftsbeginn, abends oder am Wochenende – damit Ihr Tagesgeschäft nicht gestört wird." },
+          { q: "Sind Sie versichert?", a: "Selbstverständlich. Wir verfügen über eine umfassende Betriebshaftpflichtversicherung und arbeiten ausschließlich mit fest angestelltem, geschultem Personal." },
         ]}
         bg="muted"
       />
