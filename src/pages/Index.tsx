@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import HomeReferencesPreview from "@/components/HomeReferencesPreview";
+import HomeWorkGallery from "@/components/HomeWorkGallery";
 import HomeServicesTeaser from "@/components/HomeServicesTeaser";
 import HomeJobsTeaser from "@/components/HomeJobsTeaser";
 import SeoLongCopy from "@/components/SeoLongCopy";
@@ -14,6 +15,7 @@ const Index = () => (
     <main className="flex-1">
       <HeroSection />
       <HomeReferencesPreview />
+      <HomeWorkGallery />
       <HomeServicesTeaser />
       <HomeJobsTeaser />
       <SeoLongCopy
