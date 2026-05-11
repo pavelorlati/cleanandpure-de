@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Menu, X, Phone, Sun, Moon } from "lucide-react";
 import { NavLink, Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
@@ -14,6 +14,24 @@ const navItems = [
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [dark, setDark] = useState(() =>
+    typeof window !== "undefined" && document.documentElement.classList.contains("dark")
+  );
+
+  useEffect(() => {
+    const stored = localStorage.getItem("theme");
+    if (stored === "dark") {
+      document.documentElement.classList.add("dark");
+      setDark(true);
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const next = !dark;
+    setDark(next);
+    document.documentElement.classList.toggle("dark", next);
+    localStorage.setItem("theme", next ? "dark" : "light");
+  };
 
   return (
     <header className="sticky top-0 z-50 border-b bg-background">
@@ -63,6 +81,14 @@ const Header = () => {
               <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
             </svg>
           </a>
+          <button
+            type="button"
+            onClick={toggleTheme}
+            aria-label={dark ? "Hellen Modus aktivieren" : "Dunklen Modus aktivieren"}
+            className="hidden sm:inline-flex items-center justify-center w-9 h-9 rounded-full bg-background text-primary border border-primary/30 hover:bg-primary hover:text-primary-foreground transition-colors"
+          >
+            {dark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+          </button>
           <button
             className="lg:hidden p-2"
             onClick={() => setMobileOpen(!mobileOpen)}
