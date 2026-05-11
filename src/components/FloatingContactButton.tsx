@@ -5,7 +5,7 @@ const FloatingContactButton = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex items-center">
+    <div className="hidden lg:flex fixed right-0 top-1/2 -translate-y-1/2 z-50 items-center">
       {open && (
         <div className="flex flex-col gap-3 mr-3">
           <a
