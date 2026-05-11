@@ -96,6 +96,13 @@ const Header = () => {
           >
             {dark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
+          <a
+            href="tel:04035966171"
+            aria-label="Anrufen"
+            className="lg:hidden inline-flex items-center justify-center w-9 h-9 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+          >
+            <Phone className="w-4 h-4" />
+          </a>
           <button
             className="lg:hidden p-2 relative z-[60]"
             onClick={() => setMobileOpen(!mobileOpen)}
