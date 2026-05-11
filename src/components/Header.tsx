@@ -26,6 +26,13 @@ const Header = () => {
     }
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
   const toggleTheme = () => {
     const next = !dark;
     setDark(next);
@@ -85,12 +92,12 @@ const Header = () => {
             type="button"
             onClick={toggleTheme}
             aria-label={dark ? "Hellen Modus aktivieren" : "Dunklen Modus aktivieren"}
-            className="hidden sm:inline-flex items-center justify-center w-9 h-9 rounded-full bg-background text-primary border border-primary/30 hover:bg-primary hover:text-primary-foreground transition-colors"
+            className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-background text-primary border border-primary/30 hover:bg-primary hover:text-primary-foreground transition-colors"
           >
             {dark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
           <button
-            className="lg:hidden p-2"
+            className="lg:hidden p-2 relative z-[60]"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Menü"
           >
@@ -99,9 +106,23 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Nav */}
-      {mobileOpen && (
-        <nav className="lg:hidden border-t bg-background px-6 pb-6 pt-4 space-y-4">
+      {/* Mobile Nav - Slide-in Drawer */}
+      <div
+        className={`lg:hidden fixed inset-0 z-40 transition-opacity duration-300 ${
+          mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setMobileOpen(false)}
+        aria-hidden={!mobileOpen}
+      >
+        <div className="absolute inset-0 bg-foreground/40" />
+      </div>
+      <aside
+        className={`lg:hidden fixed top-0 right-0 z-50 h-full w-[80%] max-w-sm bg-background shadow-xl transform transition-transform duration-300 ease-out ${
+          mobileOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+        aria-hidden={!mobileOpen}
+      >
+        <nav className="flex flex-col gap-6 px-8 pt-28 pb-8">
           {navItems.map((item) => (
             <NavLink
               key={item.to}
@@ -109,16 +130,23 @@ const Header = () => {
               end={item.to === "/"}
               onClick={() => setMobileOpen(false)}
               className={({ isActive }) =>
-                `block text-sm font-medium tracking-wider uppercase ${
-                  isActive ? "text-primary" : "text-muted-foreground hover:text-primary"
+                `text-base font-medium tracking-wider uppercase ${
+                  isActive ? "text-primary" : "text-foreground hover:text-primary"
                 }`
               }
             >
               {item.label}
             </NavLink>
           ))}
+          <a
+            href="tel:04035966171"
+            className="flex items-center gap-2 text-sm font-medium text-primary pt-4"
+          >
+            <Phone className="w-4 h-4" />
+            040/35 96 61 71
+          </a>
         </nav>
-      )}
+      </aside>
     </header>
   );
 };
