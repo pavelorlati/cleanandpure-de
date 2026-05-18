@@ -1,40 +1,59 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImg from "@/assets/hero-cleaning.jpg";
+import { ArrowRight, Phone } from "lucide-react";
+import heroBg from "@/assets/cp/team-hamburg-skyline.jpg";
 
 const HeroSection = () => (
-  <section id="home" className="relative overflow-hidden">
-    <img
-      src={heroImg}
-      alt="Professionelle Gebäudereinigung"
-      className="absolute inset-0 w-full h-full object-cover"
-      width={1920}
-      height={1080}
-    />
-    <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30" />
-    <div className="relative mx-auto max-w-[1400px] px-6 py-36 md:py-52 lg:py-64">
-      <div className="max-w-2xl space-y-10">
-        <p className="text-primary text-xs md:text-sm font-medium tracking-[0.3em] uppercase">
-          Gebäudereinigung Hamburg
-        </p>
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-primary-foreground leading-[1.05] tracking-tight">
-          Sauberkeit,<br />die man <span className="font-normal text-primary">sieht</span>.
-        </h1>
-        <p className="text-base md:text-lg text-primary-foreground/80 max-w-xl leading-relaxed font-light">
-          Clean &amp; Pure steht für zuverlässige, gründliche Reinigung – seit Jahren der vertrauensvolle Partner für Unternehmen in Hamburg.
-        </p>
-        <div className="flex flex-wrap gap-4 pt-2">
-          <Button size="lg" className="text-base font-semibold tracking-wide bg-primary text-primary-foreground hover:bg-primary/90" asChild>
-            <Link to="/kontakt">
-              Jetzt Angebot anfragen
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-          </Button>
-          <Button size="lg" variant="outline" className="text-base font-semibold tracking-wide border-primary text-primary bg-transparent hover:bg-primary/10" asChild>
-            <Link to="/leistungen">Unsere Leistungen</Link>
-          </Button>
+  <section className="relative min-h-screen flex flex-col justify-end overflow-hidden">
+    <div className="absolute inset-0">
+      <img src={heroBg} alt="Clean & Pure in Hamburg" className="w-full h-full object-cover" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-background/30" />
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
+    </div>
+
+    <div className="relative container-x pt-40 pb-16 md:pb-24">
+      <p className="kicker mb-6">Clean &amp; Pure in Hamburg</p>
+      <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] tracking-tight max-w-5xl mb-10">
+        Ihr Gebäude.<br />Makellos. Täglich.
+      </h1>
+      <div className="flex flex-wrap gap-4 items-center">
+        <Link
+          to="/kontakt"
+          className="inline-flex items-center gap-3 px-6 py-3.5 bg-primary text-primary-foreground text-xs font-semibold tracking-[0.2em] uppercase hover:bg-primary-glow transition-colors rounded-sm"
+        >
+          Jetzt Angebot anfordern
+          <ArrowRight className="w-4 h-4" />
+        </Link>
+        <Link
+          to="/leistungen"
+          className="inline-flex items-center gap-2 px-6 py-3.5 text-xs font-semibold tracking-[0.2em] uppercase text-foreground hover:text-primary transition-colors"
+        >
+          Unsere Leistungen →
+        </Link>
+      </div>
+    </div>
+
+    {/* Stats Bar */}
+    <div className="relative border-t border-border bg-background/80 backdrop-blur">
+      <div className="container-x grid grid-cols-2 md:grid-cols-5 gap-6 py-6 text-sm">
+        <div className="flex items-baseline gap-2">
+          <span className="text-primary text-xl font-bold">5,0</span>
+          <span className="text-muted-foreground text-xs tracking-wide">★ Google Bewertung</span>
         </div>
+        <div className="flex items-baseline gap-2">
+          <span className="text-primary text-xl font-bold">100+</span>
+          <span className="text-muted-foreground text-xs tracking-wide">Zufriedene Kunden</span>
+        </div>
+        <div className="flex items-baseline gap-2">
+          <span className="text-primary text-xl font-bold">15+</span>
+          <span className="text-muted-foreground text-xs tracking-wide">Jahre Erfahrung</span>
+        </div>
+        <div className="flex items-baseline gap-2">
+          <span className="text-foreground font-semibold">Hamburg</span>
+          <span className="text-muted-foreground text-xs tracking-wide">&amp; Umgebung</span>
+        </div>
+        <a href="tel:+494035966171" className="flex items-center gap-2 text-primary font-semibold md:justify-end">
+          <Phone className="w-4 h-4" /> 040 - 35 96 61 71
+        </a>
       </div>
     </div>
   </section>
