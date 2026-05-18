@@ -1,80 +1,148 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Phone } from "lucide-react";
-import { useEffect, useState } from "react";
-import hero1 from "@/assets/cp/team-hamburg-skyline.jpg";
-import hero2 from "@/assets/cp/firmenwagen-fensterputz.jpg";
-import hero3 from "@/assets/cp/team-bodenreinigung.jpg";
-import hero4 from "@/assets/cp/glasfassade-buerste.jpg";
+import { useEffect, useRef, useState } from "react";
+import skyline from "@/assets/cp/team-hamburg-skyline.jpg";
+import firmenwagen from "@/assets/cp/firmenwagen-fensterputz.jpg";
+import boden from "@/assets/cp/team-bodenreinigung.jpg";
+import glasfassade from "@/assets/cp/glasfassade-buerste.jpg";
 
-const slides = [hero1, hero2, hero3, hero4];
+// 1:1 wie alte Seite (clean-pure.vercel.app)
+const slides = [
+  { src: skyline,     headline: "Ihr Gebäude.",       sub: "Makellos. Täglich.",          label: "Clean & Pure in Hamburg" },
+  { src: firmenwagen, headline: "Glasreinigung.",     sub: "Streifenfrei. Professionell.", label: "Unser Team täglich im Einsatz" },
+  { src: boden,       headline: "Tiefenreinigung.",   sub: "Für sichtbare Ergebnisse.",   label: "Grundreinigung mit Profi-Maschinen" },
+  { src: glasfassade, headline: "Fassadenreinigung.", sub: "In jeder Höhe.",              label: "Glas- & Fassadenreinigung" },
+];
+
+const SLIDE_MS = 6000;
 
 const HeroSection = () => {
   const [index, setIndex] = useState(0);
+  const [progress, setProgress] = useState(0);
+  const startRef = useRef<number>(performance.now());
 
   useEffect(() => {
-    const id = setInterval(() => setIndex((i) => (i + 1) % slides.length), 5000);
-    return () => clearInterval(id);
+    startRef.current = performance.now();
+    let raf = 0;
+    const tick = (t: number) => {
+      const p = Math.min(100, ((t - startRef.current) / SLIDE_MS) * 100);
+      setProgress(p);
+      if (p >= 100) {
+        setIndex((i) => (i + 1) % slides.length);
+        startRef.current = performance.now();
+        setProgress(0);
+      }
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
   }, []);
 
+  const go = (i: number) => {
+    setIndex(i);
+    startRef.current = performance.now();
+    setProgress(0);
+  };
+
+  const current = slides[index];
+
   return (
-    <section className="relative min-h-screen flex flex-col justify-end overflow-hidden">
+    <section className="relative h-screen min-h-[600px] overflow-hidden">
+      {/* Bilder-Stack mit Crossfade */}
       <div className="absolute inset-0">
-        {slides.map((src, i) => (
+        {slides.map((s, i) => (
           <img
-            key={src}
-            src={src}
-            alt="Clean & Pure in Hamburg"
+            key={s.src}
+            src={s.src}
+            alt={s.label}
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out ${
               i === index ? "opacity-100" : "opacity-0"
             }`}
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-background/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/65 to-black/20" />
       </div>
 
-      <div className="relative container-x pt-40 pb-16 md:pb-24">
-        <p className="kicker mb-6 animate-fade-in">Clean &amp; Pure in Hamburg</p>
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] tracking-tight max-w-5xl mb-10 animate-fade-in" style={{ animationDelay: "100ms", animationFillMode: "backwards" }}>
-          Ihr Gebäude.<br />Makellos. Täglich.
-        </h1>
-        <div className="flex flex-wrap gap-4 items-center animate-fade-in" style={{ animationDelay: "250ms", animationFillMode: "backwards" }}>
-          <Link
-            to="/kontakt"
-            className="inline-flex items-center gap-3 px-6 py-3.5 bg-primary text-primary-foreground text-xs font-semibold tracking-[0.2em] uppercase hover:bg-primary-glow transition-colors rounded-sm"
-          >
-            Jetzt Angebot anfordern
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-          <Link
-            to="/leistungen"
-            className="inline-flex items-center gap-2 px-6 py-3.5 text-xs font-semibold tracking-[0.2em] uppercase text-foreground hover:text-primary transition-colors"
-          >
-            Unsere Leistungen →
-          </Link>
+      {/* Inhalt */}
+      <div className="relative z-10 h-full flex flex-col justify-between max-w-[1400px] mx-auto px-6 md:px-10">
+        <div className="h-20" />
+
+        <div className="pb-16 md:pb-24">
+          <div key={`text-${index}`} className="animate-fade-in">
+            <p className="text-xs font-medium uppercase tracking-[0.25em] text-white/50 mb-5">
+              {current.label}
+            </p>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[0.95] mb-4 max-w-3xl tracking-tight">
+              {current.headline}
+              <br />
+              {current.sub}
+            </h1>
+          </div>
+
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <Link
+              to="/kontakt"
+              className="inline-flex items-center gap-3 px-6 py-4 bg-primary text-primary-foreground text-[0.7rem] tracking-[0.2em] uppercase font-medium hover:bg-primary-glow transition-colors"
+            >
+              Jetzt Angebot anfordern
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+            <Link
+              to="/leistungen"
+              className="inline-flex items-center gap-2 px-2 py-4 text-[0.7rem] tracking-[0.2em] uppercase font-medium text-white/80 hover:text-white transition-colors"
+            >
+              Unsere Leistungen →
+            </Link>
+          </div>
+
+          {/* Slide-Progress (4 Balken) */}
+          <div className="mt-10 flex gap-3 max-w-xs">
+            {slides.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                onClick={() => go(i)}
+                aria-label={`Slide ${i + 1}`}
+                className="relative h-[2px] flex-1 bg-white/15 overflow-hidden"
+              >
+                <span
+                  className="absolute inset-y-0 left-0 bg-white"
+                  style={{
+                    width:
+                      i < index ? "100%" : i === index ? `${progress}%` : "0%",
+                    transition: i === index ? "none" : "width 200ms linear",
+                  }}
+                />
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
-      <div className="relative border-t border-border bg-background/80 backdrop-blur">
-        <div className="container-x grid grid-cols-2 md:grid-cols-5 gap-6 py-6 text-sm">
-          <div className="flex items-baseline gap-2">
-            <span className="text-primary text-xl font-bold">5,0</span>
-            <span className="text-muted-foreground text-xs tracking-wide">★ Google Bewertung</span>
+      {/* Stats-Leiste unten */}
+      <div className="absolute bottom-0 left-0 right-0 z-10 border-t border-white/10 bg-black/40 backdrop-blur">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-10 grid grid-cols-2 md:grid-cols-5 gap-4 py-4 text-xs">
+          <div className="flex items-center gap-2">
+            <span className="text-primary font-bold text-base">5,0 ★</span>
+            <span className="text-white/60 uppercase tracking-wider text-[0.65rem]">Google Bewertung</span>
           </div>
-          <div className="flex items-baseline gap-2">
-            <span className="text-primary text-xl font-bold">100+</span>
-            <span className="text-muted-foreground text-xs tracking-wide">Zufriedene Kunden</span>
+          <div className="flex items-center gap-2">
+            <span className="text-primary font-bold text-base">100+</span>
+            <span className="text-white/60 uppercase tracking-wider text-[0.65rem]">Zufriedene Kunden</span>
           </div>
-          <div className="flex items-baseline gap-2">
-            <span className="text-primary text-xl font-bold">15+</span>
-            <span className="text-muted-foreground text-xs tracking-wide">Jahre Erfahrung</span>
+          <div className="flex items-center gap-2">
+            <span className="text-primary font-bold text-base">15+</span>
+            <span className="text-white/60 uppercase tracking-wider text-[0.65rem]">Jahre Erfahrung</span>
           </div>
-          <div className="flex items-baseline gap-2">
-            <span className="text-foreground font-semibold">Hamburg</span>
-            <span className="text-muted-foreground text-xs tracking-wide">&amp; Umgebung</span>
+          <div className="flex items-center gap-2">
+            <span className="text-white font-semibold">Hamburg</span>
+            <span className="text-white/60 uppercase tracking-wider text-[0.65rem]">&amp; Umgebung</span>
           </div>
-          <a href="tel:+494035966171" className="flex items-center gap-2 text-primary font-semibold md:justify-end">
-            <Phone className="w-4 h-4" /> 040 - 35 96 61 71
+          <a
+            href="tel:+494035966171"
+            className="hidden md:flex items-center justify-end gap-2 text-white font-medium border border-white/20 rounded-full px-4 py-2 hover:border-primary hover:text-primary transition-colors"
+          >
+            <Phone className="w-3.5 h-3.5" /> 040 - 35 96 61 71
           </a>
         </div>
       </div>
