@@ -40,11 +40,12 @@ const Header = () => {
     <header className="absolute top-0 left-0 right-0 z-50">
       <div className="container-x flex h-20 md:h-24 items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="Clean & Pure GmbH" className="h-10 md:h-12 w-auto" />
-          <span className="hidden sm:block text-sm md:text-base font-medium tracking-wide text-foreground">
+          <img src={logo} alt="Clean & Pure GmbH" className="h-8 md:h-9 w-auto" />
+          <span className="hidden sm:block text-sm md:text-base font-semibold tracking-tight text-foreground">
             Clean &amp; Pure Gebäudereinigung
           </span>
         </Link>
+
 
         <nav className="hidden lg:flex items-center gap-8">
           {navItems.map((item) => (
@@ -74,10 +75,11 @@ const Header = () => {
           </button>
           <Link
             to="/kontakt"
-            className="hidden md:inline-flex items-center px-5 py-2.5 bg-primary text-primary-foreground text-xs font-semibold tracking-[0.2em] uppercase hover:bg-primary-glow transition-colors rounded-sm"
+            className="hidden md:inline-flex items-center px-5 py-2.5 bg-primary text-primary-foreground text-[0.7rem] font-semibold tracking-[0.2em] uppercase hover:bg-primary-glow transition-colors rounded-full"
           >
             Angebot anfragen
           </Link>
+
           <button
             className="lg:hidden p-2 relative z-[60] text-foreground"
             onClick={() => setMobileOpen(!mobileOpen)}
