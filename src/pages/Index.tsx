@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 import FloatingContactButton from "@/components/FloatingContactButton";
 import { Link } from "react-router-dom";
 import { ArrowRight, Star } from "lucide-react";
+import { useReveal } from "@/hooks/useReveal";
+
 import equipment from "@/assets/cp/hero-equipment.png";
 import lobbySunset from "@/assets/cp/hero-lobby-sunset.png";
 import kueche from "@/assets/cp/team-kueche-wischen.jpg";
@@ -37,7 +39,10 @@ const testimonials = [
   { quote: "Schnelle Reaktion, top Arbeit, faire Preise. Besonders die Glasreinigung ist beeindruckend.", name: "Stefan B.", role: "Hausverwaltung" },
 ];
 
-const Index = () => (
+const Index = () => {
+  useReveal();
+  return (
+
   <div className="min-h-screen flex flex-col bg-background">
     <FloatingContactButton />
     <Header />
@@ -47,7 +52,7 @@ const Index = () => (
       {/* Philosophie */}
       <section className="py-24 md:py-32">
         <div className="container-x grid md:grid-cols-2 gap-16 items-center">
-          <div>
+          <div data-reveal="left">
             <p className="kicker mb-6">Familiengeführt · Hamburg</p>
             <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">
               Familiengeführt,<br />zuverlässig &amp; nachhaltig.
@@ -62,29 +67,31 @@ const Index = () => (
               Mehr über uns <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
-          <div className="relative">
+          <div className="relative" data-reveal="right">
             <img src={equipment} alt="Professionelle Reinigungsausstattung Clean & Pure" className="w-full h-auto rounded-sm" />
           </div>
         </div>
+
       </section>
 
       {/* Werte */}
       <section className="py-20 border-t border-border bg-card/40">
         <div className="container-x grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          {values.map((v) => (
-            <div key={v.n}>
+          {values.map((v, i) => (
+            <div key={v.n} data-reveal style={{ transitionDelay: `${i * 80}ms` }}>
               <span className="text-primary text-sm font-mono mb-3 block">{v.n}</span>
               <h3 className="text-xl font-semibold mb-2">{v.title}</h3>
               <p className="text-sm text-muted-foreground">{v.desc}</p>
             </div>
           ))}
         </div>
+
       </section>
 
       {/* Leistungen */}
       <section className="py-24 md:py-32">
         <div className="container-x">
-          <div className="flex flex-wrap justify-between items-end mb-14 gap-6">
+          <div className="flex flex-wrap justify-between items-end mb-14 gap-6" data-reveal>
             <div>
               <p className="kicker mb-5">Was wir für Sie tun</p>
               <h2 className="text-4xl md:text-5xl font-bold leading-tight">Unsere Leistungen</h2>
@@ -94,8 +101,8 @@ const Index = () => (
             </Link>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((s) => (
-              <Link key={s.n} to="/leistungen" className="group block bg-card border border-border rounded-sm overflow-hidden hover:border-primary transition-colors">
+            {services.map((s, i) => (
+              <Link key={s.n} to="/leistungen" data-reveal style={{ transitionDelay: `${i * 90}ms` }} className="group block bg-card border border-border rounded-sm overflow-hidden hover:border-primary transition-colors">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img src={s.img} alt={s.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
@@ -109,6 +116,7 @@ const Index = () => (
               </Link>
             ))}
           </div>
+
           <div className="mt-12 text-center">
             <Link to="/leistungen" className="inline-flex items-center px-6 py-3 border border-foreground/20 text-xs font-semibold tracking-[0.2em] uppercase hover:bg-primary hover:border-primary hover:text-primary-foreground transition-colors">
               Alle 11 Leistungen ansehen
@@ -120,12 +128,14 @@ const Index = () => (
       {/* Vorher / Nachher */}
       <section className="py-24 border-t border-border bg-card/40">
         <div className="container-x">
-          <p className="kicker mb-5">Referenzen</p>
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-3">Das Ergebnis spricht für sich</h2>
-          <p className="text-muted-foreground mb-14">Echte Aufträge, echte Transformationen.</p>
+          <div data-reveal>
+            <p className="kicker mb-5">Referenzen</p>
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-3">Das Ergebnis spricht für sich</h2>
+            <p className="text-muted-foreground mb-14">Echte Aufträge, echte Transformationen.</p>
+          </div>
           <div className="grid md:grid-cols-2 gap-6">
-            {[{img: parkett, title: "Parkett-Grundreinigung"}, {img: flur, title: "Flur-Tiefenreinigung"}].map((r) => (
-              <div key={r.title} className="bg-card border border-border rounded-sm overflow-hidden">
+            {[{img: parkett, title: "Parkett-Grundreinigung"}, {img: flur, title: "Flur-Tiefenreinigung"}].map((r, i) => (
+              <div key={r.title} data-reveal="scale" style={{ transitionDelay: `${i * 120}ms` }} className="bg-card border border-border rounded-sm overflow-hidden">
                 <img src={r.img} alt={r.title} className="w-full h-72 object-cover" />
                 <div className="p-6 flex justify-between items-center">
                   <h3 className="font-semibold">{r.title}</h3>
@@ -136,6 +146,7 @@ const Index = () => (
               </div>
             ))}
           </div>
+
           <div className="mt-10">
             <Link to="/referenzen" className="text-primary font-semibold text-sm tracking-wide hover:underline">
               Alle Referenzen ansehen →
@@ -146,13 +157,14 @@ const Index = () => (
 
       {/* Philosophie Zitat */}
       <section className="py-24 md:py-32">
-        <div className="container-x max-w-4xl">
+        <div className="container-x max-w-4xl" data-reveal>
           <p className="kicker mb-8">Philosophie</p>
           <blockquote className="text-3xl md:text-5xl font-light leading-tight tracking-tight mb-8">
             „Service heißt, das ganze Geschäft mit den Augen des Kunden zu sehen."
           </blockquote>
           <cite className="text-sm text-muted-foreground not-italic">— Geschäftsführung Clean &amp; Pure GmbH</cite>
         </div>
+
       </section>
 
       {/* Testimonials */}
@@ -168,8 +180,8 @@ const Index = () => (
             <span className="text-sm text-muted-foreground">100+ Bewertungen</span>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((t) => (
-              <figure key={t.name} className="bg-card border border-border p-8 rounded-sm">
+            {testimonials.map((t, i) => (
+              <figure key={t.name} data-reveal style={{ transitionDelay: `${i * 120}ms` }} className="bg-card border border-border p-8 rounded-sm">
                 <div className="flex items-center gap-1 text-primary mb-4">
                   {Array.from({length: 5}).map((_, i) => <Star key={i} className="w-4 h-4 fill-current" />)}
                 </div>
@@ -181,6 +193,7 @@ const Index = () => (
               </figure>
             ))}
           </div>
+
         </div>
       </section>
 
@@ -225,6 +238,8 @@ const Index = () => (
     </main>
     <Footer />
   </div>
-);
+  );
+};
 
 export default Index;
+
