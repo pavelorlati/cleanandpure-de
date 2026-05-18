@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 import FloatingContactButton from "@/components/FloatingContactButton";
 import { Link } from "react-router-dom";
 import { ArrowRight, Star } from "lucide-react";
+import { useReveal } from "@/hooks/useReveal";
+
 import equipment from "@/assets/cp/hero-equipment.png";
 import lobbySunset from "@/assets/cp/hero-lobby-sunset.png";
 import kueche from "@/assets/cp/team-kueche-wischen.jpg";
@@ -37,7 +39,10 @@ const testimonials = [
   { quote: "Schnelle Reaktion, top Arbeit, faire Preise. Besonders die Glasreinigung ist beeindruckend.", name: "Stefan B.", role: "Hausverwaltung" },
 ];
 
-const Index = () => (
+const Index = () => {
+  useReveal();
+  return (
+
   <div className="min-h-screen flex flex-col bg-background">
     <FloatingContactButton />
     <Header />
@@ -225,6 +230,8 @@ const Index = () => (
     </main>
     <Footer />
   </div>
-);
+  );
+};
 
 export default Index;
+
