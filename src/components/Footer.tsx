@@ -1,88 +1,49 @@
-import { Phone, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-
-const navLinks = [
-  { label: "Startseite", to: "/" },
-  { label: "Über uns", to: "/ueber-uns" },
-  { label: "Leistungen", to: "/leistungen" },
-  { label: "Referenzen", to: "/referenzen" },
-  { label: "Jobs", to: "/jobs" },
-  { label: "Kontakt", to: "/kontakt" },
-];
+import { Phone, Mail, MapPin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => (
-  <footer className="bg-foreground text-background py-16">
-    <div className="mx-auto max-w-[1400px] px-6">
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-        {/* Brand */}
-        <div className="space-y-4">
-          <span className="text-xl font-bold tracking-wider">Clean & Pure</span>
-          <p className="text-sm text-background/60 leading-relaxed">
-            Ihr familiengeführter Gebäudedienstleister aus Hamburg – professionell und zuverlässig.
-          </p>
+  <footer className="border-t border-border bg-card">
+    <div className="container-x py-16 grid md:grid-cols-4 gap-10">
+      <div>
+        <div className="flex items-center gap-3 mb-4">
+          <img src={logo} alt="Clean & Pure" className="h-10 w-auto" />
+          <span className="font-medium text-foreground">Clean &amp; Pure</span>
         </div>
-
-        {/* Links */}
-        <div>
-          <h4 className="font-semibold tracking-wider text-sm uppercase mb-4">Navigation</h4>
-          <ul className="space-y-2 text-sm text-background/60">
-            {navLinks.map((item) => (
-              <li key={item.to}>
-                <Link to={item.to} className="hover:text-primary transition-colors">
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Services */}
-        <div>
-          <h4 className="font-semibold tracking-wider text-sm uppercase mb-4">Leistungen</h4>
-          <ul className="space-y-2 text-sm text-background/60">
-            {["Büroreinigung", "Glasreinigung", "Grundreinigung", "Polsterreinigung", "Hausmeisterservice"].map((s) => (
-              <li key={s}>{s}</li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Contact */}
-        <div>
-          <h4 className="font-semibold tracking-wider text-sm uppercase mb-4">Kontakt</h4>
-          <ul className="space-y-3 text-sm text-background/60">
-            <li className="flex items-center gap-2">
-              <Phone className="w-4 h-4 text-primary" />
-              <a href="tel:04035966171" className="hover:text-primary transition-colors">040/35 96 61 71</a>
-            </li>
-            <li className="flex items-center gap-2">
-              <Mail className="w-4 h-4 text-primary" />
-              <a href="mailto:info@cleanandpure.de" className="hover:text-primary transition-colors">info@cleanandpure.de</a>
-            </li>
-            <li className="flex items-center gap-2">
-              <MapPin className="w-4 h-4 text-primary" />
-              Hamburg
-            </li>
-            <li className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-              <a
-                href="https://www.instagram.com/cleanandpure_gebaeudereinigung"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary transition-colors"
-              >
-                @cleanandpure_gebaeudereinigung
-              </a>
-            </li>
-          </ul>
-        </div>
+        <p className="text-sm text-muted-foreground leading-relaxed">
+          Familiengeführter Gebäudeservice mit Hamburger Wurzeln. Seit über 15 Jahren.
+        </p>
       </div>
-
-      <div className="border-t border-background/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-background/40">
-        <p>© {new Date().getFullYear()} Clean & Pure GmbH. Alle Rechte vorbehalten.</p>
-        <div className="flex gap-6">
-          <Link to="/impressum" className="hover:text-primary transition-colors">Impressum</Link>
-          <Link to="/datenschutz" className="hover:text-primary transition-colors">Datenschutz</Link>
-        </div>
+      <div>
+        <p className="kicker mb-4">Navigation</p>
+        <ul className="space-y-2 text-sm">
+          <li><Link to="/ueber-uns" className="text-foreground/80 hover:text-primary">Über uns</Link></li>
+          <li><Link to="/leistungen" className="text-foreground/80 hover:text-primary">Leistungen</Link></li>
+          <li><Link to="/referenzen" className="text-foreground/80 hover:text-primary">Referenzen</Link></li>
+          <li><Link to="/jobs" className="text-foreground/80 hover:text-primary">Karriere</Link></li>
+          <li><Link to="/kontakt" className="text-foreground/80 hover:text-primary">Kontakt</Link></li>
+        </ul>
+      </div>
+      <div>
+        <p className="kicker mb-4">Kontakt</p>
+        <ul className="space-y-3 text-sm">
+          <li className="flex items-start gap-2"><Phone className="w-4 h-4 text-primary mt-0.5" /><a href="tel:+494035966171" className="text-foreground/80 hover:text-primary">040 - 35 96 61 71</a></li>
+          <li className="flex items-start gap-2"><Mail className="w-4 h-4 text-primary mt-0.5" /><a href="mailto:info@cleanandpure.de" className="text-foreground/80 hover:text-primary">info@cleanandpure.de</a></li>
+          <li className="flex items-start gap-2"><MapPin className="w-4 h-4 text-primary mt-0.5" /><span className="text-foreground/80">Lauenburger Straße 13<br/>22049 Hamburg</span></li>
+        </ul>
+      </div>
+      <div>
+        <p className="kicker mb-4">Rechtliches</p>
+        <ul className="space-y-2 text-sm">
+          <li><Link to="/impressum" className="text-foreground/80 hover:text-primary">Impressum</Link></li>
+          <li><Link to="/datenschutz" className="text-foreground/80 hover:text-primary">Datenschutz</Link></li>
+        </ul>
+      </div>
+    </div>
+    <div className="border-t border-border">
+      <div className="container-x py-5 text-xs text-muted-foreground flex flex-wrap justify-between gap-2">
+        <span>© {new Date().getFullYear()} Clean &amp; Pure GmbH</span>
+        <span>Gebäudereinigung Hamburg</span>
       </div>
     </div>
   </footer>
