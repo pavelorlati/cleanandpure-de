@@ -45,18 +45,28 @@ const Leistungen = () => {
       </section>
 
       <section className="pb-24">
-        <div className="container-x space-y-px bg-border">
+        <div className="container-x">
           {services.map((s, i) => (
-            <div key={s.n} data-reveal={i % 2 === 0 ? "left" : "right"} className={`grid md:grid-cols-[80px_1fr_1fr_auto] gap-6 md:gap-10 items-center bg-background p-6 md:p-10 ${i === 0 ? "border-t border-border" : ""}`}>
-              <span className="text-sm font-mono text-muted-foreground">{s.n}</span>
-              <img src={s.img} alt={s.title} className="w-full h-40 object-cover rounded-sm" loading="lazy" />
+            <Link
+              to="/kontakt"
+              key={s.n}
+              data-reveal={i % 2 === 0 ? "left" : "right"}
+              className="group grid md:grid-cols-[80px_1fr_1fr_auto] gap-6 md:gap-10 items-center p-6 md:p-10 rounded-sm transition-colors duration-500 ease-out hover:bg-secondary/50"
+            >
+              <span className="text-sm font-mono text-muted-foreground transition-colors duration-500 group-hover:text-primary">{s.n}</span>
+              <div className="overflow-hidden rounded-sm">
+                <img src={s.img} alt={s.title} className="w-full h-40 object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]" loading="lazy" />
+              </div>
               <div>
                 <p className="kicker mb-2">{s.kicker}</p>
-                <h3 className="text-xl md:text-2xl font-semibold mb-2">{s.title}</h3>
+                <h3 className="text-xl md:text-2xl font-semibold mb-2 transition-colors duration-500 group-hover:text-primary">{s.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
               </div>
-              <Link to="/kontakt" className="text-xs font-semibold tracking-[0.2em] uppercase text-primary whitespace-nowrap hover:underline">Mehr erfahren →</Link>
-            </div>
+              <span className="text-xs font-semibold tracking-[0.2em] uppercase text-primary whitespace-nowrap inline-flex items-center gap-2">
+                Mehr erfahren
+                <ArrowRight className="w-3.5 h-3.5 transition-transform duration-500 group-hover:translate-x-1" />
+              </span>
+            </Link>
           ))}
         </div>
       </section>
