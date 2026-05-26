@@ -109,9 +109,9 @@ const Referenzen = () => {
           <p className="text-muted-foreground mb-14 max-w-2xl">Ein Auszug aus unserer täglichen Arbeit in Hamburg – von der Glasfassaden-Reinigung bis zur Bodensanierung.</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((p, i) => (
-              <div key={p.title} data-reveal={i % 3 === 0 ? "left" : i % 3 === 2 ? "right" : "up"} style={{ transitionDelay: `${(i % 3) * 80}ms` }} className="bg-card border border-border rounded-sm overflow-hidden">
+              <div key={p.title} data-reveal={i % 3 === 0 ? "left" : i % 3 === 2 ? "right" : "up"} style={{ transitionDelay: `${(i % 3) * 80}ms` }} className="group bg-card border border-border rounded-sm overflow-hidden">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={p.img} alt={p.title} className="w-full h-full object-cover" loading="lazy" />
+                  <img src={p.img} alt={p.title} className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110" loading="lazy" />
                 </div>
                 <div className="p-6">
                   <p className="kicker mb-2">{p.location}</p>
