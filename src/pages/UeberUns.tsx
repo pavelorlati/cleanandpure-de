@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import FloatingContactButton from "@/components/FloatingContactButton";
 import PageHero from "@/components/PageHero";
 import { Link } from "react-router-dom";
+import { useReveal } from "@/hooks/useReveal";
 import lobbySunset from "@/assets/cp/hero-lobby-sunset.png";
 import lobbyModern from "@/assets/cp/hero-lobby-modern.png";
 import boden from "@/assets/cp/team-bodenreinigung.jpg";

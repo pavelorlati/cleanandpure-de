@@ -4,6 +4,7 @@ import FloatingContactButton from "@/components/FloatingContactButton";
 import PageHero from "@/components/PageHero";
 import { Link } from "react-router-dom";
 import { Shield, Building2, Hotel, Stethoscope, Home, ShoppingBag, Factory, Star } from "lucide-react";
+import { useReveal } from "@/hooks/useReveal";
 import lobbyModern from "@/assets/cp/hero-lobby-modern.png";
 import parkett from "@/assets/cp/vorher-nachher-parkett.jpg";
 import flur from "@/assets/cp/vorher-nachher-flur.jpg";
