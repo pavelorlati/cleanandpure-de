@@ -4,6 +4,7 @@ import FloatingContactButton from "@/components/FloatingContactButton";
 import PageHero from "@/components/PageHero";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { useReveal } from "@/hooks/useReveal";
 import glas from "@/assets/cp/hero-glasreinigung.webp";
 import mopping from "@/assets/cp/hero-mopping.png";
 import buero from "@/assets/cp/hero-buero.png";
@@ -25,7 +26,9 @@ const services = [
   { n: "11", kicker: "Gepflegte Gemeinschaftsflächen", title: "Außen- & Treppenhausreinigung", desc: "Reinigung von Treppenhäusern, Außenanlagen und Gemeinschaftsflächen für gepflegte Immobilien.", img: sunset },
 ];
 
-const Leistungen = () => (
+const Leistungen = () => {
+  useReveal();
+  return (
   <div className="min-h-screen flex flex-col bg-background">
     <FloatingContactButton />
     <Header />
