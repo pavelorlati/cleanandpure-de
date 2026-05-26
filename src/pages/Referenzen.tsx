@@ -4,6 +4,7 @@ import FloatingContactButton from "@/components/FloatingContactButton";
 import PageHero from "@/components/PageHero";
 import { Link } from "react-router-dom";
 import { Shield, Building2, Hotel, Stethoscope, Home, ShoppingBag, Factory, Star } from "lucide-react";
+import { useReveal } from "@/hooks/useReveal";
 import lobbyModern from "@/assets/cp/hero-lobby-modern.png";
 import parkett from "@/assets/cp/vorher-nachher-parkett.jpg";
 import flur from "@/assets/cp/vorher-nachher-flur.jpg";
@@ -42,7 +43,9 @@ const testimonials = [
   { quote: "Schnelle Reaktion, top Arbeit, faire Preise. Besonders die Glasreinigung ist beeindruckend.", name: "Stefan B.", role: "Hausverwaltung" },
 ];
 
-const Referenzen = () => (
+const Referenzen = () => {
+  useReveal();
+  return (
   <div className="min-h-screen flex flex-col bg-background">
     <FloatingContactButton />
     <Header />
@@ -105,8 +108,8 @@ const Referenzen = () => (
           <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-3">Echte Aufträge, echte Ergebnisse</h2>
           <p className="text-muted-foreground mb-14 max-w-2xl">Ein Auszug aus unserer täglichen Arbeit in Hamburg – von der Glasfassaden-Reinigung bis zur Bodensanierung.</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((p) => (
-              <div key={p.title} className="bg-card border border-border rounded-sm overflow-hidden">
+            {projects.map((p, i) => (
+              <div key={p.title} data-reveal={i % 3 === 0 ? "left" : i % 3 === 2 ? "right" : "up"} style={{ transitionDelay: `${(i % 3) * 80}ms` }} className="bg-card border border-border rounded-sm overflow-hidden">
                 <div className="aspect-[4/3] overflow-hidden">
                   <img src={p.img} alt={p.title} className="w-full h-full object-cover" loading="lazy" />
                 </div>
@@ -170,6 +173,7 @@ const Referenzen = () => (
     </main>
     <Footer />
   </div>
-);
+  );
+};
 
 export default Referenzen;

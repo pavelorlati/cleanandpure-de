@@ -4,6 +4,7 @@ import FloatingContactButton from "@/components/FloatingContactButton";
 import PageHero from "@/components/PageHero";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { useReveal } from "@/hooks/useReveal";
 import glas from "@/assets/cp/hero-glasreinigung.webp";
 import mopping from "@/assets/cp/hero-mopping.png";
 import buero from "@/assets/cp/hero-buero.png";
@@ -25,7 +26,9 @@ const services = [
   { n: "11", kicker: "Gepflegte Gemeinschaftsflächen", title: "Außen- & Treppenhausreinigung", desc: "Reinigung von Treppenhäusern, Außenanlagen und Gemeinschaftsflächen für gepflegte Immobilien.", img: sunset },
 ];
 
-const Leistungen = () => (
+const Leistungen = () => {
+  useReveal();
+  return (
   <div className="min-h-screen flex flex-col bg-background">
     <FloatingContactButton />
     <Header />
@@ -44,7 +47,7 @@ const Leistungen = () => (
       <section className="pb-24">
         <div className="container-x space-y-px bg-border">
           {services.map((s, i) => (
-            <div key={s.n} className={`grid md:grid-cols-[80px_1fr_1fr_auto] gap-6 md:gap-10 items-center bg-background p-6 md:p-10 ${i === 0 ? "border-t border-border" : ""}`}>
+            <div key={s.n} data-reveal={i % 2 === 0 ? "left" : "right"} className={`grid md:grid-cols-[80px_1fr_1fr_auto] gap-6 md:gap-10 items-center bg-background p-6 md:p-10 ${i === 0 ? "border-t border-border" : ""}`}>
               <span className="text-sm font-mono text-muted-foreground">{s.n}</span>
               <img src={s.img} alt={s.title} className="w-full h-40 object-cover rounded-sm" loading="lazy" />
               <div>
@@ -70,6 +73,7 @@ const Leistungen = () => (
     </main>
     <Footer />
   </div>
-);
+  );
+};
 
 export default Leistungen;
