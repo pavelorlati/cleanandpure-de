@@ -55,6 +55,9 @@ const HeroSection = () => {
             key={s.src}
             src={s.src}
             alt={s.label}
+            loading={i === 0 ? "eager" : "lazy"}
+            decoding="async"
+            fetchPriority={i === 0 ? "high" : "low"}
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out ${
               i === index ? "opacity-100" : "opacity-0"
             }`}
