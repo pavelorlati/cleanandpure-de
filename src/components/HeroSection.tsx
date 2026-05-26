@@ -53,8 +53,8 @@ const HeroSection = () => {
         {slides.map((s, i) => (
           <div
             key={s.src}
-            className={`absolute inset-0 transition-opacity ease-[cubic-bezier(0.4,0,0.2,1)] ${
-              i === index ? "opacity-100 duration-[2200ms]" : "opacity-0 duration-[1800ms]"
+            className={`absolute inset-0 transition-opacity duration-[3000ms] ease-[cubic-bezier(0.45,0,0.55,1)] ${
+              i === index ? "opacity-100" : "opacity-0"
             }`}
           >
             <img
@@ -63,9 +63,7 @@ const HeroSection = () => {
               loading={i === 0 ? "eager" : "lazy"}
               decoding="async"
               fetchPriority={i === 0 ? "high" : "low"}
-              className={`w-full h-full object-cover will-change-transform ${
-                i === index ? "animate-hero-kenburns" : ""
-              }`}
+              className="w-full h-full object-cover animate-hero-kenburns will-change-transform"
             />
           </div>
         ))}
