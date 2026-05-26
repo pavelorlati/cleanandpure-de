@@ -43,7 +43,9 @@ const testimonials = [
   { quote: "Schnelle Reaktion, top Arbeit, faire Preise. Besonders die Glasreinigung ist beeindruckend.", name: "Stefan B.", role: "Hausverwaltung" },
 ];
 
-const Referenzen = () => (
+const Referenzen = () => {
+  useReveal();
+  return (
   <div className="min-h-screen flex flex-col bg-background">
     <FloatingContactButton />
     <Header />

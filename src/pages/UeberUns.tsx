@@ -30,7 +30,9 @@ const values = [
   { n: "03", title: "Nachhaltigkeit", desc: "Wir denken an morgen. Ökologische Verantwortung ist fester Bestandteil unseres Handelns." },
 ];
 
-const UeberUns = () => (
+const UeberUns = () => {
+  useReveal();
+  return (
   <div className="min-h-screen flex flex-col bg-background">
     <FloatingContactButton />
     <Header />
@@ -39,7 +41,7 @@ const UeberUns = () => (
 
       <section className="py-24 md:py-32">
         <div className="container-x grid md:grid-cols-2 gap-16 items-center">
-          <div>
+          <div data-reveal="left">
             <p className="kicker mb-6">Unsere Philosophie</p>
             <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">Mehr als Reinigung –<br/>ein echtes Versprechen.</h2>
             <p className="text-muted-foreground mb-5 leading-relaxed">
@@ -53,7 +55,7 @@ const UeberUns = () => (
               <footer className="not-italic text-sm text-muted-foreground mt-2">— Geschäftsführung Clean &amp; Pure GmbH</footer>
             </blockquote>
           </div>
-          <img src={lobbyModern} alt="Professionelle Reinigung" className="rounded-sm" />
+          <img src={lobbyModern} alt="Professionelle Reinigung" className="rounded-sm" data-reveal="right" />
         </div>
       </section>
 
@@ -78,14 +80,14 @@ const UeberUns = () => (
           <Link to="/jobs" className="text-primary font-semibold hover:underline">Werde Teil des Teams →</Link>
 
           <div className="grid md:grid-cols-3 gap-6 mt-16">
-            <div className="md:col-span-2 relative h-80 overflow-hidden rounded-sm">
+            <div className="md:col-span-2 relative h-80 overflow-hidden rounded-sm" data-reveal="left">
               <img src={boden} alt="Team im Einsatz" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
               <div className="absolute bottom-4 left-4 text-xs text-muted-foreground"><div className="text-sm font-semibold text-foreground">Team im Einsatz</div>Unternehmensgruppe Clean &amp; Pure</div>
             </div>
             <div className="grid grid-rows-2 gap-6">
-              <img src={firmenwagen} alt="Firmenwagen-Flotte" className="w-full h-full object-cover rounded-sm" />
-              <img src={skyline} alt="Glasreinigung Hamburg" className="w-full h-full object-cover rounded-sm" />
+              <img src={firmenwagen} alt="Firmenwagen-Flotte" className="w-full h-full object-cover rounded-sm" data-reveal="right" />
+              <img src={skyline} alt="Glasreinigung Hamburg" className="w-full h-full object-cover rounded-sm" data-reveal="right" style={{ transitionDelay: "120ms" }} />
             </div>
           </div>
           <p className="text-xs text-muted-foreground uppercase tracking-wider mt-4">Unsere Firmenwagen-Flotte täglich in Hamburg im Einsatz</p>
