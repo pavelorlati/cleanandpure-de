@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import FloatingContactButton from "@/components/FloatingContactButton";
 import PageHero from "@/components/PageHero";
 import { Wallet, Clock, Heart, GraduationCap } from "lucide-react";
-import mopping from "@/assets/cp/hero-mopping.png";
+import mopping from "@/assets/cp/hero-mopping.jpg";
 
 const benefits = [
   { icon: Wallet, title: "Überdurchschnittliche Bezahlung", desc: "Faire und leistungsgerechte Vergütung – deutlich über dem Branchendurchschnitt." },

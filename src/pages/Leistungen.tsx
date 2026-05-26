@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { useReveal } from "@/hooks/useReveal";
 import glas from "@/assets/cp/hero-glasreinigung.webp";
-import mopping from "@/assets/cp/hero-mopping.png";
-import buero from "@/assets/cp/hero-buero.png";
-import sunset from "@/assets/cp/hero-sunset.png";
-import lobbyModern from "@/assets/cp/hero-lobby-modern.png";
+import mopping from "@/assets/cp/hero-mopping.jpg";
+import buero from "@/assets/cp/hero-buero.jpg";
+import sunset from "@/assets/cp/hero-sunset.jpg";
+import lobbyModern from "@/assets/cp/hero-lobby-modern.jpg";
 import boden from "@/assets/cp/team-bodenreinigung.jpg";
 
 const services = [
