@@ -111,6 +111,13 @@
     0% { transform: scale(1.12); }
     100% { transform: scale(1); }
   }
+  @keyframes hero-kenburns {
+    0%   { transform: scale(1.05) translate3d(0, 0, 0); }
+    100% { transform: scale(1.18) translate3d(-1.5%, -1%, 0); }
+  }
+  .animate-hero-kenburns {
+    animation: hero-kenburns 8000ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
   @keyframes hero-zoom {
     0% { transform: scale(1.15) translateX(-30px); }
     100% { transform: scale(1.02) translateX(0); }

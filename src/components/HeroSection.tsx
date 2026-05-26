@@ -51,17 +51,23 @@ const HeroSection = () => {
       {/* Bilder-Stack mit Crossfade */}
       <div className="absolute inset-0">
         {slides.map((s, i) => (
-          <img
+          <div
             key={s.src}
-            src={s.src}
-            alt={s.label}
-            loading={i === 0 ? "eager" : "lazy"}
-            decoding="async"
-            fetchPriority={i === 0 ? "high" : "low"}
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out ${
-              i === index ? "opacity-100" : "opacity-0"
+            className={`absolute inset-0 transition-opacity ease-[cubic-bezier(0.4,0,0.2,1)] ${
+              i === index ? "opacity-100 duration-[2200ms]" : "opacity-0 duration-[1800ms]"
             }`}
-          />
+          >
+            <img
+              src={s.src}
+              alt={s.label}
+              loading={i === 0 ? "eager" : "lazy"}
+              decoding="async"
+              fetchPriority={i === 0 ? "high" : "low"}
+              className={`w-full h-full object-cover will-change-transform ${
+                i === index ? "animate-hero-kenburns" : ""
+              }`}
+            />
+          </div>
         ))}
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/65 to-black/20" />
       </div>
