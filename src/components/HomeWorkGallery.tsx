@@ -22,17 +22,23 @@ const HomeWorkGallery = () => (
         </h2>
       </div>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-        {items.map((it) => (
-          <div key={it.alt} className="overflow-hidden aspect-[3/4]">
+        {items.map((it, i) => (
+          <div
+            key={it.alt}
+            data-reveal={i % 2 === 0 ? "left" : "right"}
+            style={{ transitionDelay: `${i * 120}ms` }}
+            className="overflow-hidden aspect-[3/4]"
+          >
             <img
               src={it.img}
               alt={it.alt}
               loading="lazy"
-              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
             />
           </div>
         ))}
       </div>
+
     </div>
   </section>
 );

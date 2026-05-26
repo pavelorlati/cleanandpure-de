@@ -32,10 +32,12 @@ const HomeReferencesPreview = () => (
           </Link>
         </div>
         <div className="grid grid-cols-2 gap-3">
-          {previews.map((p) => (
+          {previews.map((p, i) => (
             <Link
               key={p.alt}
               to="/referenzen"
+              data-reveal={i % 2 === 0 ? "left" : "right"}
+              style={{ transitionDelay: `${i * 120}ms` }}
               className="block overflow-hidden"
             >
               <img
@@ -47,6 +49,7 @@ const HomeReferencesPreview = () => (
             </Link>
           ))}
         </div>
+
       </div>
     </div>
   </section>
