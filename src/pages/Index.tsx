@@ -67,8 +67,8 @@ const Index = () => {
               Mehr über uns <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
-          <div className="relative" data-reveal="right">
-            <img src={equipment} alt="Professionelle Reinigungsausstattung Clean & Pure" className="w-full h-auto rounded-sm" />
+          <div className="relative overflow-hidden" data-reveal="right">
+            <img src={equipment} alt="Professionelle Reinigungsausstattung Clean & Pure" className="w-full h-auto rounded-sm transition-transform duration-[1400ms] ease-out hover:scale-105" />
           </div>
         </div>
 
