@@ -89,18 +89,27 @@
   /* Scroll Reveal — schnell */
   [data-reveal] {
     opacity: 0;
-    transform: translateY(16px);
-    transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1),
-                transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+    transform: translateY(40px);
+    transition: opacity 800ms cubic-bezier(0.22, 1, 0.36, 1),
+                transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
     will-change: opacity, transform;
   }
   [data-reveal="left"] { transform: translateX(-80px); }
   [data-reveal="right"] { transform: translateX(80px); }
-  [data-reveal="scale"] { transform: scale(0.96); }
+  [data-reveal="scale"] { transform: scale(0.94); }
   [data-reveal="up"] { transform: translateY(60px); }
+  [data-reveal="zoom"] { transform: scale(1.08); opacity: 0; }
   [data-reveal].is-visible {
     opacity: 1;
     transform: none;
+  }
+  /* Sanftes Dauerzoom auf Bildern beim Reinblenden */
+  .img-zoom-in {
+    animation: img-zoom 1800ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  @keyframes img-zoom {
+    0% { transform: scale(1.12); }
+    100% { transform: scale(1); }
   }
   @keyframes hero-zoom {
     0% { transform: scale(1.15) translateX(-30px); }
