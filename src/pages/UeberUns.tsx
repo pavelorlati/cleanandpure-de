@@ -99,22 +99,41 @@ const UeberUns = () => {
           <p className="kicker mb-5">Ihr Team</p>
           <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-3">Ihre Ansprechpartner</h2>
           <p className="text-muted-foreground mb-14">Persönlicher Service. Direkter Draht.</p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-10 md:gap-14">
             {team.map((t, i) => (
-              <div key={t.name} data-reveal="up" style={{ transitionDelay: `${i * 80}ms` }} className="bg-card border border-border rounded-sm overflow-hidden flex flex-col">
-                <img src={t.img} alt={t.name} className="w-full aspect-[3/4] object-cover" />
-                <div className="p-5 flex-1 flex flex-col">
-                  <h3 className="font-semibold text-lg">{t.name}</h3>
-                  <p className="text-xs text-primary uppercase tracking-wider mb-3">{t.role}</p>
-                  <div className="text-sm space-y-1 mb-4">
-                    <a href={`tel:${t.tel.replace(/\s|\//g, "")}`} className="block text-foreground/80 hover:text-primary">{t.tel}</a>
-                    <a href={`mailto:${t.mail}`} className="block text-foreground/80 hover:text-primary break-all">{t.mail}</a>
+              <div
+                key={t.name}
+                data-reveal="up"
+                style={{ transitionDelay: `${i * 120}ms` }}
+                className="group relative overflow-hidden rounded-sm bg-card"
+              >
+                <div className="grid md:grid-cols-[1.1fr_1fr]">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={t.img}
+                      alt={t.name}
+                      loading="lazy"
+                      className="w-full h-full aspect-[3/4] md:aspect-auto object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                   </div>
-                  <p className="text-xs italic text-muted-foreground leading-relaxed mt-auto">„{t.quote}"</p>
+                  <div className="p-7 md:p-9 flex flex-col justify-center">
+                    <p className="kicker mb-3 transition-colors duration-500 group-hover:text-primary-glow">{t.role}</p>
+                    <h3 className="font-bold text-2xl md:text-3xl leading-tight mb-5 tracking-tight">{t.name}</h3>
+                    <div className="text-sm space-y-1.5 mb-6">
+                      <a href={`tel:${t.tel.replace(/\s|\//g, "")}`} className="block text-foreground/85 hover:text-primary transition-colors">{t.tel}</a>
+                      <a href={`mailto:${t.mail}`} className="block text-foreground/85 hover:text-primary break-all transition-colors">{t.mail}</a>
+                    </div>
+                    <div className="relative pl-4">
+                      <span className="absolute left-0 top-0 bottom-0 w-px bg-primary/40 transition-all duration-700 group-hover:bg-primary" />
+                      <p className="text-sm italic text-muted-foreground leading-relaxed">„{t.quote}"</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
+
           <div className="mt-12 bg-card border border-border p-8 rounded-sm">
             <h3 className="text-xl font-semibold mb-2">Wir brauchen dich in unserem Team — jetzt bewerben!</h3>
             <p className="text-sm text-muted-foreground mb-4">Assistentin d. Geschäftsführung</p>
