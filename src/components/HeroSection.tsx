@@ -123,20 +123,20 @@ const HeroSection = () => {
       <div className="absolute bottom-0 left-0 right-0 z-10 border-t border-white/10 bg-black/40 backdrop-blur">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10 grid grid-cols-2 md:grid-cols-5 gap-4 py-4 text-xs">
           <div className="flex items-center gap-2">
-            <span className="text-primary font-bold text-base">5,0 ★</span>
-            <span className="text-white/60 uppercase tracking-wider text-[0.65rem]">Google Bewertung</span>
+            <span className="text-white font-extrabold text-base">5,0 ★</span>
+            <span className="text-white uppercase tracking-wider text-[0.65rem] font-semibold">Google Bewertung</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-primary font-bold text-base">100+</span>
-            <span className="text-white/60 uppercase tracking-wider text-[0.65rem]">Zufriedene Kunden</span>
+            <span className="text-white font-extrabold text-base">100+</span>
+            <span className="text-white uppercase tracking-wider text-[0.65rem] font-semibold">Zufriedene Kunden</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-primary font-bold text-base">15+</span>
-            <span className="text-white/60 uppercase tracking-wider text-[0.65rem]">Jahre Erfahrung</span>
+            <span className="text-white font-extrabold text-base">15+</span>
+            <span className="text-white uppercase tracking-wider text-[0.65rem] font-semibold">Jahre Erfahrung</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-white font-semibold">Hamburg</span>
-            <span className="text-white/60 uppercase tracking-wider text-[0.65rem]">&amp; Umgebung</span>
+            <span className="text-white font-bold">Hamburg</span>
+            <span className="text-white uppercase tracking-wider text-[0.65rem] font-semibold">&amp; Umgebung</span>
           </div>
           <a
             href="tel:+494035966171"
