@@ -18,7 +18,8 @@ export function useReveal() {
           }
         });
       },
-      { threshold: 0.01, rootMargin: "0px 0px 200px 0px" }
+      { threshold: 0.1, rootMargin: "0px 0px -10% 0px" }
+
     );
 
     els.forEach((el) => io.observe(el));
