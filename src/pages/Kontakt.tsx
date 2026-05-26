@@ -66,7 +66,7 @@ const Kontakt = () => {
               </div>
             </div>
 
-            <form onSubmit={onSubmit} className="bg-card border border-border p-8 rounded-sm space-y-4">
+            <form onSubmit={onSubmit} className="bg-card/60 border border-border/60 p-8 rounded-sm space-y-4 backdrop-blur-sm">
               <p className="kicker mb-2">Angebot anfordern</p>
               <div className="grid sm:grid-cols-2 gap-4">
                 <input required value={form.name} onChange={(e)=>setForm({...form, name: e.target.value})} placeholder="Ihr Name *" className="w-full px-4 py-3 bg-background border border-border rounded-sm text-sm focus:outline-none focus:border-primary" />
