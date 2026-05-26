@@ -135,8 +135,10 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {[{img: parkett, title: "Parkett-Grundreinigung"}, {img: flur, title: "Flur-Tiefenreinigung"}].map((r, i) => (
-              <div key={r.title} data-reveal="scale" style={{ transitionDelay: `${i * 40}ms` }} className="bg-card border border-border rounded-sm overflow-hidden">
-                <img src={r.img} alt={r.title} className="w-full h-72 object-cover" />
+              <div key={r.title} data-reveal={i === 0 ? "left" : "right"} style={{ transitionDelay: `${i * 80}ms` }} className="group bg-card border border-border rounded-sm overflow-hidden">
+                <div className="overflow-hidden">
+                  <img src={r.img} alt={r.title} className="w-full h-72 object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-110" />
+                </div>
                 <div className="p-6 flex justify-between items-center">
                   <h3 className="font-semibold">{r.title}</h3>
                   <div className="flex gap-3 text-xs text-muted-foreground uppercase tracking-wider">
