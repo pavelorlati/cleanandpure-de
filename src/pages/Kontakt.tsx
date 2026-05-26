@@ -5,7 +5,7 @@ import PageHero from "@/components/PageHero";
 import { Phone, Mail, MapPin, Clock, Check } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
-import buero from "@/assets/cp/hero-buero.png";
+import buero from "@/assets/cp/hero-buero.jpg";
 
 const leistungen = [
   "Unterhaltsreinigung","Büroreinigung","Glas- & Fassadenreinigung","Grund- & Sonderreinigung",

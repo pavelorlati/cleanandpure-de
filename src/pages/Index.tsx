@@ -6,13 +6,13 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Star } from "lucide-react";
 import { useReveal } from "@/hooks/useReveal";
 
-import equipment from "@/assets/cp/hero-equipment.png";
-import lobbySunset from "@/assets/cp/hero-lobby-sunset.png";
+import equipment from "@/assets/cp/hero-equipment.jpg";
+import lobbySunset from "@/assets/cp/hero-lobby-sunset.jpg";
 import kueche from "@/assets/cp/team-kueche-wischen.jpg";
-import buero from "@/assets/cp/hero-buero.png";
+import buero from "@/assets/cp/hero-buero.jpg";
 import firmenwagen from "@/assets/cp/firmenwagen-fensterputz.jpg";
 import boden from "@/assets/cp/team-bodenreinigung.jpg";
-import hotelImg from "@/assets/cp/hero-lobby-modern.png";
+import hotelImg from "@/assets/cp/hero-lobby-modern.jpg";
 import skyline from "@/assets/cp/team-hamburg-skyline.jpg";
 import parkett from "@/assets/cp/vorher-nachher-parkett.jpg";
 import flur from "@/assets/cp/vorher-nachher-flur.jpg";
