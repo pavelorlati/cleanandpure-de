@@ -103,14 +103,16 @@ const HeroSection = () => {
           </div>
 
           {/* Slide-Progress (4 Balken) */}
-          <div className="mt-10 flex gap-3 max-w-xs">
+          <div className="mt-10 flex gap-3 max-w-sm items-center">
             {slides.map((_, i) => (
               <button
                 key={i}
                 type="button"
                 onClick={() => go(i)}
                 aria-label={`Slide ${i + 1}`}
-                className="relative h-[2px] flex-1 bg-white/15 overflow-hidden"
+                className={`relative h-[2px] bg-white/15 overflow-hidden transition-[flex-grow] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                  i === index ? "flex-[3]" : "flex-1"
+                }`}
               >
                 <span
                   className="absolute inset-y-0 left-0 bg-white"
