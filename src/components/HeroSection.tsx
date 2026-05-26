@@ -14,7 +14,7 @@ const slides = [
   { src: glasfassade, headline: "Fassadenreinigung.", sub: "In jeder Höhe.",              label: "Glas- & Fassadenreinigung" },
 ];
 
-const SLIDE_MS = 6000;
+const SLIDE_MS = 8000;
 
 const HeroSection = () => {
   const [index, setIndex] = useState(0);
