@@ -100,8 +100,8 @@ const UeberUns = () => {
           <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-3">Ihre Ansprechpartner</h2>
           <p className="text-muted-foreground mb-14">Persönlicher Service. Direkter Draht.</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((t) => (
-              <div key={t.name} className="bg-card border border-border rounded-sm overflow-hidden flex flex-col">
+            {team.map((t, i) => (
+              <div key={t.name} data-reveal="up" style={{ transitionDelay: `${i * 80}ms` }} className="bg-card border border-border rounded-sm overflow-hidden flex flex-col">
                 <img src={t.img} alt={t.name} className="w-full aspect-[3/4] object-cover" />
                 <div className="p-5 flex-1 flex flex-col">
                   <h3 className="font-semibold text-lg">{t.name}</h3>
@@ -173,6 +173,7 @@ const UeberUns = () => {
     </main>
     <Footer />
   </div>
-);
+  );
+};
 
 export default UeberUns;
