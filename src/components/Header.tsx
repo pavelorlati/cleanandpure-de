@@ -54,7 +54,7 @@ const Header = () => {
               to={item.to}
               end={item.to === "/"}
               className={({ isActive }) =>
-                `text-xs font-medium tracking-[0.2em] uppercase transition-colors ${
+                `text-xs font-bold tracking-[0.2em] uppercase transition-colors ${
                   isActive ? "text-primary" : "text-foreground/80 hover:text-primary"
                 }`
               }
@@ -112,7 +112,7 @@ const Header = () => {
               end={item.to === "/"}
               onClick={() => setMobileOpen(false)}
               className={({ isActive }) =>
-                `text-base font-medium tracking-[0.2em] uppercase ${
+                `text-base font-bold tracking-[0.2em] uppercase ${
                   isActive ? "text-primary" : "text-foreground"
                 }`
               }

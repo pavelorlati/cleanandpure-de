@@ -101,8 +101,24 @@
     opacity: 1;
     transform: none;
   }
+  @keyframes hero-zoom {
+    0% { transform: scale(1.15) translateX(-30px); }
+    100% { transform: scale(1.02) translateX(0); }
+  }
+  .animate-hero-zoom {
+    animation: hero-zoom 1400ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  @keyframes hero-in {
+    0% { opacity: 0; transform: translateX(-40px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+  .animate-hero-in {
+    opacity: 0;
+    animation: hero-in 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
   @media (prefers-reduced-motion: reduce) {
     [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
+    .animate-hero-zoom, .animate-hero-in { animation: none !important; opacity: 1 !important; transform: none !important; }
   }
 }
 
