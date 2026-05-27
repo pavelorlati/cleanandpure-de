@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import FloatingContactButton from "@/components/FloatingContactButton";
 import PageHero from "@/components/PageHero";
 import { Wallet, Clock, Heart, GraduationCap } from "lucide-react";
+import { useReveal } from "@/hooks/useReveal";
 import mopping from "@/assets/cp/hero-mopping.jpg";
 
 const benefits = [
@@ -18,7 +19,9 @@ const jobs = [
   { title: "Mitarbeiter/in Verwaltung & Organisation", type: "Vollzeit", location: "Hamburg Wandsbek" },
 ];
 
-const Jobs = () => (
+const Jobs = () => {
+  useReveal();
+  return (
   <div className="min-h-screen flex flex-col bg-background">
     <FloatingContactButton />
     <Header />
@@ -101,6 +104,7 @@ const Jobs = () => (
     </main>
     <Footer />
   </div>
-);
+  );
+};
 
 export default Jobs;
