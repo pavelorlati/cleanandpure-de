@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import FloatingContactButton from "@/components/FloatingContactButton";
 import PageHero from "@/components/PageHero";
 import { Wallet, Clock, Heart, GraduationCap } from "lucide-react";
+import { useReveal } from "@/hooks/useReveal";
 import mopping from "@/assets/cp/hero-mopping.jpg";
 
 const benefits = [
