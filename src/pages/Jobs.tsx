@@ -19,7 +19,9 @@ const jobs = [
   { title: "Mitarbeiter/in Verwaltung & Organisation", type: "Vollzeit", location: "Hamburg Wandsbek" },
 ];
 
-const Jobs = () => (
+const Jobs = () => {
+  useReveal();
+  return (
   <div className="min-h-screen flex flex-col bg-background">
     <FloatingContactButton />
     <Header />
