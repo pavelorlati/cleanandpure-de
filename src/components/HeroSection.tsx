@@ -48,14 +48,19 @@ const HeroSection = () => {
 
   return (
     <section className="relative h-screen min-h-[600px] overflow-hidden">
-      {/* Bilder-Stack mit Crossfade */}
+      {/* Bilder-Stack mit sehr weichem Crossfade */}
       <div className="absolute inset-0">
         {slides.map((s, i) => (
           <div
             key={s.src}
-            className={`absolute inset-0 transition-opacity duration-[2200ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${
-              i === index ? "opacity-100 z-[1]" : "opacity-0 z-0"
-            }`}
+            className="absolute inset-0 ease-linear"
+            style={{
+              opacity: i === index ? 1 : 0,
+              transitionProperty: "opacity",
+              transitionDuration: "3000ms",
+              transitionTimingFunction: "linear",
+              zIndex: i === index ? 1 : 0,
+            }}
           >
             <img
               src={s.src}
@@ -63,7 +68,7 @@ const HeroSection = () => {
               loading={i === 0 ? "eager" : "lazy"}
               decoding="async"
               fetchPriority={i === 0 ? "high" : "low"}
-              className="w-full h-full object-cover animate-hero-kenburns will-change-transform"
+              className="w-full h-full object-cover animate-hero-kenburns-slow will-change-transform"
             />
           </div>
         ))}
