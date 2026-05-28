@@ -131,6 +131,9 @@
   .animate-hero-kenburns {
     animation: hero-kenburns 8000ms cubic-bezier(0.22, 1, 0.36, 1) both;
   }
+  .animate-hero-kenburns-slow {
+    animation: hero-kenburns 14000ms linear both;
+  }
   @keyframes hero-zoom {
     0% { transform: scale(1.15) translateX(-30px); }
     100% { transform: scale(1.02) translateX(0); }
