@@ -74,15 +74,14 @@ const HeroSection = () => {
       <div className="relative z-10 h-full flex flex-col justify-between max-w-[1400px] mx-auto px-6 md:px-10">
         <div className="h-20" />
 
-        <div className="pb-28 md:pb-24">
+        <div className="pb-32 md:pb-24">
           <div key={`text-${index}`} className="animate-fade-in">
             <p className="text-[10px] sm:text-xs font-medium uppercase tracking-[0.22em] text-white/50 mb-4">
               {current.label}
             </p>
-            <h1 className="text-[2.25rem] leading-[1.05] sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white sm:leading-[0.95] mb-4 max-w-3xl tracking-tight break-words hyphens-auto">
-              {current.headline}
-              <br />
-              {current.sub}
+            <h1 className="text-[1.75rem] xs:text-[2rem] leading-[1.1] sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white sm:leading-[0.95] mb-4 max-w-3xl tracking-tight">
+              <span className="block">{current.headline}</span>
+              <span className="block">{current.sub}</span>
             </h1>
           </div>
 
