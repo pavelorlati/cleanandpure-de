@@ -53,8 +53,8 @@ const HeroSection = () => {
         {slides.map((s, i) => (
           <div
             key={s.src}
-            className={`absolute inset-0 transition-opacity duration-[3000ms] ease-[cubic-bezier(0.45,0,0.55,1)] ${
-              i === index ? "opacity-100" : "opacity-0"
+            className={`absolute inset-0 transition-opacity duration-[2200ms] ease-[cubic-bezier(0.4,0,0.2,1)] ${
+              i === index ? "opacity-100 z-[1]" : "opacity-0 z-0"
             }`}
           >
             <img
