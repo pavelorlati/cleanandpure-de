@@ -1,55 +1,133 @@
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 /**
- * Globally observes elements with [data-reveal] and adds .is-visible
- * when they enter the viewport (one-shot). Pair with CSS in index.css.
+ * Global reveal controller.
  *
- * Additionally, automatically tags <img> elements inside <main> that
- * do not yet have data-reveal (or an ancestor with one) so every image
- * gracefully slides in alternately from left/right while scrolling.
+ * Auto-tags images, headings, paragraphs, list items and blockquotes in
+ * the whole document with [data-reveal="left|right"] so they alternately
+ * slide in when entering the viewport. Works outside <main> too.
+ * Excluded: header, footer, [data-no-reveal], hero animated images.
+ *
+ * Picks up dynamic nodes via MutationObserver and re-tags on route change.
+ *
+ * Mount <RevealController /> once inside <BrowserRouter>.
  */
-export function useReveal() {
+
+const TAG_SELECTOR =
+  "img, h1, h2, h3, p, li, blockquote, [data-reveal-target]";
+
+let io: IntersectionObserver | null = null;
+let rowCounter = 0;
+let rafScheduled = false;
+
+function getObserver() {
+  if (io) return io;
+  io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add("is-visible");
+          io?.unobserve(e.target);
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: "0px 0px -8% 0px" }
+  );
+  return io;
+}
+
+function shouldSkip(el: HTMLElement) {
+  if (el.closest("header, footer, [data-no-reveal]")) return true;
+  if (el.closest("[data-reveal]")) return true;
+  if (
+    el.classList.contains("animate-hero-zoom") ||
+    el.classList.contains("animate-hero-kenburns")
+  )
+    return true;
+  return false;
+}
+
+function tagElement(el: HTMLElement) {
+  if (el.hasAttribute("data-reveal")) return;
+  if (shouldSkip(el)) return;
+
+  const direction = rowCounter % 2 === 0 ? "left" : "right";
+  const stagger = (rowCounter % 3) * 90;
+  el.setAttribute("data-reveal", direction);
+  el.dataset.revealAuto = "1";
+  el.style.transitionDelay = `${stagger}ms`;
+  rowCounter++;
+
+  getObserver().observe(el);
+}
+
+function scan() {
+  const nodes = Array.from(
+    document.body.querySelectorAll<HTMLElement>(TAG_SELECTOR)
+  );
+  nodes.forEach(tagElement);
+}
+
+function scheduleScan() {
+  if (rafScheduled) return;
+  rafScheduled = true;
+  requestAnimationFrame(() => {
+    rafScheduled = false;
+    scan();
+  });
+}
+
+function clearAuto() {
+  rowCounter = 0;
+  document
+    .querySelectorAll<HTMLElement>('[data-reveal-auto="1"]')
+    .forEach((el) => {
+      el.removeAttribute("data-reveal");
+      el.classList.remove("is-visible");
+      el.style.transitionDelay = "";
+      delete el.dataset.revealAuto;
+    });
+}
+
+export function RevealController() {
+  const { pathname } = useLocation();
+
   useEffect(() => {
-    // Auto-tag images inside main with alternating left/right reveals
-    let autoIndex = 0;
-    const imgs = Array.from(document.querySelectorAll<HTMLImageElement>("main img"));
-    imgs.forEach((img) => {
-      if (img.closest("[data-reveal]") || img.closest("[data-no-reveal]")) return;
-      // Skip hero images (they animate via animate-hero-zoom / kenburns)
-      if (img.classList.contains("animate-hero-zoom") || img.classList.contains("animate-hero-kenburns")) return;
-      const target: HTMLElement = (img.parentElement as HTMLElement) ?? img;
-      if (target.hasAttribute("data-reveal")) return;
-      target.setAttribute("data-reveal", autoIndex % 2 === 0 ? "left" : "right");
-      target.style.transitionDelay = `${(autoIndex % 4) * 80}ms`;
-      autoIndex++;
+    if (
+      typeof window !== "undefined" &&
+      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches
+    ) {
+      return;
+    }
+
+    const mo = new MutationObserver((mutations) => {
+      for (const m of mutations) {
+        if (m.addedNodes.length) {
+          scheduleScan();
+          return;
+        }
+      }
     });
+    mo.observe(document.body, { childList: true, subtree: true });
 
-    // Auto-tag heading blocks (h2 wrappers) without reveal so text slides too
-    const headings = Array.from(document.querySelectorAll<HTMLElement>("main h2"));
-    headings.forEach((h) => {
-      if (h.closest("[data-reveal]") || h.closest("[data-no-reveal]")) return;
-      const wrap = (h.parentElement as HTMLElement) ?? h;
-      if (wrap.hasAttribute("data-reveal")) return;
-      wrap.setAttribute("data-reveal", autoIndex % 2 === 0 ? "left" : "right");
-      autoIndex++;
-    });
-
-    const els = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]"));
-    if (!els.length) return;
-
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add("is-visible");
-            io.unobserve(e.target);
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: "0px 0px -8% 0px" }
-    );
-
-    els.forEach((el) => io.observe(el));
-    return () => io.disconnect();
+    return () => {
+      mo.disconnect();
+      io?.disconnect();
+      io = null;
+    };
   }, []);
+
+  useEffect(() => {
+    clearAuto();
+    // Wait two frames so the new route has painted before tagging.
+    requestAnimationFrame(() => requestAnimationFrame(scheduleScan));
+  }, [pathname]);
+
+  return null;
+}
+
+/** Legacy no-op kept for backward compatibility with existing pages. */
+export function useReveal() {
+  // Handled globally by <RevealController />.
 }
