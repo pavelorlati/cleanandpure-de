@@ -15,11 +15,12 @@ import { useLocation } from "react-router-dom";
  */
 
 const TAG_SELECTOR =
-  "img, h1, h2, h3, p, li, blockquote, [data-reveal-target]";
+  "img, h1, h2, h3, p, li, blockquote, [data-reveal-target], [data-reveal]";
 
 let io: IntersectionObserver | null = null;
 let rowCounter = 0;
 let rafScheduled = false;
+const observed = new WeakSet<Element>();
 
 function getObserver() {
   if (io) return io;
@@ -32,25 +33,38 @@ function getObserver() {
         }
       });
     },
-    { threshold: 0.1, rootMargin: "0px 0px -8% 0px" }
+    { threshold: 0.05, rootMargin: "0px 0px -2% 0px" }
   );
   return io;
 }
 
 function shouldSkip(el: HTMLElement) {
   if (el.closest("header, footer, [data-no-reveal]")) return true;
-  if (el.closest("[data-reveal]")) return true;
   if (
     el.classList.contains("animate-hero-zoom") ||
-    el.classList.contains("animate-hero-kenburns")
+    el.classList.contains("animate-hero-kenburns") ||
+    el.classList.contains("animate-hero-kenburns-slow")
   )
     return true;
   return false;
 }
 
 function tagElement(el: HTMLElement) {
-  if (el.hasAttribute("data-reveal")) return;
+  if (observed.has(el)) return;
+
+  // Manually-tagged element: just observe it, keep its direction.
+  if (el.hasAttribute("data-reveal")) {
+    if (shouldSkip(el)) return;
+    observed.add(el);
+    getObserver().observe(el);
+    // Safety: reveal after 1.5s in case observer never fires.
+    window.setTimeout(() => el.classList.add("is-visible"), 1500);
+    return;
+  }
+
   if (shouldSkip(el)) return;
+  // Skip if any ancestor already handles reveal.
+  if (el.parentElement?.closest("[data-reveal]")) return;
 
   const direction = rowCounter % 2 === 0 ? "left" : "right";
   const stagger = (rowCounter % 3) * 90;
@@ -59,7 +73,9 @@ function tagElement(el: HTMLElement) {
   el.style.transitionDelay = `${stagger}ms`;
   rowCounter++;
 
+  observed.add(el);
   getObserver().observe(el);
+  window.setTimeout(() => el.classList.add("is-visible"), 1500);
 }
 
 function scan() {
