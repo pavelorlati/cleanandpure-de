@@ -66,18 +66,18 @@ const Kontakt = () => {
               </div>
             </div>
 
-            <form onSubmit={onSubmit} className="bg-secondary border border-border/70 p-8 rounded-sm space-y-4 shadow-lg">
-              <p className="kicker mb-2 text-foreground/80">Angebot anfordern</p>
+            <form onSubmit={onSubmit} className="bg-[hsl(0_0%_22%)] border border-white/10 p-8 rounded-sm space-y-4 shadow-2xl">
+              <p className="kicker mb-2 text-white/70">Angebot anfordern</p>
               <div className="grid sm:grid-cols-2 gap-4">
-                <input required value={form.name} onChange={(e)=>setForm({...form, name: e.target.value})} placeholder="Ihr Name *" className="w-full px-4 py-3 bg-card border border-border rounded-sm text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary" />
-                <input required type="email" value={form.email} onChange={(e)=>setForm({...form, email: e.target.value})} placeholder="E-Mail-Adresse *" className="w-full px-4 py-3 bg-card border border-border rounded-sm text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary" />
+                <input required value={form.name} onChange={(e)=>setForm({...form, name: e.target.value})} placeholder="Ihr Name *" className="w-full px-4 py-3 bg-[hsl(0_0%_32%)] border border-white/10 rounded-sm text-sm text-white placeholder:text-white/60 focus:outline-none focus:border-primary" />
+                <input required type="email" value={form.email} onChange={(e)=>setForm({...form, email: e.target.value})} placeholder="E-Mail-Adresse *" className="w-full px-4 py-3 bg-[hsl(0_0%_32%)] border border-white/10 rounded-sm text-sm text-white placeholder:text-white/60 focus:outline-none focus:border-primary" />
               </div>
-              <input value={form.tel} onChange={(e)=>setForm({...form, tel: e.target.value})} placeholder="Telefon" className="w-full px-4 py-3 bg-card border border-border rounded-sm text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary" />
-              <select value={form.leistung} onChange={(e)=>setForm({...form, leistung: e.target.value})} className="w-full px-4 py-3 bg-card border border-border rounded-sm text-sm text-foreground focus:outline-none focus:border-primary">
+              <input value={form.tel} onChange={(e)=>setForm({...form, tel: e.target.value})} placeholder="Telefon" className="w-full px-4 py-3 bg-[hsl(0_0%_32%)] border border-white/10 rounded-sm text-sm text-white placeholder:text-white/60 focus:outline-none focus:border-primary" />
+              <select value={form.leistung} onChange={(e)=>setForm({...form, leistung: e.target.value})} className="w-full px-4 py-3 bg-[hsl(0_0%_32%)] border border-white/10 rounded-sm text-sm text-white focus:outline-none focus:border-primary">
                 <option value="">Leistung wählen</option>
                 {leistungen.map((l) => <option key={l} value={l}>{l}</option>)}
               </select>
-              <textarea required value={form.nachricht} onChange={(e)=>setForm({...form, nachricht: e.target.value})} placeholder="Ihre Nachricht *" rows={6} className="w-full px-4 py-3 bg-card border border-border rounded-sm text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary" />
+              <textarea required value={form.nachricht} onChange={(e)=>setForm({...form, nachricht: e.target.value})} placeholder="Ihre Nachricht *" rows={6} className="w-full px-4 py-3 bg-[hsl(0_0%_32%)] border border-white/10 rounded-sm text-sm text-white placeholder:text-white/60 focus:outline-none focus:border-primary" />
               <button type="submit" className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 bg-primary text-primary-foreground text-xs font-semibold tracking-[0.2em] uppercase hover:bg-primary-glow rounded-sm">
                 Anfrage senden →
               </button>
