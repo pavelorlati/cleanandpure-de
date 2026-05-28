@@ -79,7 +79,7 @@ const HeroSection = () => {
             <p className="text-[10px] sm:text-xs font-medium uppercase tracking-[0.22em] text-white/50 mb-4">
               {current.label}
             </p>
-            <h1 className="text-[1.75rem] xs:text-[2rem] leading-[1.1] sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white sm:leading-[0.95] mb-4 max-w-3xl tracking-tight">
+            <h1 className="text-[1.6rem] xs:text-[1.85rem] leading-[1.15] sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white sm:leading-[0.95] mb-4 max-w-3xl tracking-tight sm:tracking-tight [text-wrap:balance] break-words">
               <span className="block">{current.headline}</span>
               <span className="block">{current.sub}</span>
             </h1>

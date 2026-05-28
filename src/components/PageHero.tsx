@@ -18,7 +18,7 @@ const PageHero = ({ kicker, title, image }: PageHeroProps) => (
     <div className="relative container-x pt-32 pb-20">
       <p className="kicker mb-6 animate-hero-in" style={{ animationDelay: "120ms" }}>{kicker}</p>
       <h1
-        className="text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.08] tracking-tight max-w-4xl animate-hero-in break-words hyphens-auto"
+        className="text-[1.9rem] xs:text-[2.25rem] sm:text-5xl md:text-7xl font-bold leading-[1.15] sm:leading-[1.08] tracking-tight max-w-4xl animate-hero-in [text-wrap:balance] break-words"
         style={{ animationDelay: "240ms" }}
       >
         {title}
