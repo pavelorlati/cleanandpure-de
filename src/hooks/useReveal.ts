@@ -33,7 +33,7 @@ function getObserver() {
         }
       });
     },
-    { threshold: 0.05, rootMargin: "0px 0px -2% 0px" }
+    { threshold: 0, rootMargin: "0px 0px 15% 0px" }
   );
   return io;
 }
