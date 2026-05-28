@@ -4,31 +4,22 @@ import { useLocation } from "react-router-dom";
 /**
  * Global reveal controller.
  *
- * - Auto-tags images, headings, paragraphs, list items and blockquotes
- *   throughout the document body with [data-reveal="left|right"], so they
- *   slide in alternately as they enter the viewport.
- * - Works outside <main> too (excluded: header, footer, floating button,
- *   hero animated images and anything marked [data-no-reveal]).
- * - Picks up dynamically added nodes via MutationObserver, so tabs,
- *   sliders, accordions or async sections animate as well.
- * - Re-tags on route changes so per-page alternation stays clean.
+ * Auto-tags images, headings, paragraphs, list items and blockquotes in
+ * the whole document with [data-reveal="left|right"] so they alternately
+ * slide in when entering the viewport. Works outside <main> too.
+ * Excluded: header, footer, [data-no-reveal], hero animated images.
  *
- * Mount <RevealController /> once inside <BrowserRouter>. The legacy
- * useReveal() hook is kept as a no-op so existing page calls keep working.
+ * Picks up dynamic nodes via MutationObserver and re-tags on route change.
+ *
+ * Mount <RevealController /> once inside <BrowserRouter>.
  */
 
 const TAG_SELECTOR =
   "img, h1, h2, h3, p, li, blockquote, [data-reveal-target]";
 
-const SKIP_SELECTOR =
-  "header, header *, footer, footer *, " +
-  "[data-no-reveal], [data-no-reveal] *, " +
-  ".animate-hero-zoom, .animate-hero-kenburns, " +
-  "[data-reveal], [data-reveal] *";
-
 let io: IntersectionObserver | null = null;
 let rowCounter = 0;
-let scanScheduled = false;
+let rafScheduled = false;
 
 function getObserver() {
   if (io) return io;
@@ -46,9 +37,7 @@ function getObserver() {
   return io;
 }
 
-function shouldSkip(el: Element) {
-  if (!(el instanceof HTMLElement)) return true;
-  if (el.matches(SKIP_SELECTOR)) return true;
+function shouldSkip(el: HTMLElement) {
   if (el.closest("header, footer, [data-no-reveal]")) return true;
   if (el.closest("[data-reveal]")) return true;
   if (
@@ -63,77 +52,47 @@ function tagElement(el: HTMLElement) {
   if (el.hasAttribute("data-reveal")) return;
   if (shouldSkip(el)) return;
 
-  // Anchor reveal on the most useful wrapper: lift to parent for inline
-  // text nodes (li, p) only when parent isn't already tagged.
-  const target: HTMLElement = el;
-
   const direction = rowCounter % 2 === 0 ? "left" : "right";
   const stagger = (rowCounter % 3) * 90;
-  target.setAttribute("data-reveal", direction);
-  target.style.transitionDelay = `${stagger}ms`;
+  el.setAttribute("data-reveal", direction);
+  el.dataset.revealAuto = "1";
+  el.style.transitionDelay = `${stagger}ms`;
   rowCounter++;
 
-  getObserver().observe(target);
+  getObserver().observe(el);
 }
 
-function scan(root: ParentNode = document.body) {
+function scan() {
   const nodes = Array.from(
-    root.querySelectorAll<HTMLElement>(TAG_SELECTOR)
+    document.body.querySelectorAll<HTMLElement>(TAG_SELECTOR)
   );
-  // Stable order = DOM order ≈ visual order, which keeps alternation predictable.
-  nodes.forEach((n) => tagElement(n));
+  nodes.forEach(tagElement);
 }
 
-function scheduleScan(root?: ParentNode) {
-  if (scanScheduled) return;
-  scanScheduled = true;
+function scheduleScan() {
+  if (rafScheduled) return;
+  rafScheduled = true;
   requestAnimationFrame(() => {
-    scanScheduled = false;
-    scan(root ?? document.body);
+    rafScheduled = false;
+    scan();
   });
 }
 
-function resetAndRescan() {
+function clearAuto() {
   rowCounter = 0;
-  // Strip prior auto reveals so route-level alternation restarts clean,
-  // but keep elements that were authored with data-reveal in source.
   document
-    .querySelectorAll<HTMLElement>("[data-reveal]")
+    .querySelectorAll<HTMLElement>('[data-reveal-auto="1"]')
     .forEach((el) => {
-      if (el.dataset.revealAuto === "1") {
-        el.removeAttribute("data-reveal");
-        el.classList.remove("is-visible");
-        el.style.transitionDelay = "";
-        delete el.dataset.revealAuto;
-      }
+      el.removeAttribute("data-reveal");
+      el.classList.remove("is-visible");
+      el.style.transitionDelay = "";
+      delete el.dataset.revealAuto;
     });
-  scheduleScan();
-}
-
-// Mark auto-tagged elements so resetAndRescan can distinguish them.
-const _origTag = tagElement;
-function tagElementMarked(el: HTMLElement) {
-  if (el.hasAttribute("data-reveal")) return;
-  if (shouldSkip(el)) return;
-  const before = el.hasAttribute("data-reveal");
-  _origTag(el);
-  if (!before && el.hasAttribute("data-reveal")) {
-    el.dataset.revealAuto = "1";
-  }
-}
-
-// Override scan to use marked tagger
-function scanMarked(root: ParentNode = document.body) {
-  const nodes = Array.from(
-    root.querySelectorAll<HTMLElement>(TAG_SELECTOR)
-  );
-  nodes.forEach((n) => tagElementMarked(n));
 }
 
 export function RevealController() {
   const { pathname } = useLocation();
 
-  // Init once: MutationObserver + reduced-motion guard
   useEffect(() => {
     if (
       typeof window !== "undefined" &&
@@ -143,15 +102,11 @@ export function RevealController() {
     }
 
     const mo = new MutationObserver((mutations) => {
-      let needsScan = false;
       for (const m of mutations) {
         if (m.addedNodes.length) {
-          needsScan = true;
-          break;
+          scheduleScan();
+          return;
         }
-      }
-      if (needsScan) {
-        requestAnimationFrame(() => scanMarked(document.body));
       }
     });
     mo.observe(document.body, { childList: true, subtree: true });
@@ -163,23 +118,10 @@ export function RevealController() {
     };
   }, []);
 
-  // Re-scan on route change
   useEffect(() => {
-    rowCounter = 0;
-    document
-      .querySelectorAll<HTMLElement>("[data-reveal]")
-      .forEach((el) => {
-        if (el.dataset.revealAuto === "1") {
-          el.removeAttribute("data-reveal");
-          el.classList.remove("is-visible");
-          el.style.transitionDelay = "";
-          delete el.dataset.revealAuto;
-        }
-      });
-    // Two RAFs: first lets React paint the new route, second tags it.
-    requestAnimationFrame(() =>
-      requestAnimationFrame(() => scanMarked(document.body))
-    );
+    clearAuto();
+    // Wait two frames so the new route has painted before tagging.
+    requestAnimationFrame(() => requestAnimationFrame(scheduleScan));
   }, [pathname]);
 
   return null;
@@ -187,5 +129,5 @@ export function RevealController() {
 
 /** Legacy no-op kept for backward compatibility with existing pages. */
 export function useReveal() {
-  // Intentionally empty — handled globally by <RevealController />.
+  // Handled globally by <RevealController />.
 }
