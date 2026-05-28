@@ -57,8 +57,6 @@ function tagElement(el: HTMLElement) {
     if (shouldSkip(el)) return;
     observed.add(el);
     getObserver().observe(el);
-    // Safety: reveal after 1.5s in case observer never fires.
-    window.setTimeout(() => el.classList.add("is-visible"), 1500);
     return;
   }
 
@@ -75,7 +73,6 @@ function tagElement(el: HTMLElement) {
 
   observed.add(el);
   getObserver().observe(el);
-  window.setTimeout(() => el.classList.add("is-visible"), 1500);
 }
 
 function scan() {
