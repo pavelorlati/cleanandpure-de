@@ -80,6 +80,19 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center gap-3">
+          <a
+            href="https://www.instagram.com/cleanandpure_gebaeudereinigung/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="inline-flex items-center justify-center w-9 h-9 rounded-full border border-foreground/20 text-foreground/80 hover:text-primary hover:border-primary transition-colors"
+          >
+            <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
           <button
             type="button"
             onClick={toggleTheme}
@@ -88,6 +101,7 @@ const Header = () => {
           >
             {light ? <Moon className="w-4 h-4" /> : <Sun className="w-4 h-4" />}
           </button>
+
           <Link
             to="/kontakt"
             className="hidden md:inline-flex items-center px-5 py-2.5 bg-primary text-primary-foreground text-[0.7rem] font-semibold tracking-[0.2em] uppercase hover:bg-primary-glow transition-colors rounded-full"
