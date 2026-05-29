@@ -15,6 +15,7 @@ const navItems = [
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [light, setLight] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const stored = localStorage.getItem("theme");
@@ -22,6 +23,13 @@ const Header = () => {
       document.documentElement.classList.add("light");
       setLight(true);
     }
+  }, []);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   useEffect(() => {
@@ -37,7 +45,14 @@ const Header = () => {
   };
 
   return (
-    <header className="absolute top-0 left-0 right-0 z-50">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-background/70 backdrop-blur-xl border-b border-border/50 shadow-sm"
+          : "bg-transparent"
+      }`}
+    >
+
       <div className="container-x flex h-20 md:h-24 items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
           <img src={logo} alt="Clean & Pure GmbH" className="h-16 md:h-14 w-auto" />
