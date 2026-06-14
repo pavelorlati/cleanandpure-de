@@ -44,7 +44,7 @@ const Footer = () => (
     <div className="border-t border-border">
       <div className="container-x py-5 text-xs text-muted-foreground flex flex-wrap justify-between gap-2">
         <span>© {new Date().getFullYear()} Clean &amp; Pure GmbH</span>
-        <span>Gebäudereinigung Hamburg</span>
+        <span>Ihr Gebäudedienstleister&nbsp;</span>
       </div>
     </div>
   </footer>
