@@ -227,7 +227,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl">
             {[
               {n:"01", title:"Anfrage senden", desc:"Formular ausfüllen oder anrufen – dauert nur 2 Minuten."},
-              {n:"02", title:"Angebot erhalten", desc:"Wir melden uns innerhalb von 24 Stunden mit einem maßgeschneiderten Angebot."},
+              {n:"02", title:"Angebot erhalten", desc:"Wir melden uns innerhalb von 48 Stunden mit einem maßgeschneiderten Angebot."},
               {n:"03", title:"Starten & entspannen", desc:"Unser Team übernimmt – pünktlich, diskret und zuverlässig."},
             ].map((s) => (
               <div key={s.n} className="border-t border-border pt-5">
