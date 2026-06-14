@@ -36,7 +36,7 @@ const Leistungen = () => {
     <FloatingContactButton />
     <Header />
     <main className="flex-1">
-      <PageHero kicker="Was wir für Sie leisten" title="Alles aus einer Hand" image={glas} />
+      <PageHero kicker="Was wir für Sie leisten" title="Alles aus einer Hand" image={glas.url} />>
 
       <section className="py-16 border-t border-border">
         <div className="container-x flex flex-wrap justify-between items-end gap-6">
