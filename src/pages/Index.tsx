@@ -208,7 +208,7 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/40" />
         </div>
         <div className="relative container-x">
-          <p className="kicker mb-6">Bereit für ein sauberes Ergebnis?</p>
+          <p className="kicker mb-6">BEREIT FÜR SAUBERE ERGEBNISSE?</p>
           <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-10 max-w-3xl">
             Ihr Angebot in <span className="text-primary">24 Stunden.</span>
           </h2>
