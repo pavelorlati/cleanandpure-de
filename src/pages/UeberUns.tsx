@@ -92,7 +92,7 @@ const UeberUns = () => {
               <img src={skyline} alt="Glasreinigung Hamburg" className="w-full h-full object-cover rounded-sm" data-reveal="right" style={{ transitionDelay: "120ms" }} />
             </div>
           </div>
-          <p className="text-xs text-muted-foreground uppercase tracking-wider mt-4">Unsere Firmenwagen-Flotte täglich in Hamburg im Einsatz</p>
+          <p className="text-xs text-muted-foreground uppercase tracking-wider mt-4">UNSERE FIRMENWAGEN-FLOTTE TÄGLICH IM EINSATZ FÜR SIE</p>
         </div>
       </section>
 
