@@ -147,9 +147,8 @@ const HeroSection = () => {
             <span className="text-white font-extrabold text-base">15+</span>
             <span className="text-white uppercase tracking-wider text-[0.65rem] font-semibold">Jahre Erfahrung</span>
           </div>
-          <div className="flex items-center gap-2">
-            <span className="text-white font-bold">Hamburg</span>
-            <span className="text-white uppercase tracking-wider text-[0.65rem] font-semibold">&amp; Umgebung</span>
+          <div className="flex flex-col justify-center">
+            <span className="text-white font-bold">deutschlandweit</span>
           </div>
           <a
             href="tel:+494035966171"
