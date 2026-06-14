@@ -5,7 +5,7 @@ import PageHero from "@/components/PageHero";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { useReveal } from "@/hooks/useReveal";
-import glas from "@/assets/cp/hero-glasreinigung.webp";
+import glas from "@/assets/cp/glas-fassadenreinigung.jpg.asset.json";
 import mopping from "@/assets/cp/hero-mopping.jpg";
 import buero from "@/assets/cp/bueroreinigung.jpg.asset.json";
 import kueche from "@/assets/cp/team-kueche-wischen.jpg";
