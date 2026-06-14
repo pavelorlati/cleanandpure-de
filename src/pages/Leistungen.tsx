@@ -58,7 +58,7 @@ const Leistungen = () => {
             >
               <span className="text-sm font-mono text-muted-foreground transition-colors duration-500 group-hover:text-primary">{s.n}</span>
               <div className="overflow-hidden rounded-sm bg-secondary/50 h-40">
-                <img src={s.img} alt={s.title} className={`w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04] ${s.n === "07" ? "object-bottom" : s.n === "02" ? "object-[50%_20%]" : ""}`} loading="lazy" />
+                <img src={s.img} alt={s.title} className={`w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04] ${s.n === "07" ? "object-bottom" : s.n === "02" ? "object-[50%_20%]" : s.n === "05" ? "object-[40%_40%]" : ""}`} loading="lazy" />
               </div>
               <div>
                 <p className="kicker mb-2">{s.kicker}</p>
