@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import hausmeister from "@/assets/cp/hausmeisterservice.jpg.asset.json";
 
 const services = [
   {
@@ -58,7 +59,7 @@ const services = [
       "Professionelle Bodenpflege, Sanierung und Versiegelung für alle Bodenbeläge und Oberflächen.",
   },
   {
-    image: "https://clean-pure.vercel.app/images/hero-sunset.png",
+    image: hausmeister.url,
     kicker: "Rundum-Betreuung",
     title: "Hausmeisterservice",
     description:
