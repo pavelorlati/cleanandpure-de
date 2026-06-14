@@ -20,7 +20,7 @@ const team = [
 const why = [
   { n: "01", title: "Zuverlässigkeit", desc: "Pünktlich, verlässlich und transparent – Sie können sich auf uns verlassen. Immer." },
   { n: "02", title: "Nachhaltigkeit", desc: "Wir setzen auf umweltfreundliche Reinigungsprodukte und ressourcenschonendes Arbeiten." },
-  { n: "03", title: "Fachkompetenz", desc: "Unser geschultes Personal arbeitet nach höchsten Qualitätsstandards und modernen Methoden." },
+  { n: "03", title: "Fachkompetenz", desc: "Unser qualifiziertes Fachpersonal arbeitet nach höchsten Qualitätsstandards und modernen Methoden." },
   { n: "04", title: "Persönlicher Service", desc: "Direkte Ansprechpartner, kurze Wege und ein offenes Ohr für Ihre Wünsche." },
 ];
 
