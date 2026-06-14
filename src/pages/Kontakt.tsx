@@ -33,7 +33,7 @@ const Kontakt = () => {
 
         <section className="py-8 border-t border-border bg-card/40">
           <div className="container-x flex flex-wrap gap-8 justify-around text-sm">
-            {["Kostenlos & unverbindlich", "Antwort in 24 Stunden", "Individuelle Angebote"].map((t) => (
+            {["Kostenlos & unverbindlich", "Antwort in 48 Stunden", "Individuelle Angebote"].map((t) => (
               <div key={t} className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" />{t}</div>
             ))}
           </div>
@@ -44,7 +44,7 @@ const Kontakt = () => {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-6">Wir freuen uns auf Ihre Anfrage.</h2>
               <p className="text-muted-foreground leading-relaxed mb-10">
-                Ob regelmäßige Unterhaltsreinigung oder einmaliger Spezialeinsatz – schildern Sie uns Ihren Bedarf. Wir melden uns innerhalb von 24 Stunden mit einem individuellen Angebot.
+                Ob regelmäßige Unterhaltsreinigung oder einmaliger Sondereinsatz – schildern Sie uns Ihren Bedarf. Wir melden uns innerhalb von 48 Stunden mit einem individuellen &amp; unverbindliches Angebot.
               </p>
               <div className="grid sm:grid-cols-2 gap-8">
                 <div>
