@@ -70,7 +70,7 @@ const Index = () => {
             </Link>
           </div>
           <div className="relative overflow-hidden" data-reveal="right">
-            <img src={equipment} alt="Professionelle Reinigungsausstattung Clean & Pure" className="w-full h-auto rounded-sm transition-transform duration-[1400ms] ease-out hover:scale-105" />
+            <img src={equipment} alt="Clean & Pure Mitarbeiter bei der Glas- und Fassadenreinigung in Hamburg" className="w-full h-auto rounded-sm transition-transform duration-[1400ms] ease-out hover:scale-105" />
           </div>
         </div>
 
