@@ -11,7 +11,8 @@ const Footer = () => (
           <span className="font-medium text-foreground">Clean &amp; Pure</span>
         </div>
         <p className="text-sm text-muted-foreground leading-relaxed">
-          Familiengeführter Gebäudeservice mit Hamburger Wurzeln. Seit über 15 Jahren.
+          Familiengeführte Gebäudereinigung mit Hamburger Wurzeln.&nbsp;<br />
+          Seit über 15 Jahren.
         </p>
       </div>
       <div>
