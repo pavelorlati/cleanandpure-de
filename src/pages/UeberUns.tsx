@@ -187,7 +187,7 @@ const UeberUns = () => {
           <h3 className="text-3xl md:text-5xl font-bold leading-tight mb-10">Lernen Sie uns persönlich kennen.</h3>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link to="/kontakt" className="inline-flex items-center px-6 py-3.5 bg-primary text-primary-foreground text-xs font-semibold tracking-[0.2em] uppercase hover:bg-primary-glow rounded-sm">Jetzt kontaktieren</Link>
-            <a href="tel:+494035966171" className="inline-flex items-center px-6 py-3.5 border border-foreground/30 text-xs font-semibold tracking-[0.2em] uppercase hover:border-primary hover:text-primary rounded-sm">040 35 96 61 71</a>
+            <a href="tel:+494035966171" className="inline-flex items-center px-6 py-3.5 border border-foreground/30 text-xs font-semibold tracking-[0.2em] uppercase hover:border-primary hover:text-primary rounded-sm">040. 35 96 61 71</a>
           </div>
         </div>
       </section>
