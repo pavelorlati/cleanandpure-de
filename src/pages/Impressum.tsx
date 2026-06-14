@@ -32,7 +32,7 @@ const Impressum = () => (
 
             <div>
               <h2 className="text-xl font-semibold text-foreground mb-2">Vertretungsberechtigte Geschäftsführung</h2>
-              <p>Geschäftsführer der CPG Clean & Pure Gebäudereinigungs GmbH</p>
+              <p>Tolgahan Cakirgöz</p>
             </div>
 
             <div>
