@@ -28,7 +28,7 @@ const Footer = () => (
       <div>
         <p className="kicker mb-4">Kontakt</p>
         <ul className="space-y-3 text-sm">
-          <li className="flex items-start gap-2"><Phone className="w-4 h-4 text-primary mt-0.5" /><a href="tel:+494035966171" className="text-foreground/80 hover:text-primary">040 35 96 61 71</a></li>
+          <li className="flex items-start gap-2"><Phone className="w-4 h-4 text-primary mt-0.5" /><a href="tel:+494035966171" className="text-foreground/80 hover:text-primary">040. 35 96 61 71</a></li>
           <li className="flex items-start gap-2"><Mail className="w-4 h-4 text-primary mt-0.5" /><a href="mailto:info@cleanandpure.de" className="text-foreground/80 hover:text-primary">info@cleanandpure.de</a></li>
           <li className="flex items-start gap-2"><MapPin className="w-4 h-4 text-primary mt-0.5" /><span className="text-foreground/80">Lauenburger Straße 13<br/>22049 Hamburg</span></li>
         </ul>
