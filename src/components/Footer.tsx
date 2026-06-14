@@ -8,7 +8,7 @@ const Footer = () => (
       <div>
         <div className="flex items-center gap-3 mb-4">
           <img src={logo} alt="Clean & Pure" className="h-10 w-auto" />
-          <span className="font-medium text-foreground">Clean &amp; Pure</span>
+          <span className="font-medium text-foreground">Clean &amp; Pure GmbH</span>
         </div>
         <p className="text-sm text-muted-foreground leading-relaxed">
           Familiengeführte Gebäudereinigung mit Hamburger Wurzeln.&nbsp;<br />
