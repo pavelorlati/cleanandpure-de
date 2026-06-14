@@ -62,14 +62,14 @@ const Header = () => {
         </Link>
 
 
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-6">
           {navItems.map((item) => (
             <NavLink
               key={item.to}
               to={item.to}
               end={item.to === "/"}
               className={({ isActive }) =>
-                `text-xs font-bold tracking-[0.2em] uppercase transition-colors ${
+                `text-[0.8rem] font-extrabold tracking-[0.15em] uppercase whitespace-nowrap transition-colors ${
                   isActive ? "text-primary" : "text-foreground/80 hover:text-primary"
                 }`
               }
