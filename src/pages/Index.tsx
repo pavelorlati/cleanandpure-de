@@ -92,13 +92,12 @@ const Index = () => {
       {/* Leistungen */}
       <section className="py-24 md:py-32">
         <div className="container-x">
-          <div className="flex flex-wrap justify-between items-end mb-14 gap-6" data-reveal>
-            <div>
-              <p className="kicker mb-5">Was wir für Sie tun</p>
-              <h2 className="text-4xl md:text-5xl font-bold leading-tight">Unsere Leistungen</h2>
-            </div>
-            <Link to="/leistungen" className="text-primary font-semibold text-sm tracking-wide hover:underline">
-              Alle 11 Leistungen →
+          <div className="flex flex-wrap items-center justify-between mb-14 gap-6" data-reveal>
+            <h2 className="text-3xl md:text-4xl font-extrabold leading-tight bg-black text-white px-6 py-3 rounded-sm whitespace-nowrap">
+              Unsere Leistungen
+            </h2>
+            <Link to="/kontakt" className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground text-sm font-extrabold tracking-wide uppercase hover:bg-primary-glow transition-colors rounded-sm whitespace-nowrap">
+              Jetzt Angebot anfordern →
             </Link>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
