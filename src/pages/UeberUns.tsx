@@ -123,7 +123,7 @@ const UeberUns = () => {
                     <p className="kicker mb-3 transition-colors duration-500 group-hover:text-primary-glow">{t.role}</p>
                     <h3 className="font-bold text-2xl md:text-3xl leading-tight mb-5 tracking-tight">{t.name}</h3>
                     <div className="text-sm space-y-1.5 mb-6">
-                      <a href={`tel:${t.tel.replace(/\s|\//g, "")}`} className="block text-foreground/85 hover:text-primary transition-colors">{t.tel}</a>
+                      <a href={`tel:${t.tel.replace(/\s|\.|\//g, "")}`} className="block text-foreground/85 hover:text-primary transition-colors">{t.tel}</a>
                       <a href={`mailto:${t.mail}`} className="block text-foreground/85 hover:text-primary break-all transition-colors">{t.mail}</a>
                     </div>
                     <div className="relative pl-4">
