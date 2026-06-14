@@ -140,7 +140,7 @@ const UeberUns = () => {
             <h3 className="text-xl font-semibold mb-2">Wir brauchen dich in unserem Team — jetzt bewerben!</h3>
             <p className="text-sm text-muted-foreground mb-4">Assistentin d. Geschäftsführung</p>
             <div className="flex flex-wrap gap-4 text-sm">
-              <a href="tel:+494035966171" className="text-primary hover:underline">040 35 96 61 71</a>
+              <a href="tel:+494035966171" className="text-primary hover:underline">040. 35 96 61 71</a>
               <a href="mailto:personal@cleanandpure.de" className="text-primary hover:underline">personal@cleanandpure.de</a>
             </div>
             <p className="text-xs italic text-muted-foreground mt-4">„Beginne, wo du bist. Nutze, was du hast. Tu, was du kannst."</p>
