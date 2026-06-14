@@ -82,15 +82,15 @@ const UeberUns = () => {
           </p>
           <Link to="/jobs" className="text-primary font-semibold hover:underline">Werde Teil des Teams →</Link>
 
-          <div className="grid md:grid-cols-3 gap-6 mt-16">
-            <div className="md:col-span-2 relative h-80 overflow-hidden rounded-sm" data-reveal="left">
+          <div className="mt-16 space-y-6">
+            <div className="relative h-80 overflow-hidden rounded-sm" data-reveal="left">
               <img src={boden} alt="Team im Einsatz" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
               <div className="absolute bottom-4 left-4 text-xs text-muted-foreground"><div className="text-sm font-semibold text-foreground">Team im Einsatz</div>Unternehmensgruppe Clean &amp; Pure</div>
             </div>
-            <div className="grid grid-rows-2 gap-6">
-              <img src={firmenwagen} alt="Firmenwagen-Flotte" className="w-full h-full object-cover rounded-sm" data-reveal="right" />
-              <img src={skyline} alt="Glasreinigung Hamburg" className="w-full h-full object-cover rounded-sm" data-reveal="right" style={{ transitionDelay: "120ms" }} />
+            <div className="grid md:grid-cols-2 gap-6">
+              <img src={firmenwagen} alt="Firmenwagen-Flotte" className="w-full h-64 object-cover rounded-sm" data-reveal="left" />
+              <img src={skyline} alt="Glasreinigung Hamburg" className="w-full h-64 object-cover rounded-sm" data-reveal="right" style={{ transitionDelay: "120ms" }} />
             </div>
           </div>
           <p className="text-xs text-muted-foreground uppercase tracking-wider mt-4">UNSERE FIRMENWAGEN-FLOTTE TÄGLICH IM EINSATZ FÜR SIE</p>
