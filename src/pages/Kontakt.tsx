@@ -89,7 +89,7 @@ const Kontakt = () => {
           <div className="container-x text-center">
             <p className="kicker mb-5">Lieber telefonisch?</p>
             <h3 className="text-3xl md:text-4xl font-bold mb-8">Rufen Sie uns einfach an.</h3>
-            <a href="tel:+494035966171" className="text-3xl md:text-4xl text-primary font-bold hover:underline">040 35 96 61 71</a>
+            <a href="tel:+494035966171" className="text-3xl md:text-4xl text-primary font-bold hover:underline">040. 35 96 61 71</a>
             <div className="flex flex-wrap gap-4 justify-center mt-10">
               <a href="tel:+494035966171" className="inline-flex items-center px-6 py-3.5 bg-primary text-primary-foreground text-xs font-semibold tracking-[0.2em] uppercase hover:bg-primary-glow rounded-sm">Anrufen</a>
               <a href="mailto:info@cleanandpure.de" className="inline-flex items-center px-6 py-3.5 border border-foreground/30 text-xs font-semibold tracking-[0.2em] uppercase hover:border-primary hover:text-primary rounded-sm">E-Mail senden</a>
