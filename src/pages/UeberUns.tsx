@@ -45,7 +45,9 @@ const UeberUns = () => {
             <p className="kicker mb-6">Unsere Philosophie</p>
             <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">Mehr als Reinigung –<br/>ein echtes Versprechen.</h2>
             <p className="text-muted-foreground mb-5 leading-relaxed">
-              Clean &amp; Pure GmbH wurde mit einer klaren Mission gegründet: Professionellen Gebäudeservice zu erbringen, der wirklich den Unterschied macht. Als Unternehmen mit Hamburger Wurzeln wissen wir, dass Vertrauen die Grundlage jeder guten Zusammenarbeit ist.
+              Clean &amp; Pure GmbH wurde mit einer klaren Mission gegründet:&nbsp;<br />
+              Professionelle Gebäudereinigung zu erbringen, der wirklich den Unterschied macht.<br />&nbsp;
+              Als Unternehmen mit Hamburger Wurzeln wissen wir, dass Vertrauen die Grundlage jeder guten Zusammenarbeit ist.
             </p>
             <p className="text-muted-foreground mb-8 leading-relaxed">
               Deshalb stehen wir für Verlässlichkeit, Transparenz und höchste Qualitätsstandards – bei jedem Auftrag, für jeden Kunden.
