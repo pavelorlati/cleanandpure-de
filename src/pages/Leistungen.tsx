@@ -20,7 +20,7 @@ const services = [
   { n: "02", kicker: "Hygienisch & professionell", title: "Büroreinigung", desc: "Professionelle Reinigung für Büros und Arbeitsräume – für ein hygienisches, produktives Arbeitsumfeld.", img: kueche },
   { n: "03", kicker: "Gäste begeistern", title: "Hotelreinigung", desc: "Diskrete, zuverlässige Reinigung für Hotels und Beherbergungsbetriebe nach höchsten Hygienestandards.", img: lobbyModern },
   { n: "04", kicker: "Medizinische Standards", title: "Praxis- & Hygienereinigung", desc: "Spezialisierte Hygienereinigung für Arztpraxen, Zahnarztpraxen und medizinische Einrichtungen.", img: praxis },
-  { n: "05", kicker: "Kristallklar", title: "Glas- & Fassadenreinigung", desc: "Streifenfreie Glas- und Fassadenreinigung für ein gepflegtes Erscheinungsbild Ihres Gebäudes.", img: glas },
+  { n: "05", kicker: "Kristallklar", title: "Glas- & Fassadenreinigung", desc: "Streifenfreie Glas- und Fassadenreinigung für ein gepflegtes Erscheinungsbild Ihres Gebäudes.", img: glas.url },
   { n: "06", kicker: "Intensive Tiefenpflege", title: "Grund- & Intensivreinigung", desc: "Intensive Tiefenreinigung für Räume, die eine gründliche Auffrischung und Intensivpflege benötigen.", img: boden },
   { n: "07", kicker: "Textilpflege", title: "Polster- & Teppichreinigung", desc: "Professionelle Reinigung von Teppichböden, Polstermöbeln und textilen Belägen aller Art.", img: "/leistungen/polster-teppichreinigung.jpg" },
   { n: "08", kicker: "Schutz & Glanz", title: "Bodensanierung & Versiegelung", desc: "Professionelle Bodenpflege, Sanierung und Versiegelung für alle Bodenbeläge und Oberflächen.", img: boden },
