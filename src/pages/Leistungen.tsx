@@ -15,6 +15,7 @@ import lobbyModern from "@/assets/cp/hotelzimmer-bett.jpg";
 import boden from "@/assets/cp/team-bodenreinigung.jpg";
 import hausmeister from "@/assets/cp/hausmeisterservice.jpg.asset.json";
 import bauend from "@/assets/cp/bauendreinigung.jpg.asset.json";
+import beschichtung from "@/assets/cp/2K-Beschichtung.jpg.asset.json";
 
 const services = [
   { n: "01", kicker: "Regelmäßig & verlässlich", title: "Unterhaltsreinigung", desc: "Täglich, wöchentlich oder nach individuellem Turnus – zuverlässig und termingerecht.", img: buero.url },
@@ -24,7 +25,7 @@ const services = [
   { n: "05", kicker: "Kristallklar", title: "Glas- & Fassadenreinigung", desc: "Streifenfreie Glas- und Fassadenreinigung für ein gepflegtes Erscheinungsbild Ihres Gebäudes.", img: glas.url },
   { n: "06", kicker: "Intensive Tiefenpflege", title: "Grund- & Intensivreinigung", desc: "Intensive Tiefenreinigung für Räume, die eine gründliche Auffrischung und Intensivpflege benötigen.", img: boden },
   { n: "07", kicker: "Textilpflege", title: "Polster- & Teppichreinigung", desc: "Professionelle Reinigung von Teppichböden, Polstermöbeln und textilen Belägen aller Art.", img: "/leistungen/polster-teppichreinigung.jpg" },
-  { n: "08", kicker: "Schutz & Glanz", title: "Bodensanierung & Versiegelung", desc: "Professionelle Bodenpflege, Sanierung und Versiegelung für alle Bodenbeläge und Oberflächen.", img: boden },
+  { n: "08", kicker: "Schutz & Glanz", title: "Bodensanierung & Versiegelung", desc: "Professionelle Bodenpflege, Sanierung und Versiegelung für alle Bodenbeläge und Oberflächen.", img: beschichtung.url },
   { n: "09", kicker: "Rundum-Betreuung", title: "Hausmeisterservice", desc: "Zuverlässiger Hausmeisterservice für Wartung, Pflege und technischen Betrieb Ihrer Immobilie.", img: hausmeister.url },
   { n: "10", kicker: "Übergabebereit", title: "Bauendreinigung", desc: "Professionelle Endreinigung nach Bau- und Renovierungsarbeiten für eine sofort nutzbare Immobilie.", img: bauend.url },
   { n: "11", kicker: "Gepflegte Gemeinschaftsflächen", title: "Außen- & Treppenhausreinigung", desc: "Reinigung von Treppenhäusern, Außenanlagen und Gemeinschaftsflächen für gepflegte Immobilien.", img: sunset },
