@@ -10,7 +10,7 @@ import glasfassade from "@/assets/cp/glasfassade-buerste.jpg";
 const slides = [
   { src: skyline,     headline: "Ihr Gebäude.",       sub: "Makellos. Täglich.",          label: "Clean & Pure in Hamburg" },
   { src: firmenwagen, headline: "Glasreinigung.",     sub: "Streifenfrei. Professionell.", label: "Unser Team täglich im Einsatz" },
-  { src: boden,       headline: "Tiefenreinigung.",   sub: "Für sichtbare Ergebnisse.",   label: "Grundreinigung mit Profi-Maschinen" },
+  { src: boden,       headline: "Grundreinigung.",    sub: "Für sichtbare Ergebnisse.",   label: "Grundreinigung mit Profi-Maschinen" },
   { src: glasfassade, headline: "Fassadenreinigung.", sub: "In jeder Höhe.",              label: "Glas- & Fassadenreinigung" },
 ];
 
