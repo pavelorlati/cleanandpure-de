@@ -9,7 +9,7 @@ import glas from "@/assets/cp/hero-glasreinigung.webp";
 import mopping from "@/assets/cp/hero-mopping.jpg";
 import buero from "@/assets/cp/bueroreinigung.jpg.asset.json";
 import kueche from "@/assets/cp/team-kueche-wischen.jpg";
-import praxis from "@/assets/cp/hero-buero.jpg";
+import praxis from "@/assets/cp/praxis-reinigung.jpg";
 import sunset from "@/assets/cp/hero-sunset.jpg";
 import lobbyModern from "@/assets/cp/hotelzimmer-bett.jpg";
 import boden from "@/assets/cp/team-bodenreinigung.jpg";
