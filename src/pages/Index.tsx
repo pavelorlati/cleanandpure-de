@@ -30,8 +30,8 @@ const services = [
 const values = [
   { n: "01", title: "Zuverlässigkeit", desc: "Pünktlich & verlässlich" },
   { n: "02", title: "Nachhaltigkeit", desc: "Umweltfreundliche Mittel" },
-  { n: "03", title: "Fachkompetenz", desc: "Geschultes Personal" },
-  { n: "04", title: "Persönl. Service", desc: "Direkter Ansprechpartner" },
+  { n: "03", title: "Fachkompetenz", desc: "qualifiziertes Fachpersonal" },
+  { n: "04", title: "Persönlicher Service", desc: "Direkte Ansprechpartner*in" },
 ];
 
 const testimonials = [
@@ -99,7 +99,7 @@ const Index = () => {
               <h2 className="text-4xl md:text-5xl font-bold leading-tight">Unsere Leistungen</h2>
             </div>
             <Link to="/leistungen" className="text-primary font-semibold text-sm tracking-wide hover:underline">
-              Alle 11 Leistungen →
+              Unsere Leistungen →
             </Link>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
