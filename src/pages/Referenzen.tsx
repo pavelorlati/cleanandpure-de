@@ -26,7 +26,7 @@ const projects = [
   { img: parkett, location: "Hamburg-Altona", title: "Grundreinigung & Versiegelung Bürogebäude", desc: "Professionelle Tiefenreinigung und Versiegelung eines stark beanspruchten Parkettbodens." },
   { img: flur, location: "Hamburg-Wandsbek", title: "Grundreinigung & Beschichtung Flurbereiche Wohnanlage", desc: "Grundreinigung und Beschichtung aller Gemeinschaftsflächen einer Wohnanlage." },
   { img: glasFassade, location: "Hamburg City", title: "Glasfassaden-Reinigung Hochhaus", desc: "Reinigung einer mehrstöckigen Glasfassade mit Teleskopsystem – streifenfrei." },
-  { img: skyline, location: "Hamburg-Altona", title: "Premium-Büroreinigung Hamburg", desc: "Wöchentliche Fenster- und Büroreinigung in einem Hochhaus mit Blick auf den Fernsehturm." },
+  { img: skyline, location: "Hamburg-Altona", title: "Treppenhaus- & Glasreinigung Hochhaus", desc: "Wöchentliche Fenster- und Treppenreinigung in einem Hochhaus mit Blick auf den Fernsehturm." },
   { img: boden, location: "Hamburg-Harburg", title: "Industriereinigung mit Exzentermaschine", desc: "Maschinelle Bodenreinigung und Beschichtungsentfernung in einer Gewerbeeinheit." },
   { img: kueche, location: "Hamburg-Eimsbüttel", title: "Küchenreinigung Gastronomie", desc: "Hygienische Tiefenreinigung einer gewerblichen Küche nach HACCP-Standard." },
 ];
