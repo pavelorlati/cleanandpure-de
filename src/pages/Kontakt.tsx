@@ -33,7 +33,7 @@ const Kontakt = () => {
 
         <section className="py-8 border-t border-border bg-card/40">
           <div className="container-x flex flex-wrap gap-8 justify-around text-sm">
-            {["Kostenlos & unverbindlich", "Antwort in 48 Stunden", "Individuelle Angebote"].map((t) => (
+            {["Kostenlos & unverbindlich", "Antwort in 48 Stunden", "Individuelles Angebot"].map((t) => (
               <div key={t} className="flex items-center gap-2"><Check className="w-4 h-4 text-primary" />{t}</div>
             ))}
           </div>
