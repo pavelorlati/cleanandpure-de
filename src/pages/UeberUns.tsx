@@ -152,7 +152,7 @@ const UeberUns = () => {
         <div className="container-x">
           <p className="kicker mb-5">Warum Clean &amp; Pure?</p>
           <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-3">Das zeichnet uns aus</h2>
-          <p className="text-muted-foreground mb-14 max-w-2xl">Wir setzen auf Qualität, Verlässlichkeit und persönliche Betreuung, die man spürt.</p>
+          <p className="text-muted-foreground mb-14 max-w-2xl">Wir setzen auf Qualität, Verlässlichkeit und persönliche Betreuung, die man sieht &amp; spürt.</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
             {why.map((w) => (
               <div key={w.n} className="border-t border-border pt-5">
