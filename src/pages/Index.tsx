@@ -228,7 +228,7 @@ const Index = () => {
             {[
               {n:"01", title:"Anfrage senden", desc:"Formular ausfüllen oder anrufen – dauert nur 2 Minuten."},
               {n:"02", title:"Angebot erhalten", desc:"Wir melden uns innerhalb von 48 Stunden mit einem maßgeschneiderten Angebot."},
-              {n:"03", title:"Starten & entspannen", desc:"Unser Team übernimmt – pünktlich, diskret und zuverlässig."},
+              {n:"03", title:"Starten & profitieren", desc:"Unser Team übernimmt – pünktlich, diskret und zuverlässig."},
             ].map((s) => (
               <div key={s.n} className="border-t border-border pt-5">
                 <span className="text-primary text-sm font-mono">{s.n}</span>
