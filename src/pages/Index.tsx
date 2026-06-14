@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Star } from "lucide-react";
 import { useReveal } from "@/hooks/useReveal";
 
-import equipment from "@/assets/cp/cleanproof-duftreiniger.webp.asset.json";
+import equipment from "@/assets/cp/equipment-cleanproof.jpg.asset.json";
 import lobbySunset from "@/assets/cp/hero-lobby-sunset.jpg";
 import kueche from "@/assets/cp/team-kueche-wischen.jpg";
 import buero from "@/assets/cp/bueroreinigung.jpg.asset.json";
