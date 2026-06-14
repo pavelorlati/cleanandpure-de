@@ -19,8 +19,8 @@ import flur from "@/assets/cp/vorher-nachher-flur.jpg";
 import hausmeister from "@/assets/cp/hausmeisterservice.jpg.asset.json";
 
 const services = [
-  { n: "01", title: "Unterhaltsreinigung", desc: "Täglich, wöchentlich oder nach Bedarf – zuverlässig und pünktlich.", img: kueche },
-  { n: "02", title: "Büroreinigung", desc: "Hygienisches, einladendes Arbeitsumfeld für Ihr Team.", img: buero.url },
+  { n: "01", title: "Unterhaltsreinigung", desc: "Täglich, wöchentlich oder nach Bedarf – zuverlässig und pünktlich.", img: buero.url },
+  { n: "02", title: "Büroreinigung", desc: "Hygienisches, einladendes Arbeitsumfeld für Ihr Team.", img: kueche },
   { n: "03", title: "Glas- & Fassadenreinigung", desc: "Streifenfreie Glasreinigung innen und außen.", img: firmenwagen },
   { n: "04", title: "Grundreinigung", desc: "Intensive Tiefenreinigung für nachhaltigen Glanz.", img: boden },
   { n: "05", title: "Hotelreinigung", desc: "Höchste Hotelstandards – diskret und zuverlässig.", img: hotelImg },
