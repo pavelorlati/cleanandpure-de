@@ -82,15 +82,15 @@ const UeberUns = () => {
           </p>
           <Link to="/jobs" className="text-primary font-semibold hover:underline">Werde Teil des Teams →</Link>
 
-          <div className="grid md:grid-cols-3 gap-6 mt-16 md:h-[460px]">
-            <div className="md:col-span-2 relative h-80 md:h-full overflow-hidden rounded-sm" data-reveal="left">
+          <div className="grid md:grid-cols-3 gap-6 mt-16">
+            <div className="md:col-span-2 relative h-80 overflow-hidden rounded-sm" data-reveal="left">
               <img src={boden} alt="Team im Einsatz" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
               <div className="absolute bottom-4 left-4 text-xs text-muted-foreground"><div className="text-sm font-semibold text-foreground">Team im Einsatz</div>Unternehmensgruppe Clean &amp; Pure</div>
             </div>
-            <div className="grid grid-rows-2 gap-6 h-full">
-              <img src={firmenwagen} alt="Firmenwagen-Flotte" className="w-full h-full min-h-0 object-cover rounded-sm" data-reveal="right" />
-              <img src={skyline} alt="Glasreinigung Hamburg" className="w-full h-full min-h-0 object-cover rounded-sm" data-reveal="right" style={{ transitionDelay: "120ms" }} />
+            <div className="grid grid-rows-2 gap-6">
+              <img src={firmenwagen} alt="Firmenwagen-Flotte" className="w-full h-full object-cover rounded-sm" data-reveal="right" />
+              <img src={skyline} alt="Glasreinigung Hamburg" className="w-full h-full object-cover rounded-sm" data-reveal="right" style={{ transitionDelay: "120ms" }} />
             </div>
           </div>
           <p className="text-xs text-muted-foreground uppercase tracking-wider mt-4">UNSERE FIRMENWAGEN-FLOTTE TÄGLICH IM EINSATZ FÜR SIE</p>
@@ -138,24 +138,13 @@ const UeberUns = () => {
           </div>
 
           <div className="mt-12 bg-card border border-border p-8 rounded-sm">
-            <h3 className="text-xl font-semibold mb-6">Wir brauchen dich in unserem Team — jetzt bewerben!</h3>
-            <div className="flex flex-col sm:flex-row gap-6 items-start">
-              <img
-                src="/team/gabrielle-rosin.jpg"
-                alt="Gabrielle Rosin"
-                loading="lazy"
-                className="w-40 h-48 object-cover rounded-sm shrink-0"
-              />
-              <div>
-                <h4 className="font-bold text-xl leading-tight mb-1">Gabrielle Rosin</h4>
-                <p className="text-sm text-muted-foreground mb-4">Assistentin d. Geschäftsführung</p>
-                <div className="flex flex-wrap gap-4 text-sm">
-                  <a href="tel:+494035966171" className="text-primary hover:underline">040. 35 96 61 71</a>
-                  <a href="mailto:personal@cleanandpure.de" className="text-primary hover:underline">personal@cleanandpure.de</a>
-                </div>
-                <p className="text-xs italic text-muted-foreground mt-4">„Beginne, wo du bist. Nutze, was du hast. Tu, was du kannst."</p>
-              </div>
+            <h3 className="text-xl font-semibold mb-2">Wir brauchen dich in unserem Team — jetzt bewerben!</h3>
+            <p className="text-sm text-muted-foreground mb-4">Assistentin d. Geschäftsführung</p>
+            <div className="flex flex-wrap gap-4 text-sm">
+              <a href="tel:+494035966171" className="text-primary hover:underline">040. 35 96 61 71</a>
+              <a href="mailto:personal@cleanandpure.de" className="text-primary hover:underline">personal@cleanandpure.de</a>
             </div>
+            <p className="text-xs italic text-muted-foreground mt-4">„Beginne, wo du bist. Nutze, was du hast. Tu, was du kannst."</p>
           </div>
         </div>
       </section>

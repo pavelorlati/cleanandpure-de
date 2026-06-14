@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Star } from "lucide-react";
 import { useReveal } from "@/hooks/useReveal";
 
-import equipment from "@/assets/cp/fassadenreinigung-team.jpg";
+import equipment from "@/assets/cp/hero-equipment.jpg";
 import lobbySunset from "@/assets/cp/hero-lobby-sunset.jpg";
 import kueche from "@/assets/cp/team-kueche-wischen.jpg";
 import buero from "@/assets/cp/bueroreinigung.jpg.asset.json";
@@ -70,7 +70,7 @@ const Index = () => {
             </Link>
           </div>
           <div className="relative overflow-hidden" data-reveal="right">
-            <img src={equipment} alt="Clean & Pure Mitarbeiter bei der Glas- und Fassadenreinigung in Hamburg" className="w-full h-auto rounded-sm transition-transform duration-[1400ms] ease-out hover:scale-105" />
+            <img src={equipment} alt="Professionelle Reinigungsausstattung Clean & Pure" className="w-full h-auto rounded-sm transition-transform duration-[1400ms] ease-out hover:scale-105" />
           </div>
         </div>
 
