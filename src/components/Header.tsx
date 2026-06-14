@@ -152,11 +152,11 @@ const Header = () => {
           <Link
             to="/kontakt"
             onClick={() => setMobileOpen(false)}
-            className="mt-4 inline-flex items-center justify-center px-5 py-3 bg-primary text-primary-foreground text-xs font-semibold tracking-[0.2em] uppercase"
+            className="mt-4 inline-flex items-center justify-center px-5 py-3 bg-primary text-primary-foreground text-xs font-bold tracking-[0.2em] uppercase rounded-sm"
           >
             Angebot anfragen
           </Link>
-          <a href="tel:+494035966171" className="text-sm text-primary mt-2">040 35 96 61 71</a>
+          <a href="tel:+494035966171" className="mt-3 block w-full text-center py-3 bg-primary/10 text-primary text-base font-extrabold tracking-wide">040 35 96 61 71</a>
         </nav>
       </aside>
     </header>
