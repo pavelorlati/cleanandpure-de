@@ -69,8 +69,8 @@ const Header = () => {
               to={item.to}
               end={item.to === "/"}
               className={({ isActive }) =>
-                `text-xs font-bold tracking-[0.2em] uppercase transition-colors ${
-                  isActive ? "text-primary" : "text-foreground/80 hover:text-primary"
+                `text-sm font-extrabold tracking-[0.15em] uppercase transition-colors ${
+                  isActive ? "text-primary" : "text-black hover:text-primary"
                 }`
               }
             >
