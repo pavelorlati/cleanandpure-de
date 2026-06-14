@@ -56,8 +56,8 @@ const Header = () => {
       <div className="container-x flex h-20 md:h-24 items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
           <img src={logo} alt="Clean & Pure GmbH" className="h-16 md:h-14 w-auto" />
-          <span className="hidden sm:block text-sm md:text-base font-semibold tracking-tight text-foreground">
-            Clean &amp; Pure Gebäudereinigung
+          <span className="hidden sm:block text-sm md:text-base font-semibold tracking-tight text-foreground whitespace-nowrap">
+            Clean &amp; Pure Gebäudereinigungs GmbH
           </span>
         </Link>
 
