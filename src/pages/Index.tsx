@@ -12,7 +12,7 @@ import kueche from "@/assets/cp/team-kueche-wischen.jpg";
 import buero from "@/assets/cp/bueroreinigung.jpg.asset.json";
 import firmenwagen from "@/assets/cp/firmenwagen-fensterputz.jpg";
 import boden from "@/assets/cp/team-bodenreinigung.jpg";
-import hotelImg from "@/assets/cp/hero-lobby-modern.jpg";
+import hotelImg from "@/assets/cp/hotelzimmer-bett.jpg";
 import skyline from "@/assets/cp/team-hamburg-skyline.jpg";
 import parkett from "@/assets/cp/vorher-nachher-parkett.jpg";
 import flur from "@/assets/cp/vorher-nachher-flur.jpg";

@@ -10,7 +10,7 @@ import mopping from "@/assets/cp/hero-mopping.jpg";
 import buero from "@/assets/cp/bueroreinigung.jpg.asset.json";
 import praxis from "@/assets/cp/hero-buero.jpg";
 import sunset from "@/assets/cp/hero-sunset.jpg";
-import lobbyModern from "@/assets/cp/hero-lobby-modern.jpg";
+import lobbyModern from "@/assets/cp/hotelzimmer-bett.jpg";
 import boden from "@/assets/cp/team-bodenreinigung.jpg";
 import hausmeister from "@/assets/cp/hausmeisterservice.jpg.asset.json";
 
