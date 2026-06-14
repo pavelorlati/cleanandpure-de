@@ -221,7 +221,7 @@ const Index = () => {
             </a>
           </div>
           <p className="text-sm text-muted-foreground mb-16">
-            ✓ Kostenlos &amp; unverbindlich &nbsp; ✓ Antwort in 24h &nbsp; ✓ Kein Risiko
+            ✓ Kostenlos &amp; unverbindlich &nbsp; ✓ Antwort innerhalb 48h &nbsp; ✓ Kein Risiko
           </p>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl">
