@@ -52,7 +52,7 @@ const SeoLongCopy = ({
           Jetzt unverbindlich anfragen →
         </Link>
         <a href="tel:+494035966171" className="text-muted-foreground hover:text-foreground">
-          040 / 35 96 61 71
+          040 35 96 61 71
         </a>
       </div>
     </div>

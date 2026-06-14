@@ -11,10 +11,10 @@ import firmenwagen from "@/assets/cp/firmenwagen-fensterputz.jpg";
 import skyline from "@/assets/cp/team-hamburg-skyline.jpg";
 
 const team = [
-  { name: "Safak Cakirgöz", role: "Kaufmännischer Geschäftsführer", tel: "040 - 35 96 61 71", mail: "info@cleanandpure.de", quote: "Müde macht uns die Arbeit, die wir liegen lassen, nicht die, die wir tun.", img: "/team/safak-cakirgoez.jpg" },
-  { name: "Tolgahan Cakirgöz", role: "Gesellschaftender Geschäftsführer", tel: "040 - 35 96 61 71", mail: "tca@cleanandpure.de", quote: "Service heißt, das ganze Geschäft mit den Augen des Kunden zu sehen.", img: "/team/tolgahan-cakirgoez.jpg" },
+  { name: "Safak Cakirgöz", role: "Kaufmännischer Geschäftsführer", tel: "040 35 96 61 71", mail: "info@cleanandpure.de", quote: "Müde macht uns die Arbeit, die wir liegen lassen, nicht die, die wir tun.", img: "/team/safak-cakirgoez.jpg" },
+  { name: "Tolgahan Cakirgöz", role: "Gesellschaftender Geschäftsführer", tel: "040 35 96 61 71", mail: "tca@cleanandpure.de", quote: "Service heißt, das ganze Geschäft mit den Augen des Kunden zu sehen.", img: "/team/tolgahan-cakirgoez.jpg" },
   { name: "Maik Stolzenberg", role: "Betriebsleiter", tel: "0159 / 0165 777 6", mail: "mst@cleanandpure.de", quote: "Zusammenkommen ist ein Beginn, Zusammenbleiben ein Fortschritt, Zusammenarbeiten ein Erfolg.", img: "/team/maik-stolzenberg.jpg" },
-  { name: "Selvi Ayvaz", role: "Finanzbuchhaltung", tel: "040 - 35 96 61 71", mail: "buchhaltung@cleanandpure.de", quote: "Zusammen geht's nur dann, wenn alle Beteiligten mit einer Portion für Gemeinsinn und Einsatz was dafür tuen.", img: "/team/selvi-ayvaz.jpg" },
+  { name: "Selvi Ayvaz", role: "Finanzbuchhaltung", tel: "040 35 96 61 71", mail: "buchhaltung@cleanandpure.de", quote: "Zusammen geht's nur dann, wenn alle Beteiligten mit einer Portion für Gemeinsinn und Einsatz was dafür tuen.", img: "/team/selvi-ayvaz.jpg" },
 ];
 
 const why = [
@@ -138,7 +138,7 @@ const UeberUns = () => {
             <h3 className="text-xl font-semibold mb-2">Wir brauchen dich in unserem Team — jetzt bewerben!</h3>
             <p className="text-sm text-muted-foreground mb-4">Assistentin d. Geschäftsführung</p>
             <div className="flex flex-wrap gap-4 text-sm">
-              <a href="tel:+494035966171" className="text-primary hover:underline">040 - 35 96 61 71</a>
+              <a href="tel:+494035966171" className="text-primary hover:underline">040 35 96 61 71</a>
               <a href="mailto:personal@cleanandpure.de" className="text-primary hover:underline">personal@cleanandpure.de</a>
             </div>
             <p className="text-xs italic text-muted-foreground mt-4">„Beginne, wo du bist. Nutze, was du hast. Tu, was du kannst."</p>
@@ -185,7 +185,7 @@ const UeberUns = () => {
           <h3 className="text-3xl md:text-5xl font-bold leading-tight mb-10">Lernen Sie uns persönlich kennen.</h3>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link to="/kontakt" className="inline-flex items-center px-6 py-3.5 bg-primary text-primary-foreground text-xs font-semibold tracking-[0.2em] uppercase hover:bg-primary-glow rounded-sm">Jetzt kontaktieren</Link>
-            <a href="tel:+494035966171" className="inline-flex items-center px-6 py-3.5 border border-foreground/30 text-xs font-semibold tracking-[0.2em] uppercase hover:border-primary hover:text-primary rounded-sm">040 - 35 96 61 71</a>
+            <a href="tel:+494035966171" className="inline-flex items-center px-6 py-3.5 border border-foreground/30 text-xs font-semibold tracking-[0.2em] uppercase hover:border-primary hover:text-primary rounded-sm">040 35 96 61 71</a>
           </div>
         </div>
       </section>

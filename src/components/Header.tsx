@@ -156,7 +156,7 @@ const Header = () => {
           >
             Angebot anfragen
           </Link>
-          <a href="tel:+494035966171" className="text-sm text-primary mt-2">040 - 35 96 61 71</a>
+          <a href="tel:+494035966171" className="text-sm text-primary mt-2">040 35 96 61 71</a>
         </nav>
       </aside>
     </header>
