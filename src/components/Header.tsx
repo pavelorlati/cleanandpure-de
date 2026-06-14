@@ -69,8 +69,8 @@ const Header = () => {
               to={item.to}
               end={item.to === "/"}
               className={({ isActive }) =>
-                `text-sm font-extrabold tracking-[0.15em] uppercase transition-colors ${
-                  isActive ? "text-primary" : "text-black hover:text-primary"
+                `text-xs font-bold tracking-[0.2em] uppercase transition-colors ${
+                  isActive ? "text-primary" : "text-foreground/80 hover:text-primary"
                 }`
               }
             >
@@ -104,7 +104,7 @@ const Header = () => {
 
           <Link
             to="/kontakt"
-            className="hidden md:inline-flex items-center px-5 py-2.5 bg-primary text-primary-foreground text-xs font-bold tracking-[0.2em] uppercase hover:bg-primary-glow transition-colors rounded-sm"
+            className="hidden md:inline-flex items-center px-5 py-2.5 bg-primary text-primary-foreground text-[0.7rem] font-semibold tracking-[0.2em] uppercase hover:bg-primary-glow transition-colors rounded-full"
           >
             Angebot anfragen
           </Link>
@@ -152,11 +152,11 @@ const Header = () => {
           <Link
             to="/kontakt"
             onClick={() => setMobileOpen(false)}
-            className="mt-4 inline-flex items-center justify-center px-5 py-3 bg-primary text-primary-foreground text-xs font-bold tracking-[0.2em] uppercase rounded-sm"
+            className="mt-4 inline-flex items-center justify-center px-5 py-3 bg-primary text-primary-foreground text-xs font-semibold tracking-[0.2em] uppercase"
           >
             Angebot anfragen
           </Link>
-          <a href="tel:+494035966171" className="mt-3 block w-full text-center py-3 bg-primary/10 text-primary text-base font-extrabold tracking-wide">040 35 96 61 71</a>
+          <a href="tel:+494035966171" className="text-sm text-primary mt-2">040 35 96 61 71</a>
         </nav>
       </aside>
     </header>
