@@ -25,7 +25,7 @@ const Impressum = () => (
             <div>
               <h2 className="text-xl font-semibold text-foreground mb-2">Kontakt</h2>
               <p>
-                Telefon: <a href="tel:04035966171" className="text-primary hover:underline">040/35 96 61 71</a><br />
+                Telefon: <a href="tel:+494035966171" className="text-primary hover:underline">040 35 96 61 71</a><br />
                 E-Mail: <a href="mailto:info@cleanandpure.de" className="text-primary hover:underline">info@cleanandpure.de</a>
               </p>
             </div>
