@@ -40,7 +40,7 @@ const Leistungen = () => {
       <section className="py-16 border-t border-border">
         <div className="container-x flex flex-wrap justify-between items-end gap-6">
           <p className="text-muted-foreground max-w-2xl leading-relaxed">
-            Vom täglichen Reinigungsservice bis zur Spezialreinigung – das komplette Spektrum professioneller Gebäudedienstleistungen in Hamburg.
+            Von der täglichen Unterhaltsreinigung bis zur Sonderreinigung – das komplette Spektrum professioneller Gebäudedienstleistungen für Sie aus einer Hand.
           </p>
           <div><span className="text-3xl font-bold text-primary">11</span> <span className="kicker">Leistungen</span></div>
         </div>
