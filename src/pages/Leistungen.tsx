@@ -14,6 +14,7 @@ import sunset from "@/assets/cp/treppenhaus-reinigung.jpg";
 import lobbyModern from "@/assets/cp/hotelzimmer-bett.jpg";
 import boden from "@/assets/cp/team-bodenreinigung.jpg";
 import hausmeister from "@/assets/cp/hausmeisterservice.jpg.asset.json";
+import bauend from "@/assets/cp/bauendreinigung.jpg.asset.json";
 
 const services = [
   { n: "01", kicker: "Regelmäßig & verlässlich", title: "Unterhaltsreinigung", desc: "Täglich, wöchentlich oder nach individuellem Turnus – zuverlässig und termingerecht.", img: buero.url },
@@ -25,7 +26,7 @@ const services = [
   { n: "07", kicker: "Textilpflege", title: "Polster- & Teppichreinigung", desc: "Professionelle Reinigung von Teppichböden, Polstermöbeln und textilen Belägen aller Art.", img: "/leistungen/polster-teppichreinigung.jpg" },
   { n: "08", kicker: "Schutz & Glanz", title: "Bodensanierung & Versiegelung", desc: "Professionelle Bodenpflege, Sanierung und Versiegelung für alle Bodenbeläge und Oberflächen.", img: boden },
   { n: "09", kicker: "Rundum-Betreuung", title: "Hausmeisterservice", desc: "Zuverlässiger Hausmeisterservice für Wartung, Pflege und technischen Betrieb Ihrer Immobilie.", img: hausmeister.url },
-  { n: "10", kicker: "Übergabebereit", title: "Bauendreinigung", desc: "Professionelle Endreinigung nach Bau- und Renovierungsarbeiten für eine sofort nutzbare Immobilie.", img: mopping },
+  { n: "10", kicker: "Übergabebereit", title: "Bauendreinigung", desc: "Professionelle Endreinigung nach Bau- und Renovierungsarbeiten für eine sofort nutzbare Immobilie.", img: bauend.url },
   { n: "11", kicker: "Gepflegte Gemeinschaftsflächen", title: "Außen- & Treppenhausreinigung", desc: "Reinigung von Treppenhäusern, Außenanlagen und Gemeinschaftsflächen für gepflegte Immobilien.", img: sunset },
 ];
 
@@ -58,7 +59,7 @@ const Leistungen = () => {
             >
               <span className="text-sm font-mono text-muted-foreground transition-colors duration-500 group-hover:text-primary">{s.n}</span>
               <div className="overflow-hidden rounded-sm bg-secondary/50 h-40">
-                <img src={s.img} alt={s.title} className={`w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04] ${s.n === "07" ? "object-bottom" : s.n === "02" ? "object-[50%_20%]" : s.n === "05" ? "object-[40%_40%]" : ""}`} loading="lazy" />
+                <img src={s.img} alt={s.title} className={`w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04] ${s.n === "07" ? "object-bottom" : s.n === "02" ? "object-[50%_20%]" : s.n === "05" ? "object-[40%_40%]" : s.n === "10" ? "object-bottom" : ""}`} loading="lazy" />
               </div>
               <div>
                 <p className="kicker mb-2">{s.kicker}</p>
