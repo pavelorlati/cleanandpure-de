@@ -133,10 +133,10 @@ const Index = () => {
           <div data-reveal>
             <p className="kicker mb-5">Referenzen</p>
             <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-3">Das Ergebnis spricht für sich</h2>
-            <p className="text-muted-foreground mb-14">Echte Aufträge, echte Transformationen.</p>
+            <p className="text-muted-foreground mb-14">vor- & nach der Versiegelung - Beschichtung</p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
-            {[{img: parkett, title: "Parkett-Grundreinigung"}, {img: flur, title: "Flur-Tiefenreinigung"}].map((r, i) => (
+            {[{img: parkett, title: "Grundreinigung & Versiegelung"}, {img: flur, title: "Grundreinigung & Beschichtung"}].map((r, i) => (
               <div key={r.title} data-reveal={i === 0 ? "left" : "right"} style={{ transitionDelay: `${i * 80}ms` }} className="group bg-card border border-border rounded-sm overflow-hidden">
                 <div className="overflow-hidden">
                   <img src={r.img} alt={r.title} className="w-full h-72 object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-110" />
