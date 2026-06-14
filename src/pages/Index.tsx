@@ -16,6 +16,7 @@ import hotelImg from "@/assets/cp/hero-lobby-modern.jpg";
 import skyline from "@/assets/cp/team-hamburg-skyline.jpg";
 import parkett from "@/assets/cp/vorher-nachher-parkett.jpg";
 import flur from "@/assets/cp/vorher-nachher-flur.jpg";
+import hausmeister from "@/assets/cp/hausmeisterservice.jpg.asset.json";
 
 const services = [
   { n: "01", title: "Unterhaltsreinigung", desc: "Täglich, wöchentlich oder nach Bedarf – zuverlässig und pünktlich.", img: kueche },
@@ -23,7 +24,7 @@ const services = [
   { n: "03", title: "Glas- & Fassadenreinigung", desc: "Streifenfreie Glasreinigung innen und außen.", img: firmenwagen },
   { n: "04", title: "Grundreinigung", desc: "Intensive Tiefenreinigung für nachhaltigen Glanz.", img: boden },
   { n: "05", title: "Hotelreinigung", desc: "Höchste Hotelstandards – diskret und zuverlässig.", img: hotelImg },
-  { n: "06", title: "Hausmeisterservice", desc: "Wartung, Pflege und technischer Betrieb aus einer Hand.", img: skyline },
+  { n: "06", title: "Hausmeisterservice", desc: "Wartung, Pflege und technischer Betrieb aus einer Hand.", img: hausmeister.url },
 ];
 
 const values = [
