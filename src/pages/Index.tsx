@@ -9,7 +9,7 @@ import { useReveal } from "@/hooks/useReveal";
 import equipment from "@/assets/cp/hero-equipment.jpg";
 import lobbySunset from "@/assets/cp/hero-lobby-sunset.jpg";
 import kueche from "@/assets/cp/team-kueche-wischen.jpg";
-import buero from "@/assets/cp/hero-buero.jpg";
+import buero from "@/assets/cp/bueroreinigung.jpg.asset.json";
 import firmenwagen from "@/assets/cp/firmenwagen-fensterputz.jpg";
 import boden from "@/assets/cp/team-bodenreinigung.jpg";
 import hotelImg from "@/assets/cp/hero-lobby-modern.jpg";
@@ -20,7 +20,7 @@ import hausmeister from "@/assets/cp/hausmeisterservice.jpg.asset.json";
 
 const services = [
   { n: "01", title: "Unterhaltsreinigung", desc: "Täglich, wöchentlich oder nach Bedarf – zuverlässig und pünktlich.", img: kueche },
-  { n: "02", title: "Büroreinigung", desc: "Hygienisches, einladendes Arbeitsumfeld für Ihr Team.", img: buero },
+  { n: "02", title: "Büroreinigung", desc: "Hygienisches, einladendes Arbeitsumfeld für Ihr Team.", img: buero.url },
   { n: "03", title: "Glas- & Fassadenreinigung", desc: "Streifenfreie Glasreinigung innen und außen.", img: firmenwagen },
   { n: "04", title: "Grundreinigung", desc: "Intensive Tiefenreinigung für nachhaltigen Glanz.", img: boden },
   { n: "05", title: "Hotelreinigung", desc: "Höchste Hotelstandards – diskret und zuverlässig.", img: hotelImg },
