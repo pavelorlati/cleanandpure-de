@@ -32,7 +32,7 @@ const Jobs = () => {
         <div className="container-x grid md:grid-cols-2 gap-16 items-start">
           <div>
             <p className="kicker mb-6">Warum Clean &amp; Pure?</p>
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight">Ein Arbeitgeber, der für seine Mitarbeiter da ist.</h2>
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight">Ein Arbeitgeber, der für seine Mitarbeiter*in da ist.</h2>
           </div>
           <div className="space-y-5 text-muted-foreground leading-relaxed">
             <p>Wir suchen engagierte Mitarbeiterinnen und Mitarbeiter, die mit uns wachsen möchten. Werde Teil der Clean &amp; Pure Familie in Hamburg.</p>
