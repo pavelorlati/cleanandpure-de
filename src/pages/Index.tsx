@@ -63,7 +63,7 @@ const Index = () => {
               Als familiengeführtes Unternehmen verbinden wir höchste Qualitätsstandards mit persönlichem Service.
             </p>
             <p className="text-base text-muted-foreground leading-relaxed mb-8">
-              Seit über 15 Jahren sorgen unsere geschulten Reinigungsprofis dafür, dass unsere anspruchsvollste Gebäude täglich in bestem Zustand sind.
+              Seit über 15 Jahren sorgen unsere geschulten Reinigungsprofis für professionelle Sauberkeit.
             </p>
             <Link to="/ueber-uns" className="inline-flex items-center gap-2 text-primary font-semibold tracking-wide hover:gap-3 transition-all">
               Mehr über uns <ArrowRight className="w-4 h-4" />
