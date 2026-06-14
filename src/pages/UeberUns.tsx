@@ -11,10 +11,10 @@ import firmenwagen from "@/assets/cp/firmenwagen-fensterputz.jpg";
 import skyline from "@/assets/cp/team-hamburg-skyline.jpg";
 
 const team = [
-  { name: "Safak Cakirgöz", role: "Kaufmännischer Geschäftsführer", tel: "040 - 35 96 61 71", mail: "info@cleanandpure.de", quote: "Müde macht uns die Arbeit, die wir liegen lassen, nicht die, die wir tun.", img: "/team/safak-cakirgoez.jpg" },
-  { name: "Tolgahan Cakirgöz", role: "Gesellschaftender Geschäftsführer", tel: "040 - 35 96 61 71", mail: "tca@cleanandpure.de", quote: "Service heißt, das ganze Geschäft mit den Augen des Kunden zu sehen.", img: "/team/tolgahan-cakirgoez.jpg" },
+  { name: "Safak Cakirgöz", role: "Kaufmännischer Geschäftsführer", tel: "040 35 96 61 71", mail: "info@cleanandpure.de", quote: "Müde macht uns die Arbeit, die wir liegen lassen, nicht die, die wir tun.", img: "/team/safak-cakirgoez.jpg" },
+  { name: "Tolgahan Cakirgöz", role: "Gesellschaftender Geschäftsführer", tel: "040 35 96 61 71", mail: "tca@cleanandpure.de", quote: "Service heißt, das ganze Geschäft mit den Augen des Kunden zu sehen.", img: "/team/tolgahan-cakirgoez.jpg" },
   { name: "Maik Stolzenberg", role: "Betriebsleiter", tel: "0159 / 0165 777 6", mail: "mst@cleanandpure.de", quote: "Zusammenkommen ist ein Beginn, Zusammenbleiben ein Fortschritt, Zusammenarbeiten ein Erfolg.", img: "/team/maik-stolzenberg.jpg" },
-  { name: "Selvi Ayvaz", role: "Finanzbuchhaltung", tel: "040 - 35 96 61 71", mail: "buchhaltung@cleanandpure.de", quote: "Zusammen geht's nur dann, wenn alle Beteiligten mit einer Portion für Gemeinsinn und Einsatz was dafür tuen.", img: "/team/selvi-ayvaz.jpg" },
+  { name: "Selvi Ayvaz", role: "Finanzbuchhaltung", tel: "040 35 96 61 71", mail: "buchhaltung@cleanandpure.de", quote: "Zusammen geht's nur dann, wenn alle Beteiligten mit einer Portion für Gemeinsinn und Einsatz was dafür tuen.", img: "/team/selvi-ayvaz.jpg" },
 ];
 
 const why = [
