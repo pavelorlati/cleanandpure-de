@@ -15,8 +15,9 @@ const Impressum = () => (
             <div>
               <h2 className="text-xl font-semibold text-foreground mb-2">Angaben gemäß § 5 TMG</h2>
               <p>
-                Clean & Pure GmbH<br />
-                Hamburg<br />
+                CPG Clean & Pure Gebäudereinigungs GmbH<br />
+                Lauenburger Straße 13<br />
+                22049 Hamburg<br />
                 Deutschland
               </p>
             </div>
@@ -31,7 +32,7 @@ const Impressum = () => (
 
             <div>
               <h2 className="text-xl font-semibold text-foreground mb-2">Vertretungsberechtigte Geschäftsführung</h2>
-              <p>Geschäftsführer der Clean & Pure GmbH</p>
+              <p>Geschäftsführer der CPG Clean & Pure Gebäudereinigungs GmbH</p>
             </div>
 
             <div>
@@ -54,8 +55,9 @@ const Impressum = () => (
             <div>
               <h2 className="text-xl font-semibold text-foreground mb-2">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
               <p>
-                Clean & Pure GmbH<br />
-                Hamburg
+                CPG Clean & Pure Gebäudereinigungs GmbH<br />
+                Lauenburger Straße 13<br />
+                22049 Hamburg
               </p>
             </div>
 

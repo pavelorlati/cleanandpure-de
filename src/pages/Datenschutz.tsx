@@ -25,8 +25,9 @@ const Datenschutz = () => (
               <h2 className="text-xl font-semibold text-foreground mb-2">2. Verantwortliche Stelle</h2>
               <p>
                 Verantwortlich für die Datenverarbeitung auf dieser Website ist:<br />
-                Clean & Pure GmbH<br />
-                Hamburg<br />
+                CPG Clean & Pure Gebäudereinigungs GmbH<br />
+                Lauenburger Straße 13<br />
+                22049 Hamburg<br />
                 Telefon: <a href="tel:04035966171" className="text-primary hover:underline">040/35 96 61 71</a><br />
                 E-Mail: <a href="mailto:info@cleanandpure.de" className="text-primary hover:underline">info@cleanandpure.de</a>
               </p>
