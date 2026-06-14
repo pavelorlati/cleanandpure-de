@@ -36,7 +36,7 @@ const Jobs = () => {
           </div>
           <div className="space-y-5 text-muted-foreground leading-relaxed">
             <p>Wir suchen engagierte Mitarbeiterinnen und Mitarbeiter, die mit uns wachsen möchten. Werde jetzt Teil der Clean &amp; Pure Familie.</p>
-            <p>Bei uns arbeiten Menschen aus vielen Ländern zusammen. Wir schätzen jeden Einzelnen – unabhängig von Herkunft oder Vorerfahrung. Faire Bezahlung und ein Team, das zusammenhält, sind unsere Grundlage.</p>
+            <p>Bei uns ist der Mensch im Fokus. Wir schätzen jede*n Einzelne*n – unabhängig von Vorerfahrung.&nbsp;<br />Faire Bezahlung und ein Team, das zusammenhält, sind unsere Grundlage.</p>
           </div>
         </div>
       </section>
