@@ -121,7 +121,7 @@ const Index = () => {
 
           <div className="mt-12 text-center">
             <Link to="/leistungen" className="inline-flex items-center px-6 py-3 border border-foreground/20 text-xs font-semibold tracking-[0.2em] uppercase hover:bg-primary hover:border-primary hover:text-primary-foreground transition-colors">
-              ALL UNSERE LEISTUNGEN ANSEHEN
+              UNSERE LEISTUNGEN IM ÜBERBLICK
             </Link>
           </div>
         </div>
