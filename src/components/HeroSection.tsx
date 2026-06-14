@@ -155,7 +155,7 @@ const HeroSection = () => {
             href="tel:+494035966171"
             className="hidden md:flex items-center justify-end gap-2 text-white font-medium border border-white/20 rounded-full px-4 py-2 hover:border-primary hover:text-primary transition-colors"
           >
-            <Phone className="w-3.5 h-3.5" /> 040 - 35 96 61 71
+            <Phone className="w-3.5 h-3.5" /> 040 35 96 61 71
           </a>
         </div>
       </div>
