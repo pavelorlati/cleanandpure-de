@@ -23,7 +23,7 @@ const branches = [
 ];
 
 const projects = [
-  { img: parkett, location: "Hamburg-Altona", title: "Parkett-Grundreinigung Bürogebäude", desc: "Professionelle Tiefenreinigung und Versiegelung eines stark beanspruchten Parkettbodens." },
+  { img: parkett, location: "Hamburg-Altona", title: "Grundreinigung & Versiegelung Bürogebäude", desc: "Professionelle Tiefenreinigung und Versiegelung eines stark beanspruchten Parkettbodens." },
   { img: flur, location: "Hamburg-Wandsbek", title: "Flur-Tiefenreinigung Wohnanlage", desc: "Grundreinigung und Versiegelung aller Gemeinschaftsflächen einer Wohnanlage." },
   { img: glasFassade, location: "Hamburg City", title: "Glasfassaden-Reinigung Hochhaus", desc: "Reinigung einer mehrstöckigen Glasfassade mit Teleskopsystem – streifenfrei." },
   { img: skyline, location: "Hamburg-Altona", title: "Premium-Büroreinigung Hamburg", desc: "Wöchentliche Fenster- und Büroreinigung in einem Hochhaus mit Blick auf den Fernsehturm." },
