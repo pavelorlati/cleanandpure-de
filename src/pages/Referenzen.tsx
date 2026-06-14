@@ -32,7 +32,7 @@ const projects = [
 ];
 
 const anonymized = [
-  { icon: Building2, title: "Bürokomplex Hamburg-Altona", obj: "5.000 m² Bürofläche", leistung: "Tägliche Unterhaltsreinigung", laufzeit: "seit 2019" },
+  { icon: Building2, title: "Bürokomplex Hamburg-Altona", obj: "5.000 m² Bürofläche", leistung: "Tägliche Unterhaltsreinigung", laufzeit: "seit 2016" },
   { icon: Hotel, title: "Fünf-Sterne-Hotel Hamburg", obj: "180 Zimmer + Tagungsbereiche", leistung: "Wöchentliche Fensterreinigung + Grundreinigung", laufzeit: "seit 2021" },
   { icon: Stethoscope, title: "Zahnarztpraxis Hamburg-Wandsbek", obj: "6 Behandlungszimmer", leistung: "Tägliche Hygienereinigung nach DIN EN 13549", laufzeit: "seit 2020" },
 ];
