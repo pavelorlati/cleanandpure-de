@@ -74,7 +74,8 @@ const UeberUns = () => {
           <p className="kicker mb-5">Unser Team</p>
           <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-4">Die Unternehmensgruppe Clean &amp; Pure.</h2>
           <p className="text-muted-foreground max-w-2xl mb-10 leading-relaxed">
-            Hinter jedem sauberen Gebäude steht ein eingespieltes Team. Unsere geschulten Reinigungsprofis arbeiten täglich in Hamburg – mit Leidenschaft, Präzision und modernsten Maschinen.
+            Hinter jedem sauberen Gebäude steht ein eingespieltes Team.&nbsp;<br />
+            Unsere geschulten Reinigungsprofis arbeiten täglich für Sie – mit Leidenschaft, Präzision und modernsten Maschinen.
           </p>
           <p className="text-muted-foreground max-w-2xl mb-10 leading-relaxed">
             Die Unternehmensgruppe Clean &amp; Pure steht für über 15 Jahre Erfahrung in der professionellen Gebäudereinigung – vom Bürogebäude bis zur Glasfassade.
