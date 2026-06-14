@@ -210,7 +210,7 @@ const Index = () => {
         <div className="relative container-x">
           <p className="kicker mb-6">BEREIT FÜR SAUBERE ERGEBNISSE?</p>
           <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-10 max-w-3xl">
-            Ihr Angebot&nbsp;<span className="text-primary">unverbindlich &amp; kostenfrei.</span>
+            Ihr Angebot&nbsp;<span className="text-primary">unverbindlich &amp; kostenlos.</span>
           </h2>
           <div className="flex flex-wrap gap-4 mb-8">
             <Link to="/kontakt" className="inline-flex items-center gap-2 px-6 py-3.5 bg-primary text-primary-foreground text-xs font-semibold tracking-[0.2em] uppercase hover:bg-primary-glow transition-colors rounded-sm">
