@@ -28,7 +28,7 @@ const Datenschutz = () => (
                 CPG Clean & Pure Gebäudereinigungs GmbH<br />
                 Lauenburger Straße 13<br />
                 22049 Hamburg<br />
-                Telefon: <a href="tel:04035966171" className="text-primary hover:underline">040/35 96 61 71</a><br />
+                Telefon: <a href="tel:+494035966171" className="text-primary hover:underline">040 35 96 61 71</a><br />
                 E-Mail: <a href="mailto:info@cleanandpure.de" className="text-primary hover:underline">info@cleanandpure.de</a>
               </p>
             </div>
