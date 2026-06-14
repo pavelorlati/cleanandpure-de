@@ -14,6 +14,7 @@ import sunset from "@/assets/cp/treppenhaus-reinigung.jpg";
 import lobbyModern from "@/assets/cp/hotelzimmer-bett.jpg";
 import boden from "@/assets/cp/team-bodenreinigung.jpg";
 import hausmeister from "@/assets/cp/hausmeisterservice.jpg.asset.json";
+import bauend from "@/assets/cp/bauendreinigung.jpg.asset.json";
 
 const services = [
   { n: "01", kicker: "Regelmäßig & verlässlich", title: "Unterhaltsreinigung", desc: "Täglich, wöchentlich oder nach individuellem Turnus – zuverlässig und termingerecht.", img: buero.url },
