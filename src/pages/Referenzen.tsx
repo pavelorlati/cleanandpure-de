@@ -105,8 +105,8 @@ const Referenzen = () => {
       <section className="py-24 md:py-32">
         <div className="container-x">
           <p className="kicker mb-5">Projekt-Galerie</p>
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-3">Echte Aufträge, echte Ergebnisse</h2>
-          <p className="text-muted-foreground mb-14 max-w-2xl">Ein Auszug aus unserer täglichen Arbeit in Hamburg – von der Glasfassaden-Reinigung bis zur Bodensanierung.</p>
+          <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-3">Manufaktur für einzigartige Ergebnisse&nbsp;</h2>
+          <p className="text-muted-foreground mb-14 max-w-2xl">Ein Auszug aus unserer täglichen Arbeit – von der Glasfassaden-Reinigung bis zur Bodensanierung &amp; Veredelung.</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((p, i) => (
               <div key={p.title} data-reveal={i % 3 === 0 ? "left" : i % 3 === 2 ? "right" : "up"} style={{ transitionDelay: `${(i % 3) * 80}ms` }} className="group bg-card border border-border rounded-sm overflow-hidden">
