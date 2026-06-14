@@ -104,7 +104,7 @@ const Header = () => {
 
           <Link
             to="/kontakt"
-            className="hidden md:inline-flex items-center px-5 py-2.5 bg-primary text-primary-foreground text-[0.7rem] font-semibold tracking-[0.2em] uppercase hover:bg-primary-glow transition-colors rounded-full"
+            className="hidden md:inline-flex items-center px-4 py-2 bg-primary text-primary-foreground text-xs font-bold tracking-[0.15em] uppercase hover:bg-primary-glow transition-colors rounded-full"
           >
             Angebot anfragen
           </Link>
