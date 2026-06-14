@@ -8,6 +8,7 @@ import { useReveal } from "@/hooks/useReveal";
 import glas from "@/assets/cp/hero-glasreinigung.webp";
 import mopping from "@/assets/cp/hero-mopping.jpg";
 import buero from "@/assets/cp/bueroreinigung.jpg.asset.json";
+import kueche from "@/assets/cp/team-kueche-wischen.jpg";
 import praxis from "@/assets/cp/hero-buero.jpg";
 import sunset from "@/assets/cp/hero-sunset.jpg";
 import lobbyModern from "@/assets/cp/hotelzimmer-bett.jpg";
@@ -16,7 +17,7 @@ import hausmeister from "@/assets/cp/hausmeisterservice.jpg.asset.json";
 
 const services = [
   { n: "01", kicker: "Regelmäßig & verlässlich", title: "Unterhaltsreinigung", desc: "Täglich, wöchentlich oder nach individuellem Turnus – zuverlässig und termingerecht.", img: buero.url },
-  { n: "02", kicker: "Hygienisch & professionell", title: "Büroreinigung", desc: "Professionelle Reinigung für Büros und Arbeitsräume – für ein hygienisches, produktives Arbeitsumfeld.", img: mopping },
+  { n: "02", kicker: "Hygienisch & professionell", title: "Büroreinigung", desc: "Professionelle Reinigung für Büros und Arbeitsräume – für ein hygienisches, produktives Arbeitsumfeld.", img: kueche },
   { n: "03", kicker: "Gäste begeistern", title: "Hotelreinigung", desc: "Diskrete, zuverlässige Reinigung für Hotels und Beherbergungsbetriebe nach höchsten Hygienestandards.", img: lobbyModern },
   { n: "04", kicker: "Medizinische Standards", title: "Praxis- & Hygienereinigung", desc: "Spezialisierte Hygienereinigung für Arztpraxen, Zahnarztpraxen und medizinische Einrichtungen.", img: praxis },
   { n: "05", kicker: "Kristallklar", title: "Glas- & Fassadenreinigung", desc: "Streifenfreie Glas- und Fassadenreinigung für ein gepflegtes Erscheinungsbild Ihres Gebäudes.", img: glas },
