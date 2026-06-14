@@ -40,7 +40,7 @@ const Impressum = () => (
               <p>
                 Eintragung im Handelsregister.<br />
                 Registergericht: Amtsgericht Hamburg<br />
-                Registernummer: HRB [bitte ergänzen]
+                Registernummer: HRB 156893
               </p>
             </div>
 
@@ -48,7 +48,7 @@ const Impressum = () => (
               <h2 className="text-xl font-semibold text-foreground mb-2">Umsatzsteuer-ID</h2>
               <p>
                 Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:<br />
-                DE [bitte ergänzen]
+                DE323370575
               </p>
             </div>
 
