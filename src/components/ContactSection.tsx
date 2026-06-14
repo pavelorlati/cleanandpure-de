@@ -14,8 +14,8 @@ const contactCards = [
   {
     icon: Phone,
     title: "Telefon",
-    value: "040/35 96 61 71",
-    href: "tel:04035966171",
+    value: "040 35 96 61 71",
+    href: "tel:+494035966171",
     action: "Jetzt anrufen",
   },
   {
