@@ -11,6 +11,7 @@ import buero from "@/assets/cp/hero-buero.jpg";
 import sunset from "@/assets/cp/hero-sunset.jpg";
 import lobbyModern from "@/assets/cp/hero-lobby-modern.jpg";
 import boden from "@/assets/cp/team-bodenreinigung.jpg";
+import hausmeister from "@/assets/cp/hausmeisterservice.jpg.asset.json";
 
 const services = [
   { n: "01", kicker: "Regelmäßig & verlässlich", title: "Unterhaltsreinigung", desc: "Täglich, wöchentlich oder nach individuellem Turnus – zuverlässig und termingerecht.", img: mopping },
@@ -21,7 +22,7 @@ const services = [
   { n: "06", kicker: "Intensive Tiefenpflege", title: "Grund- & Sonderreinigung", desc: "Intensive Tiefenreinigung für Räume, die eine gründliche Auffrischung und Intensivpflege benötigen.", img: boden },
   { n: "07", kicker: "Textilpflege", title: "Polster- & Teppichreinigung", desc: "Professionelle Reinigung von Teppichböden, Polstermöbeln und textilen Belägen aller Art.", img: mopping },
   { n: "08", kicker: "Schutz & Glanz", title: "Bodensanierung & Versiegelung", desc: "Professionelle Bodenpflege, Sanierung und Versiegelung für alle Bodenbeläge und Oberflächen.", img: boden },
-  { n: "09", kicker: "Rundum-Betreuung", title: "Hausmeisterservice", desc: "Zuverlässiger Hausmeisterservice für Wartung, Pflege und technischen Betrieb Ihrer Immobilie.", img: sunset },
+  { n: "09", kicker: "Rundum-Betreuung", title: "Hausmeisterservice", desc: "Zuverlässiger Hausmeisterservice für Wartung, Pflege und technischen Betrieb Ihrer Immobilie.", img: hausmeister.url },
   { n: "10", kicker: "Übergabebereit", title: "Bauendreinigung", desc: "Professionelle Endreinigung nach Bau- und Renovierungsarbeiten für eine sofort nutzbare Immobilie.", img: mopping },
   { n: "11", kicker: "Gepflegte Gemeinschaftsflächen", title: "Außen- & Treppenhausreinigung", desc: "Reinigung von Treppenhäusern, Außenanlagen und Gemeinschaftsflächen für gepflegte Immobilien.", img: sunset },
 ];
