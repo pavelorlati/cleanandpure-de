@@ -11,16 +11,16 @@ import firmenwagen from "@/assets/cp/firmenwagen-fensterputz.jpg";
 import skyline from "@/assets/cp/team-hamburg-skyline.jpg";
 
 const team = [
-  { name: "Safak Cakirgöz", role: "Kaufmännischer Geschäftsführer", tel: "040 35 96 61 71", mail: "info@cleanandpure.de", quote: "Müde macht uns die Arbeit, die wir liegen lassen, nicht die, die wir tun.", img: "/team/safak-cakirgoez.jpg" },
-  { name: "Tolgahan Cakirgöz", role: "Gesellschaftender Geschäftsführer", tel: "040 35 96 61 71", mail: "tca@cleanandpure.de", quote: "Service heißt, das ganze Geschäft mit den Augen des Kunden zu sehen.", img: "/team/tolgahan-cakirgoez.jpg" },
-  { name: "Maik Stolzenberg", role: "Betriebsleiter", tel: "0159 / 0165 777 6", mail: "mst@cleanandpure.de", quote: "Zusammenkommen ist ein Beginn, Zusammenbleiben ein Fortschritt, Zusammenarbeiten ein Erfolg.", img: "/team/maik-stolzenberg.jpg" },
-  { name: "Selvi Ayvaz", role: "Finanzbuchhaltung", tel: "040 35 96 61 71", mail: "buchhaltung@cleanandpure.de", quote: "Zusammen geht's nur dann, wenn alle Beteiligten mit einer Portion für Gemeinsinn und Einsatz was dafür tuen.", img: "/team/selvi-ayvaz.jpg" },
+  { name: "Safak Cakirgöz", role: "Kaufmännischer Geschäftsführer", tel: "040. 35 96 61 71", mail: "info@cleanandpure.de", quote: "Müde macht uns die Arbeit, die wir liegen lassen, nicht die, die wir tun.", img: "/team/safak-cakirgoez.jpg" },
+  { name: "Tolgahan Cakirgöz", role: "Gesellschaftender Geschäftsführer", tel: "040. 35 96 61 71", mail: "tca@cleanandpure.de", quote: "Service heißt, das ganze Geschäft mit den Augen des Kunden zu sehen.", img: "/team/tolgahan-cakirgoez.jpg" },
+  { name: "Maik Stolzenberg", role: "Betriebsleiter", tel: "0159. 0165 777 6", mail: "mst@cleanandpure.de", quote: "Zusammenkommen ist ein Beginn, Zusammenbleiben ein Fortschritt, Zusammenarbeiten ein Erfolg.", img: "/team/maik-stolzenberg.jpg" },
+  { name: "Selvi Ayvaz", role: "Finanzbuchhaltung", tel: "040. 35 96 61 71", mail: "buchhaltung@cleanandpure.de", quote: "Zusammen geht's nur dann, wenn alle Beteiligten mit einer Portion für Gemeinsinn und Einsatz was dafür tuen.", img: "/team/selvi-ayvaz.jpg" },
 ];
 
 const why = [
   { n: "01", title: "Zuverlässigkeit", desc: "Pünktlich, verlässlich und transparent – Sie können sich auf uns verlassen. Immer." },
   { n: "02", title: "Nachhaltigkeit", desc: "Wir setzen auf umweltfreundliche Reinigungsprodukte und ressourcenschonendes Arbeiten." },
-  { n: "03", title: "Fachkompetenz", desc: "Unser geschultes Personal arbeitet nach höchsten Qualitätsstandards und modernen Methoden." },
+  { n: "03", title: "Fachkompetenz", desc: "Unser qualifiziertes Fachpersonal arbeitet nach höchsten Qualitätsstandards und modernen Methoden." },
   { n: "04", title: "Persönlicher Service", desc: "Direkte Ansprechpartner, kurze Wege und ein offenes Ohr für Ihre Wünsche." },
 ];
 
@@ -45,7 +45,9 @@ const UeberUns = () => {
             <p className="kicker mb-6">Unsere Philosophie</p>
             <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8">Mehr als Reinigung –<br/>ein echtes Versprechen.</h2>
             <p className="text-muted-foreground mb-5 leading-relaxed">
-              Clean &amp; Pure GmbH wurde mit einer klaren Mission gegründet: Professionellen Gebäudeservice zu erbringen, der wirklich den Unterschied macht. Als Unternehmen mit Hamburger Wurzeln wissen wir, dass Vertrauen die Grundlage jeder guten Zusammenarbeit ist.
+              Clean &amp; Pure GmbH wurde mit einer klaren Mission gegründet:&nbsp;<br />
+              Professionelle Gebäudereinigung zu erbringen, der wirklich den Unterschied macht.<br />&nbsp;
+              Als Unternehmen mit Hamburger Wurzeln wissen wir, dass Vertrauen die Grundlage jeder guten Zusammenarbeit ist.
             </p>
             <p className="text-muted-foreground mb-8 leading-relaxed">
               Deshalb stehen wir für Verlässlichkeit, Transparenz und höchste Qualitätsstandards – bei jedem Auftrag, für jeden Kunden.
@@ -90,7 +92,7 @@ const UeberUns = () => {
               <img src={skyline} alt="Glasreinigung Hamburg" className="w-full h-full object-cover rounded-sm" data-reveal="right" style={{ transitionDelay: "120ms" }} />
             </div>
           </div>
-          <p className="text-xs text-muted-foreground uppercase tracking-wider mt-4">Unsere Firmenwagen-Flotte täglich in Hamburg im Einsatz</p>
+          <p className="text-xs text-muted-foreground uppercase tracking-wider mt-4">UNSERE FIRMENWAGEN-FLOTTE TÄGLICH IM EINSATZ FÜR SIE</p>
         </div>
       </section>
 
@@ -121,7 +123,7 @@ const UeberUns = () => {
                     <p className="kicker mb-3 transition-colors duration-500 group-hover:text-primary-glow">{t.role}</p>
                     <h3 className="font-bold text-2xl md:text-3xl leading-tight mb-5 tracking-tight">{t.name}</h3>
                     <div className="text-sm space-y-1.5 mb-6">
-                      <a href={`tel:${t.tel.replace(/\s|\//g, "")}`} className="block text-foreground/85 hover:text-primary transition-colors">{t.tel}</a>
+                      <a href={`tel:${t.tel.replace(/\s|\.|\//g, "")}`} className="block text-foreground/85 hover:text-primary transition-colors">{t.tel}</a>
                       <a href={`mailto:${t.mail}`} className="block text-foreground/85 hover:text-primary break-all transition-colors">{t.mail}</a>
                     </div>
                     <div className="relative pl-4">
@@ -138,7 +140,7 @@ const UeberUns = () => {
             <h3 className="text-xl font-semibold mb-2">Wir brauchen dich in unserem Team — jetzt bewerben!</h3>
             <p className="text-sm text-muted-foreground mb-4">Assistentin d. Geschäftsführung</p>
             <div className="flex flex-wrap gap-4 text-sm">
-              <a href="tel:+494035966171" className="text-primary hover:underline">040 35 96 61 71</a>
+              <a href="tel:+494035966171" className="text-primary hover:underline">040. 35 96 61 71</a>
               <a href="mailto:personal@cleanandpure.de" className="text-primary hover:underline">personal@cleanandpure.de</a>
             </div>
             <p className="text-xs italic text-muted-foreground mt-4">„Beginne, wo du bist. Nutze, was du hast. Tu, was du kannst."</p>
@@ -150,7 +152,7 @@ const UeberUns = () => {
         <div className="container-x">
           <p className="kicker mb-5">Warum Clean &amp; Pure?</p>
           <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-3">Das zeichnet uns aus</h2>
-          <p className="text-muted-foreground mb-14 max-w-2xl">Wir setzen auf Qualität, Verlässlichkeit und persönliche Betreuung, die man spürt.</p>
+          <p className="text-muted-foreground mb-14 max-w-2xl">Wir setzen auf Qualität, Verlässlichkeit und persönliche Betreuung, die man sieht &amp; spürt.</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
             {why.map((w) => (
               <div key={w.n} className="border-t border-border pt-5">
@@ -185,7 +187,7 @@ const UeberUns = () => {
           <h3 className="text-3xl md:text-5xl font-bold leading-tight mb-10">Lernen Sie uns persönlich kennen.</h3>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link to="/kontakt" className="inline-flex items-center px-6 py-3.5 bg-primary text-primary-foreground text-xs font-semibold tracking-[0.2em] uppercase hover:bg-primary-glow rounded-sm">Jetzt kontaktieren</Link>
-            <a href="tel:+494035966171" className="inline-flex items-center px-6 py-3.5 border border-foreground/30 text-xs font-semibold tracking-[0.2em] uppercase hover:border-primary hover:text-primary rounded-sm">040 35 96 61 71</a>
+            <a href="tel:+494035966171" className="inline-flex items-center px-6 py-3.5 border border-foreground/30 text-xs font-semibold tracking-[0.2em] uppercase hover:border-primary hover:text-primary rounded-sm">040. 35 96 61 71</a>
           </div>
         </div>
       </section>
