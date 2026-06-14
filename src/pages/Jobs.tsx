@@ -35,7 +35,7 @@ const Jobs = () => {
             <h2 className="text-4xl md:text-5xl font-bold leading-tight">Ein Arbeitgeber, der für seine Mitarbeiter*in da ist.</h2>
           </div>
           <div className="space-y-5 text-muted-foreground leading-relaxed">
-            <p>Wir suchen engagierte Mitarbeiterinnen und Mitarbeiter, die mit uns wachsen möchten. Werde Teil der Clean &amp; Pure Familie in Hamburg.</p>
+            <p>Wir suchen engagierte Mitarbeiterinnen und Mitarbeiter, die mit uns wachsen möchten. Werde jetzt Teil der Clean &amp; Pure Familie.</p>
             <p>Bei uns arbeiten Menschen aus vielen Ländern zusammen. Wir schätzen jeden Einzelnen – unabhängig von Herkunft oder Vorerfahrung. Faire Bezahlung und ein Team, das zusammenhält, sind unsere Grundlage.</p>
           </div>
         </div>
