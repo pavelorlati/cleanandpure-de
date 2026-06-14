@@ -25,7 +25,7 @@ const services = [
   { n: "07", kicker: "Textilpflege", title: "Polster- & Teppichreinigung", desc: "Professionelle Reinigung von Teppichböden, Polstermöbeln und textilen Belägen aller Art.", img: "/leistungen/polster-teppichreinigung.jpg" },
   { n: "08", kicker: "Schutz & Glanz", title: "Bodensanierung & Versiegelung", desc: "Professionelle Bodenpflege, Sanierung und Versiegelung für alle Bodenbeläge und Oberflächen.", img: boden },
   { n: "09", kicker: "Rundum-Betreuung", title: "Hausmeisterservice", desc: "Zuverlässiger Hausmeisterservice für Wartung, Pflege und technischen Betrieb Ihrer Immobilie.", img: hausmeister.url },
-  { n: "10", kicker: "Übergabebereit", title: "Bauendreinigung", desc: "Professionelle Endreinigung nach Bau- und Renovierungsarbeiten für eine sofort nutzbare Immobilie.", img: mopping },
+  { n: "10", kicker: "Übergabebereit", title: "Bauendreinigung", desc: "Professionelle Endreinigung nach Bau- und Renovierungsarbeiten für eine sofort nutzbare Immobilie.", img: bauend.url },
   { n: "11", kicker: "Gepflegte Gemeinschaftsflächen", title: "Außen- & Treppenhausreinigung", desc: "Reinigung von Treppenhäusern, Außenanlagen und Gemeinschaftsflächen für gepflegte Immobilien.", img: sunset },
 ];
 
