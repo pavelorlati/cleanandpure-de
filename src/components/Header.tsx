@@ -34,7 +34,11 @@ const Header = () => {
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    document.documentElement.style.overflow = mobileOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+    };
   }, [mobileOpen]);
 
   const toggleTheme = () => {
@@ -45,13 +49,16 @@ const Header = () => {
   };
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+    <>
+      <header
+        className={`fixed top-0 left-0 right-0 transition-all duration-300 ${
+          mobileOpen ? "z-[70] bg-transparent" : "z-50"
+        } ${
+          scrolled && !mobileOpen
           ? "bg-white/35 backdrop-blur-2xl border-b border-white/20 shadow-sm"
           : "bg-transparent"
-      }`}
-    >
+        }`}
+      >
 
       <div className="container-x flex h-20 md:h-24 items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
@@ -119,9 +126,11 @@ const Header = () => {
         </div>
       </div>
 
+      </header>
+
       {/* Mobile Drawer */}
       <div
-        className={`lg:hidden fixed inset-0 z-[55] transition-opacity duration-300 ${
+        className={`lg:hidden fixed inset-0 z-[60] transition-opacity duration-300 ${
           mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
         onClick={() => setMobileOpen(false)}
@@ -129,7 +138,7 @@ const Header = () => {
         <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
       </div>
       <aside
-        className={`lg:hidden fixed top-0 right-0 z-[58] h-full w-[82%] max-w-sm bg-background border-l border-border shadow-2xl transform transition-transform duration-300 ${
+        className={`lg:hidden fixed inset-y-0 right-0 z-[65] h-dvh w-[82%] max-w-sm bg-background border-l border-border shadow-2xl transform transition-transform duration-300 ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -159,7 +168,7 @@ const Header = () => {
           <a href="tel:+494035966171" className="text-sm text-primary mt-2">040 35 96 61 71</a>
         </nav>
       </aside>
-    </header>
+    </>
   );
 };
 
