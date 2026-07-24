@@ -130,8 +130,8 @@ const Header = () => {
 
       {/* Mobile Drawer */}
       <aside
-        className={`lg:hidden fixed inset-0 z-[80] h-dvh w-full bg-background transform transition-transform duration-300 ease-out ${
-          mobileOpen ? "translate-x-0 pointer-events-auto" : "translate-x-full pointer-events-none"
+        className={`lg:hidden fixed inset-0 z-[80] h-dvh w-full bg-background ${
+          mobileOpen ? "block pointer-events-auto" : "hidden pointer-events-none"
         }`}
         aria-hidden={!mobileOpen}
       >
