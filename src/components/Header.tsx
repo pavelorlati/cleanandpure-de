@@ -121,15 +121,15 @@ const Header = () => {
 
       {/* Mobile Drawer */}
       <div
-        className={`lg:hidden fixed inset-0 z-40 transition-opacity duration-300 ${
+        className={`lg:hidden fixed inset-0 z-[55] transition-opacity duration-300 ${
           mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
         onClick={() => setMobileOpen(false)}
       >
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
       </div>
       <aside
-        className={`lg:hidden fixed top-0 right-0 z-50 h-full w-[82%] max-w-sm bg-card shadow-2xl transform transition-transform duration-300 ${
+        className={`lg:hidden fixed top-0 right-0 z-[58] h-full w-[82%] max-w-sm bg-background border-l border-border shadow-2xl transform transition-transform duration-300 ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
