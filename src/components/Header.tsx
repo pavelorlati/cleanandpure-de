@@ -129,20 +129,27 @@ const Header = () => {
       </header>
 
       {/* Mobile Drawer */}
-      <div
-        className={`lg:hidden fixed inset-0 z-[60] transition-opacity duration-300 ${
-          mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
-        onClick={() => setMobileOpen(false)}
-      >
-        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
-      </div>
       <aside
-        className={`lg:hidden fixed inset-y-0 right-0 z-[65] h-dvh w-[82%] max-w-sm bg-background border-l border-border shadow-2xl transform transition-transform duration-300 ${
-          mobileOpen ? "translate-x-0" : "translate-x-full"
+        className={`lg:hidden fixed inset-0 z-[80] h-dvh w-full bg-background transform transition-transform duration-300 ease-out ${
+          mobileOpen ? "translate-x-0 pointer-events-auto" : "translate-x-full pointer-events-none"
         }`}
+        aria-hidden={!mobileOpen}
       >
-        <nav className="flex flex-col gap-5 px-8 pt-24 pb-8">
+        <div className="container-x flex h-20 items-center justify-between">
+          <Link to="/" onClick={() => setMobileOpen(false)} className="flex items-center gap-3">
+            <img src={logo} alt="Clean & Pure GmbH" className="h-16 w-auto" />
+          </Link>
+          <button
+            type="button"
+            className="inline-flex h-11 w-11 items-center justify-center text-foreground"
+            onClick={() => setMobileOpen(false)}
+            aria-label="Menü schließen"
+          >
+            <X className="h-7 w-7" />
+          </button>
+        </div>
+
+        <nav className="flex flex-col gap-5 px-8 pt-12 pb-8">
           {navItems.map((item) => (
             <NavLink
               key={item.to}
